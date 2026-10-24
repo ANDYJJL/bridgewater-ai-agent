@@ -1,0 +1,415 @@
+{
+  "tool_name": "model_comparison",
+  "generated_at": "2026-05-19T23:13:14Z",
+  "target": "outperform benchmark over next 60 trading days",
+  "status": "success",
+  "official_model_type": "transparent_fallback",
+  "models": {
+    "logistic_regression": {
+      "status": "success",
+      "outperform_probability": null,
+      "model_confidence": null,
+      "training_row_count": 609,
+      "test_row_count": 153,
+      "features_used": [
+        "20d_return",
+        "60d_return",
+        "20d_volatility",
+        "60d_volatility",
+        "max_drawdown_60d",
+        "relative_return_vs_benchmark_60d"
+      ],
+      "validation_metrics": {
+        "accuracy": 0.444444,
+        "roc_auc": 0.472129,
+        "test_row_count": 153,
+        "class_balance": {
+          "positive_rate": 0.647059,
+          "negative_rate": 0.352941
+        }
+      },
+      "limitations": [
+        "historical_training_uses_market_derived_features_only"
+      ]
+    },
+    "random_forest": {
+      "status": "success",
+      "outperform_probability": null,
+      "model_confidence": null,
+      "training_row_count": 609,
+      "test_row_count": 153,
+      "features_used": [
+        "20d_return",
+        "60d_return",
+        "20d_volatility",
+        "60d_volatility",
+        "max_drawdown_60d",
+        "relative_return_vs_benchmark_60d"
+      ],
+      "validation_metrics": {
+        "accuracy": 0.424837,
+        "roc_auc": 0.57529,
+        "test_row_count": 153,
+        "class_balance": {
+          "positive_rate": 0.647059,
+          "negative_rate": 0.352941
+        }
+      },
+      "limitations": [
+        "historical_training_uses_market_derived_features_only"
+      ]
+    }
+  },
+  "target_price_models": {
+    "linear_regression": {
+      "status": "success",
+      "validation_status": "weak_validation",
+      "price_estimate_usable": false,
+      "predicted_60d_return": null,
+      "current_price": null,
+      "predicted_60d_price": null,
+      "model_confidence": 0.402134,
+      "training_row_count": 609,
+      "test_row_count": 153,
+      "features_used": [
+        "20d_return",
+        "60d_return",
+        "20d_volatility",
+        "60d_volatility",
+        "max_drawdown_60d",
+        "relative_return_vs_benchmark_60d"
+      ],
+      "validation_metrics": {
+        "mae": 0.073726,
+        "rmse": 0.086258,
+        "r2": -0.470493
+      },
+      "baseline_metrics": {
+        "baseline_type": "historical_mean_forward_return",
+        "mae": 0.058883,
+        "rmse": 0.071306
+      },
+      "beats_baseline": false,
+      "limitations": [
+        "does_not_beat_baseline",
+        "experimental_price_forecast_low_validation_quality",
+        "market_derived_features_only",
+        "not_used_for_official_recommendation",
+        "target_returns_winsorized_for_stability"
+      ],
+      "model_family": "ridge_regularized_linear_model"
+    },
+    "random_forest_regressor": {
+      "status": "success",
+      "validation_status": "weak_validation",
+      "price_estimate_usable": false,
+      "predicted_60d_return": null,
+      "current_price": null,
+      "predicted_60d_price": null,
+      "model_confidence": 0.38412,
+      "training_row_count": 609,
+      "test_row_count": 153,
+      "features_used": [
+        "20d_return",
+        "60d_return",
+        "20d_volatility",
+        "60d_volatility",
+        "max_drawdown_60d",
+        "relative_return_vs_benchmark_60d"
+      ],
+      "validation_metrics": {
+        "mae": 0.112862,
+        "rmse": 0.136548,
+        "r2": -2.684966
+      },
+      "baseline_metrics": {
+        "baseline_type": "historical_mean_forward_return",
+        "mae": 0.058883,
+        "rmse": 0.071306
+      },
+      "beats_baseline": false,
+      "limitations": [
+        "does_not_beat_baseline",
+        "experimental_price_forecast_low_validation_quality",
+        "market_derived_features_only",
+        "not_used_for_official_recommendation",
+        "target_returns_winsorized_for_stability"
+      ]
+    }
+  },
+  "ticker_results": {
+    "NVDA": {
+      "logistic_regression": {
+        "status": "success",
+        "outperform_probability": 0.516195,
+        "model_confidence": 0.420588,
+        "predicted_return_bucket": "neutral",
+        "training_row_count": 609,
+        "test_row_count": 153,
+        "features_used": [
+          "20d_return",
+          "60d_return",
+          "20d_volatility",
+          "60d_volatility",
+          "max_drawdown_60d",
+          "relative_return_vs_benchmark_60d"
+        ],
+        "validation_metrics": {
+          "accuracy": 0.444444,
+          "roc_auc": 0.472129,
+          "test_row_count": 153,
+          "class_balance": {
+            "positive_rate": 0.647059,
+            "negative_rate": 0.352941
+          }
+        },
+        "limitations": [
+          "historical_training_uses_market_derived_features_only"
+        ]
+      },
+      "random_forest": {
+        "status": "success",
+        "outperform_probability": 0.149756,
+        "model_confidence": 0.420652,
+        "predicted_return_bucket": "negative",
+        "training_row_count": 609,
+        "test_row_count": 153,
+        "features_used": [
+          "20d_return",
+          "60d_return",
+          "20d_volatility",
+          "60d_volatility",
+          "max_drawdown_60d",
+          "relative_return_vs_benchmark_60d"
+        ],
+        "validation_metrics": {
+          "accuracy": 0.424837,
+          "roc_auc": 0.57529,
+          "test_row_count": 153,
+          "class_balance": {
+            "positive_rate": 0.647059,
+            "negative_rate": 0.352941
+          }
+        },
+        "limitations": [
+          "historical_training_uses_market_derived_features_only"
+        ]
+      },
+      "target_price_models": {
+        "linear_regression": {
+          "status": "success",
+          "validation_status": "weak_validation",
+          "price_estimate_usable": false,
+          "predicted_60d_return": 0.029379,
+          "current_price": 220.610001,
+          "predicted_60d_price": 227.091231,
+          "model_confidence": 0.417519,
+          "training_row_count": 609,
+          "test_row_count": 153,
+          "features_used": [
+            "20d_return",
+            "60d_return",
+            "20d_volatility",
+            "60d_volatility",
+            "max_drawdown_60d",
+            "relative_return_vs_benchmark_60d"
+          ],
+          "validation_metrics": {
+            "mae": 0.073726,
+            "rmse": 0.086258,
+            "r2": -0.470493
+          },
+          "baseline_metrics": {
+            "baseline_type": "historical_mean_forward_return",
+            "mae": 0.058883,
+            "rmse": 0.071306
+          },
+          "beats_baseline": false,
+          "limitations": [
+            "does_not_beat_baseline",
+            "experimental_price_forecast_low_validation_quality",
+            "market_derived_features_only",
+            "not_used_for_official_recommendation",
+            "target_returns_winsorized_for_stability"
+          ],
+          "model_family": "ridge_regularized_linear_model"
+        },
+        "random_forest_regressor": {
+          "status": "success",
+          "validation_status": "weak_validation",
+          "price_estimate_usable": false,
+          "predicted_60d_return": -0.134783,
+          "current_price": 220.610001,
+          "predicted_60d_price": 190.875453,
+          "model_confidence": 0.399505,
+          "training_row_count": 609,
+          "test_row_count": 153,
+          "features_used": [
+            "20d_return",
+            "60d_return",
+            "20d_volatility",
+            "60d_volatility",
+            "max_drawdown_60d",
+            "relative_return_vs_benchmark_60d"
+          ],
+          "validation_metrics": {
+            "mae": 0.112862,
+            "rmse": 0.136548,
+            "r2": -2.684966
+          },
+          "baseline_metrics": {
+            "baseline_type": "historical_mean_forward_return",
+            "mae": 0.058883,
+            "rmse": 0.071306
+          },
+          "beats_baseline": false,
+          "limitations": [
+            "does_not_beat_baseline",
+            "experimental_price_forecast_low_validation_quality",
+            "market_derived_features_only",
+            "not_used_for_official_recommendation",
+            "target_returns_winsorized_for_stability"
+          ]
+        }
+      }
+    },
+    "KO": {
+      "logistic_regression": {
+        "status": "success",
+        "outperform_probability": 0.533962,
+        "model_confidence": 0.389819,
+        "predicted_return_bucket": "neutral",
+        "training_row_count": 609,
+        "test_row_count": 153,
+        "features_used": [
+          "20d_return",
+          "60d_return",
+          "20d_volatility",
+          "60d_volatility",
+          "max_drawdown_60d",
+          "relative_return_vs_benchmark_60d"
+        ],
+        "validation_metrics": {
+          "accuracy": 0.444444,
+          "roc_auc": 0.472129,
+          "test_row_count": 153,
+          "class_balance": {
+            "positive_rate": 0.647059,
+            "negative_rate": 0.352941
+          }
+        },
+        "limitations": [
+          "historical_training_uses_market_derived_features_only"
+        ]
+      },
+      "random_forest": {
+        "status": "success",
+        "outperform_probability": 0.36046,
+        "model_confidence": 0.389883,
+        "predicted_return_bucket": "negative",
+        "training_row_count": 609,
+        "test_row_count": 153,
+        "features_used": [
+          "20d_return",
+          "60d_return",
+          "20d_volatility",
+          "60d_volatility",
+          "max_drawdown_60d",
+          "relative_return_vs_benchmark_60d"
+        ],
+        "validation_metrics": {
+          "accuracy": 0.424837,
+          "roc_auc": 0.57529,
+          "test_row_count": 153,
+          "class_balance": {
+            "positive_rate": 0.647059,
+            "negative_rate": 0.352941
+          }
+        },
+        "limitations": [
+          "historical_training_uses_market_derived_features_only"
+        ]
+      },
+      "target_price_models": {
+        "linear_regression": {
+          "status": "success",
+          "validation_status": "weak_validation",
+          "price_estimate_usable": false,
+          "predicted_60d_return": 0.056963,
+          "current_price": 81.919998,
+          "predicted_60d_price": 86.58641,
+          "model_confidence": 0.386749,
+          "training_row_count": 609,
+          "test_row_count": 153,
+          "features_used": [
+            "20d_return",
+            "60d_return",
+            "20d_volatility",
+            "60d_volatility",
+            "max_drawdown_60d",
+            "relative_return_vs_benchmark_60d"
+          ],
+          "validation_metrics": {
+            "mae": 0.073726,
+            "rmse": 0.086258,
+            "r2": -0.470493
+          },
+          "baseline_metrics": {
+            "baseline_type": "historical_mean_forward_return",
+            "mae": 0.058883,
+            "rmse": 0.071306
+          },
+          "beats_baseline": false,
+          "limitations": [
+            "does_not_beat_baseline",
+            "experimental_price_forecast_low_validation_quality",
+            "market_derived_features_only",
+            "not_used_for_official_recommendation",
+            "target_returns_winsorized_for_stability"
+          ],
+          "model_family": "ridge_regularized_linear_model"
+        },
+        "random_forest_regressor": {
+          "status": "success",
+          "validation_status": "weak_validation",
+          "price_estimate_usable": false,
+          "predicted_60d_return": -0.008713,
+          "current_price": 81.919998,
+          "predicted_60d_price": 81.20625,
+          "model_confidence": 0.368736,
+          "training_row_count": 609,
+          "test_row_count": 153,
+          "features_used": [
+            "20d_return",
+            "60d_return",
+            "20d_volatility",
+            "60d_volatility",
+            "max_drawdown_60d",
+            "relative_return_vs_benchmark_60d"
+          ],
+          "validation_metrics": {
+            "mae": 0.112862,
+            "rmse": 0.136548,
+            "r2": -2.684966
+          },
+          "baseline_metrics": {
+            "baseline_type": "historical_mean_forward_return",
+            "mae": 0.058883,
+            "rmse": 0.071306
+          },
+          "beats_baseline": false,
+          "limitations": [
+            "does_not_beat_baseline",
+            "experimental_price_forecast_low_validation_quality",
+            "market_derived_features_only",
+            "not_used_for_official_recommendation",
+            "target_returns_winsorized_for_stability"
+          ]
+        }
+      }
+    }
+  },
+  "limitations": [
+    "experimental_models_do_not_override_official_recommendation_logic"
+  ]
+}

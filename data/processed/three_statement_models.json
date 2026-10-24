@@ -1,0 +1,516 @@
+{
+  "tool_name": "build_three_statement_model",
+  "generated_at": "2026-06-05T16:42:46Z",
+  "models": {
+    "NVDA": {
+      "ticker": "NVDA",
+      "company_name": "NVIDIA Corporation",
+      "base_year": 2022,
+      "historical_inputs": {
+        "revenue": 26914000000.0,
+        "gross_profit": 17475000000.0,
+        "operating_income": 10041000000.0,
+        "net_income": 9752000000.0,
+        "cash": 10605000000.0,
+        "debt": 7469000000.0,
+        "assets": 206803000000.0,
+        "liabilities": 49510000000.0
+      },
+      "assumptions": {
+        "projection_years": 5,
+        "revenue_growth_start": 0.18,
+        "revenue_growth_tapers_by": 0.1,
+        "gross_margin": 0.64929,
+        "operating_margin": 0.373077,
+        "tax_rate": 0.21,
+        "depreciation_pct_revenue": 0.03,
+        "capex_pct_revenue": 0.05,
+        "nwc_pct_incremental_revenue": 0.02
+      },
+      "income_statement_projection": [
+        {
+          "year": 2023,
+          "revenue_growth": 0.18,
+          "revenue": 31758520000.0,
+          "gross_profit": 20620489450.8,
+          "operating_income": 11848373366.04,
+          "tax_expense": 2488158406.87,
+          "net_income": 9360214959.17
+        },
+        {
+          "year": 2024,
+          "revenue_growth": 0.162,
+          "revenue": 36903400240.0,
+          "gross_profit": 23961008741.83,
+          "operating_income": 13767809851.34,
+          "tax_expense": 2891240068.78,
+          "net_income": 10876569782.56
+        },
+        {
+          "year": 2025,
+          "revenue_growth": 0.144,
+          "revenue": 42217489874.56,
+          "gross_profit": 27411394000.65,
+          "operating_income": 15750374469.93,
+          "tax_expense": 3307578638.69,
+          "net_income": 12442795831.25
+        },
+        {
+          "year": 2026,
+          "revenue_growth": 0.126,
+          "revenue": 47536893598.75,
+          "gross_profit": 30865229644.74,
+          "operating_income": 17734921653.14,
+          "tax_expense": 3724333547.16,
+          "net_income": 14010588105.98
+        },
+        {
+          "year": 2027,
+          "revenue_growth": 0.108,
+          "revenue": 52670878107.42,
+          "gross_profit": 34198674446.37,
+          "operating_income": 19650293191.68,
+          "tax_expense": 4126561570.25,
+          "net_income": 15523731621.43
+        }
+      ],
+      "cash_flow_projection": [
+        {
+          "year": 2023,
+          "net_income": 9360214959.17,
+          "depreciation": 952755600.0,
+          "capital_expenditures": 1587926000.0,
+          "change_in_net_working_capital": 96890400.0,
+          "free_cash_flow": 8628154159.17
+        },
+        {
+          "year": 2024,
+          "net_income": 10876569782.56,
+          "depreciation": 1107102007.2,
+          "capital_expenditures": 1845170012.0,
+          "change_in_net_working_capital": 102897604.8,
+          "free_cash_flow": 10035604172.96
+        },
+        {
+          "year": 2025,
+          "net_income": 12442795831.25,
+          "depreciation": 1266524696.24,
+          "capital_expenditures": 2110874493.73,
+          "change_in_net_working_capital": 106281792.69,
+          "free_cash_flow": 11492164241.06
+        },
+        {
+          "year": 2026,
+          "net_income": 14010588105.98,
+          "depreciation": 1426106807.96,
+          "capital_expenditures": 2376844679.94,
+          "change_in_net_working_capital": 106388074.48,
+          "free_cash_flow": 12953462159.52
+        },
+        {
+          "year": 2027,
+          "net_income": 15523731621.43,
+          "depreciation": 1580126343.22,
+          "capital_expenditures": 2633543905.37,
+          "change_in_net_working_capital": 102679690.17,
+          "free_cash_flow": 14367634369.11
+        }
+      ],
+      "balance_sheet_stub": {
+        "cash": 10605000000.0,
+        "debt": 7469000000.0,
+        "assets": 206803000000.0,
+        "liabilities": 49510000000.0,
+        "net_debt": -3136000000.0,
+        "debt_to_assets": 0.036116
+      },
+      "key_metrics": {
+        "gross_margin": 0.64929,
+        "operating_margin": 0.373077,
+        "net_margin": 0.362339,
+        "projected_year_5_revenue": 52670878107.42,
+        "projected_year_5_free_cash_flow": 14367634369.11
+      },
+      "display_values": {
+        "historical_inputs_usd_billions": {
+          "revenue": 26.91,
+          "gross_profit": 17.48,
+          "operating_income": 10.04,
+          "net_income": 9.75,
+          "cash": 10.61,
+          "debt": 7.47,
+          "assets": 206.8,
+          "liabilities": 49.51
+        },
+        "projected_year_5_revenue_usd_billions": 52.67,
+        "projected_year_5_free_cash_flow_usd_billions": 14.37,
+        "gross_margin_pct": 64.9,
+        "operating_margin_pct": 37.3
+      },
+      "provenance": {
+        "base_year": {
+          "source": "processed_filing_evidence",
+          "source_path": "data/processed/filing_evidence.json",
+          "source_field": "facts.revenue.value",
+          "fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "fiscal_year": 2022,
+          "form": "10-K",
+          "classification": "actual"
+        },
+        "historical_inputs": {
+          "revenue": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.revenue.value",
+            "fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "fiscal_year": 2022,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "gross_profit": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.gross_profit.value",
+            "fact_name": "GrossProfit",
+            "fiscal_year": 2022,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "operating_income": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.operating_income.value",
+            "fact_name": "OperatingIncomeLoss",
+            "fiscal_year": 2022,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "net_income": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.net_income.value",
+            "fact_name": "NetIncomeLoss",
+            "fiscal_year": 2022,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "cash": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.cash.value",
+            "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "debt": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.debt.value",
+            "fact_name": "LongTermDebtNoncurrent",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "assets": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.assets.value",
+            "fact_name": "Assets",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "liabilities": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.liabilities.value",
+            "fact_name": "Liabilities",
+            "fiscal_year": 2026,
+            "form": "10-K",
+            "classification": "actual"
+          }
+        },
+        "assumptions": {
+          "revenue_growth_start": {
+            "source": "processed_filing_evidence",
+            "source_field": "computed_metrics.revenue_growth",
+            "classification": "estimate"
+          },
+          "gross_margin": {
+            "source": "processed_filing_evidence",
+            "source_field": "computed_metrics.gross_margin",
+            "classification": "estimate"
+          },
+          "operating_margin": {
+            "source": "processed_filing_evidence",
+            "source_field": "computed_metrics.operating_margin",
+            "classification": "estimate"
+          },
+          "tax_rate": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_TAX_RATE",
+            "classification": "assumption"
+          },
+          "depreciation_pct_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_DEPRECIATION_PCT_REVENUE",
+            "classification": "assumption"
+          },
+          "capex_pct_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_CAPEX_PCT_REVENUE",
+            "classification": "assumption"
+          },
+          "nwc_pct_incremental_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_NWC_PCT_REVENUE",
+            "classification": "assumption"
+          }
+        },
+        "income_statement_projection": {
+          "source": "derived_calculation",
+          "classification": "projection",
+          "formula": "base revenue grown by tapered growth; margins and tax assumptions applied"
+        },
+        "cash_flow_projection": {
+          "source": "derived_calculation",
+          "classification": "projection",
+          "formula": "net income plus depreciation minus capex and working-capital assumptions"
+        }
+      },
+      "data_sources": {
+        "filing_evidence": "data/processed/filing_evidence.json",
+        "stock_features": "data/processed/stock_features.csv",
+        "company_thesis": "data/thesis/company_theses.json"
+      },
+      "presentation_guidance": {
+        "not_investment_recommendation": true,
+        "recommended_display_scale": "USD billions",
+        "label_projection_fields_as": "assumption-based estimate",
+        "show_limitations_with_model": true
+      },
+      "limitations": [
+        "depreciation_capex_and_working_capital_are_assumption_based",
+        "revenue_growth_assumption_capped_for_projection_stability",
+        "tax_rate_default_assumption_used"
+      ]
+    },
+    "KO": {
+      "ticker": "KO",
+      "company_name": "The Coca-Cola Company",
+      "base_year": 2026,
+      "historical_inputs": {
+        "revenue": null,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": null,
+        "cash": 10270000000.0,
+        "debt": 35547000000.0,
+        "assets": 104816000000.0,
+        "liabilities": null
+      },
+      "assumptions": {
+        "projection_years": 5,
+        "revenue_growth_start": 0.03,
+        "revenue_growth_tapers_by": 0.1,
+        "gross_margin": 0.45,
+        "operating_margin": 0.2,
+        "tax_rate": 0.21,
+        "depreciation_pct_revenue": 0.03,
+        "capex_pct_revenue": 0.05,
+        "nwc_pct_incremental_revenue": 0.02
+      },
+      "income_statement_projection": [],
+      "cash_flow_projection": [],
+      "balance_sheet_stub": {
+        "cash": 10270000000.0,
+        "debt": 35547000000.0,
+        "assets": 104816000000.0,
+        "liabilities": null,
+        "net_debt": 25277000000.0,
+        "debt_to_assets": 0.339137
+      },
+      "key_metrics": {
+        "gross_margin": 0.45,
+        "operating_margin": 0.2,
+        "net_margin": null,
+        "projected_year_5_revenue": null,
+        "projected_year_5_free_cash_flow": null
+      },
+      "display_values": {
+        "historical_inputs_usd_billions": {
+          "revenue": null,
+          "gross_profit": null,
+          "operating_income": null,
+          "net_income": null,
+          "cash": 10.27,
+          "debt": 35.55,
+          "assets": 104.82,
+          "liabilities": null
+        },
+        "projected_year_5_revenue_usd_billions": null,
+        "projected_year_5_free_cash_flow_usd_billions": null,
+        "gross_margin_pct": 45.0,
+        "operating_margin_pct": 20.0
+      },
+      "provenance": {
+        "base_year": {
+          "source": "processed_filing_evidence",
+          "source_path": "data/processed/filing_evidence.json",
+          "source_field": "facts.revenue.value",
+          "fact_name": null,
+          "fiscal_year": null,
+          "form": null,
+          "classification": "unavailable"
+        },
+        "historical_inputs": {
+          "revenue": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.revenue.value",
+            "fact_name": null,
+            "fiscal_year": null,
+            "form": null,
+            "classification": "unavailable"
+          },
+          "gross_profit": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.gross_profit.value",
+            "fact_name": "GrossProfit",
+            "fiscal_year": null,
+            "form": null,
+            "classification": "unavailable"
+          },
+          "operating_income": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.operating_income.value",
+            "fact_name": "OperatingIncomeLoss",
+            "fiscal_year": null,
+            "form": null,
+            "classification": "unavailable"
+          },
+          "net_income": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.net_income.value",
+            "fact_name": "NetIncomeLoss",
+            "fiscal_year": null,
+            "form": null,
+            "classification": "unavailable"
+          },
+          "cash": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.cash.value",
+            "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "debt": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.debt.value",
+            "fact_name": "LongTermDebtNoncurrent",
+            "fiscal_year": 2023,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "assets": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.assets.value",
+            "fact_name": "Assets",
+            "fiscal_year": 2025,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "liabilities": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.liabilities.value",
+            "fact_name": null,
+            "fiscal_year": null,
+            "form": null,
+            "classification": "unavailable"
+          }
+        },
+        "assumptions": {
+          "revenue_growth_start": {
+            "source": "default_assumption",
+            "source_field": "computed_metrics.revenue_growth",
+            "classification": "estimate"
+          },
+          "gross_margin": {
+            "source": "default_assumption",
+            "source_field": "computed_metrics.gross_margin",
+            "classification": "estimate"
+          },
+          "operating_margin": {
+            "source": "default_assumption",
+            "source_field": "computed_metrics.operating_margin",
+            "classification": "estimate"
+          },
+          "tax_rate": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_TAX_RATE",
+            "classification": "assumption"
+          },
+          "depreciation_pct_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_DEPRECIATION_PCT_REVENUE",
+            "classification": "assumption"
+          },
+          "capex_pct_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_CAPEX_PCT_REVENUE",
+            "classification": "assumption"
+          },
+          "nwc_pct_incremental_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_NWC_PCT_REVENUE",
+            "classification": "assumption"
+          }
+        },
+        "income_statement_projection": {
+          "source": "derived_calculation",
+          "classification": "projection",
+          "formula": "base revenue grown by tapered growth; margins and tax assumptions applied"
+        },
+        "cash_flow_projection": {
+          "source": "derived_calculation",
+          "classification": "projection",
+          "formula": "net income plus depreciation minus capex and working-capital assumptions"
+        }
+      },
+      "data_sources": {
+        "filing_evidence": "data/processed/filing_evidence.json",
+        "stock_features": "data/processed/stock_features.csv",
+        "company_thesis": "data/thesis/company_theses.json"
+      },
+      "presentation_guidance": {
+        "not_investment_recommendation": true,
+        "recommended_display_scale": "USD billions",
+        "label_projection_fields_as": "assumption-based estimate",
+        "show_limitations_with_model": true
+      },
+      "limitations": [
+        "debt_to_assets:debt_assets_fiscal_year_misalignment",
+        "depreciation_capex_and_working_capital_are_assumption_based",
+        "gross_margin:missing_required_fact",
+        "gross_margin_missing_default_used",
+        "income_facts:no_annual_revenue_anchor_year",
+        "liabilities:missing_annual_balance_fact",
+        "operating_margin:missing_required_fact",
+        "operating_margin_missing_default_used",
+        "revenue_growth:insufficient_annual_revenue_history",
+        "revenue_growth_missing_default_used",
+        "revenue_missing_projection_unavailable",
+        "tax_rate_default_assumption_used"
+      ]
+    }
+  }
+}

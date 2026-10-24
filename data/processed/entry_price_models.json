@@ -1,0 +1,207 @@
+{
+  "tool_name": "build_entry_price_model",
+  "generated_at": "2026-06-05T16:42:46Z",
+  "entry_prices": {
+    "NVDA": {
+      "ticker": "NVDA",
+      "valuation_date": "2026-06-05",
+      "latest_market_price": 207.399994,
+      "dcf_equity_value": 199110939593.71,
+      "shares_outstanding": 960033487.72,
+      "shares_outstanding_source": "simulated",
+      "shares_outstanding_is_simulated": true,
+      "simulated_shares_outstanding_reason": "actual shares outstanding unavailable; simulated for demo entry price using dcf_equity_value / latest_market_price",
+      "implied_fair_value_per_share": 207.399994,
+      "margin_of_safety": 0.33,
+      "entry_price": 138.957996,
+      "current_price_vs_entry_price_pct": 0.492537,
+      "current_price_vs_fair_value_pct": 0.0,
+      "entry_status": "watchlist_below_fair_value",
+      "risk_adjustments": [
+        {
+          "reason": "base_margin_of_safety",
+          "adjustment": 0.15,
+          "source": "hardcoded_default"
+        },
+        {
+          "reason": "pm_review_required",
+          "adjustment": 0.03,
+          "source": "data/processed/portfolio_stress_test.json"
+        },
+        {
+          "reason": "large_stress_test_downside",
+          "adjustment": 0.07,
+          "source": "data/processed/portfolio_stress_test.json"
+        },
+        {
+          "reason": "negative_valuation_sensitivity_indicator",
+          "adjustment": 0.04,
+          "source": "data/processed/indicator_scorecards.json"
+        },
+        {
+          "reason": "dcf_assumption_heavy_or_proxy_based",
+          "adjustment": 0.04,
+          "source": "data/processed/dcf_valuations.json"
+        }
+      ],
+      "assumptions": {
+        "base_margin_of_safety": 0.15,
+        "min_margin_of_safety": 0.1,
+        "max_margin_of_safety": 0.4,
+        "entry_price_formula": "implied_fair_value_per_share * (1 - margin_of_safety)",
+        "not_a_price_target_or_trade_recommendation": true,
+        "simulated_shares_fallback_enabled": true,
+        "simulated_shares_formula": "dcf_equity_value / latest_market_price"
+      },
+      "limitations": [
+        "depreciation_capex_and_working_capital_are_assumption_based",
+        "discount_rate_estimated_from_short_term_volatility_proxy",
+        "revenue_growth_assumption_capped_for_dcf_stability",
+        "revenue_growth_assumption_capped_for_projection_stability",
+        "shares_outstanding_simulated_for_demo_entry_price",
+        "shares_outstanding_unavailable_implied_share_price_not_calculated",
+        "tax_rate_default_assumption_used"
+      ],
+      "provenance": {
+        "dcf_equity_value": {
+          "source": "data/processed/dcf_valuations.json",
+          "source_field": "valuations.NVDA.equity_value",
+          "classification": "estimate"
+        },
+        "shares_outstanding": {
+          "source": "simulated_demo_fallback",
+          "source_field": "dcf_equity_value / latest_market_price",
+          "classification": "simulated"
+        },
+        "latest_market_price": {
+          "source": "data/processed/dcf_valuations.json or data/raw/market/{TICKER}_prices.csv",
+          "source_field": "valuations.NVDA.latest_market_price or NVDA_prices.adjusted_close",
+          "classification": "actual"
+        },
+        "margin_of_safety": {
+          "source": "derived_risk_adjustment",
+          "source_field": "indicator_scorecards, portfolio_stress_test, dcf limitations",
+          "classification": "assumption"
+        },
+        "entry_price": {
+          "source": "derived_calculation",
+          "source_field": "implied_fair_value_per_share * (1 - margin_of_safety)",
+          "classification": "estimate"
+        }
+      },
+      "display_values": {
+        "latest_market_price": 207.4,
+        "dcf_equity_value_usd_billions": 199.11,
+        "implied_fair_value_per_share": 207.4,
+        "margin_of_safety_pct": 33.0,
+        "entry_price": 138.96,
+        "current_price_vs_entry_price_pct": 49.3,
+        "current_price_vs_fair_value_pct": 0.0
+      },
+      "presentation_guidance": "For analyst review only. Not a trade approval. Entry price is illustrative because share count is simulated."
+    },
+    "KO": {
+      "ticker": "KO",
+      "valuation_date": "2026-06-05",
+      "latest_market_price": 79.964996,
+      "dcf_equity_value": null,
+      "shares_outstanding": null,
+      "shares_outstanding_source": "unavailable",
+      "shares_outstanding_is_simulated": false,
+      "simulated_shares_outstanding_reason": null,
+      "implied_fair_value_per_share": null,
+      "margin_of_safety": 0.27,
+      "entry_price": null,
+      "current_price_vs_entry_price_pct": null,
+      "current_price_vs_fair_value_pct": null,
+      "entry_status": "unavailable",
+      "risk_adjustments": [
+        {
+          "reason": "base_margin_of_safety",
+          "adjustment": 0.15,
+          "source": "hardcoded_default"
+        },
+        {
+          "reason": "low_indicator_evidence_confidence",
+          "adjustment": 0.05,
+          "source": "data/processed/indicator_scorecards.json"
+        },
+        {
+          "reason": "pm_review_required",
+          "adjustment": 0.03,
+          "source": "data/processed/portfolio_stress_test.json"
+        },
+        {
+          "reason": "dcf_assumption_heavy_or_proxy_based",
+          "adjustment": 0.04,
+          "source": "data/processed/dcf_valuations.json"
+        }
+      ],
+      "assumptions": {
+        "base_margin_of_safety": 0.15,
+        "min_margin_of_safety": 0.1,
+        "max_margin_of_safety": 0.4,
+        "entry_price_formula": "implied_fair_value_per_share * (1 - margin_of_safety)",
+        "not_a_price_target_or_trade_recommendation": true,
+        "simulated_shares_fallback_enabled": true,
+        "simulated_shares_formula": "dcf_equity_value / latest_market_price"
+      },
+      "limitations": [
+        "dcf_equity_value_unavailable",
+        "debt_to_assets:debt_assets_fiscal_year_misalignment",
+        "depreciation_capex_and_working_capital_are_assumption_based",
+        "discount_rate_estimated_from_short_term_volatility_proxy",
+        "gross_margin:missing_required_fact",
+        "gross_margin_missing_default_used",
+        "income_facts:no_annual_revenue_anchor_year",
+        "liabilities:missing_annual_balance_fact",
+        "operating_margin:missing_required_fact",
+        "operating_margin_missing_default_used",
+        "revenue_growth:insufficient_annual_revenue_history",
+        "revenue_growth_missing_default_used",
+        "revenue_missing_dcf_projection_unavailable",
+        "revenue_missing_projection_unavailable",
+        "shares_outstanding_unavailable_entry_price_not_calculated",
+        "shares_outstanding_unavailable_implied_share_price_not_calculated",
+        "tax_rate_default_assumption_used"
+      ],
+      "provenance": {
+        "dcf_equity_value": {
+          "source": "data/processed/dcf_valuations.json",
+          "source_field": "valuations.KO.equity_value",
+          "classification": "unavailable"
+        },
+        "shares_outstanding": {
+          "source": "data/processed/dcf_valuations.json or data/processed/filing_evidence.json",
+          "source_field": "valuations.KO.shares_outstanding or tickers.KO.facts.*shares*.value",
+          "classification": "unavailable"
+        },
+        "latest_market_price": {
+          "source": "data/processed/dcf_valuations.json or data/raw/market/{TICKER}_prices.csv",
+          "source_field": "valuations.KO.latest_market_price or KO_prices.adjusted_close",
+          "classification": "actual"
+        },
+        "margin_of_safety": {
+          "source": "derived_risk_adjustment",
+          "source_field": "indicator_scorecards, portfolio_stress_test, dcf limitations",
+          "classification": "assumption"
+        },
+        "entry_price": {
+          "source": "derived_calculation",
+          "source_field": "implied_fair_value_per_share * (1 - margin_of_safety)",
+          "classification": "unavailable"
+        }
+      },
+      "display_values": {
+        "latest_market_price": 79.96,
+        "dcf_equity_value_usd_billions": null,
+        "implied_fair_value_per_share": null,
+        "margin_of_safety_pct": 27.0,
+        "entry_price": null,
+        "current_price_vs_entry_price_pct": null,
+        "current_price_vs_fair_value_pct": null
+      },
+      "presentation_guidance": "For analyst review only. Not a trade approval."
+    }
+  }
+}

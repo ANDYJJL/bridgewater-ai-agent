@@ -1,0 +1,53 @@
+"""
+Minimal MCP server skeleton for Milestone 03.
+
+This file is intentionally provided as a `.example` skeleton because the Python
+MCP SDK is not installed in the current environment. Do not claim this server
+is runnable until the `mcp` package is installed.
+
+Expected dependency:
+    python3 -m pip install mcp
+"""
+
+from __future__ import annotations
+
+try:
+    from mcp.server.fastmcp import FastMCP
+except ImportError as exc:  # pragma: no cover - skeleton guard only
+    raise RuntimeError(
+        "The `mcp` package is not installed. Install it before using this server skeleton."
+    ) from exc
+
+from tools.extract_filing_metrics import extract_filing_metrics as _extract_filing_metrics
+from tools.get_macro_trends import get_macro_trends as _get_macro_trends
+
+
+mcp = FastMCP("milestone03-bridgewater-tools")
+
+
+@mcp.tool()
+def get_macro_trends(
+    path: str = "data/fred_macro/fred_macro_sample.csv",
+    series_ids: list[str] | None = None,
+    lookback_periods: int = 4,
+) -> dict:
+    """Call this when the model needs deterministic macro trend features from FRED-based data."""
+    return _get_macro_trends(path=path, series_ids=series_ids, lookback_periods=lookback_periods)
+
+
+@mcp.tool()
+def extract_filing_metrics(
+    filing_path: str = "data/filings/raw/nvda_10k_excerpts.json",
+    ticker: str | None = None,
+    include_segments: bool = True,
+) -> dict:
+    """Call this when the model needs deterministic filing flags and evidence snippets from raw excerpts."""
+    return _extract_filing_metrics(
+        filing_path=filing_path,
+        ticker=ticker,
+        include_segments=include_segments,
+    )
+
+
+if __name__ == "__main__":  # pragma: no cover - skeleton only
+    mcp.run()

@@ -1,0 +1,102 @@
+[
+  {
+    "scenario_id": "base_case",
+    "scenario_name": "Base Case",
+    "description": "AI infrastructure demand remains healthy, customers continue deploying capacity, and policy conditions do not materially worsen from the current baseline.",
+    "macro_assumptions": {
+      "global_growth": "steady but below prior-cycle peaks",
+      "policy_rates": "gradual easing or broadly stable",
+      "inflation": "moderating but not fully normalized",
+      "enterprise_spending": "selective but constructive",
+      "trade_policy": "current restrictions remain in place without major expansion"
+    },
+    "company_variable_shocks": {
+      "hyperscaler_capex_growth": "high single digits to low double digits",
+      "enterprise_ai_adoption": "gradual broadening",
+      "gross_margin_direction": "stable to modestly improving",
+      "supply_availability": "improving but still monitored",
+      "customer_concentration_risk": "unchanged"
+    },
+    "stress_flags": ["platform_transition_execution", "supply_chain_timing"]
+  },
+  {
+    "scenario_id": "growth_slowdown",
+    "scenario_name": "Growth Slowdown",
+    "description": "Global activity cools, enterprise budgets become more selective, and customers lengthen deployment timing even if AI remains strategically important.",
+    "macro_assumptions": {
+      "global_growth": "slowing",
+      "policy_rates": "stable to mildly lower",
+      "inflation": "moderating",
+      "enterprise_spending": "more cautious",
+      "credit_conditions": "somewhat tighter"
+    },
+    "company_variable_shocks": {
+      "hyperscaler_capex_growth": "slower than plan",
+      "enterprise_ai_adoption": "pilot-to-production conversion delayed",
+      "gross_margin_direction": "slightly weaker mix",
+      "supply_availability": "adequate relative to demand",
+      "inventory_risk": "moderately higher"
+    },
+    "stress_flags": ["deployment_timing", "budget_prioritization", "valuation_sensitivity"]
+  },
+  {
+    "scenario_id": "rate_higher_for_longer",
+    "scenario_name": "Rates Higher for Longer",
+    "description": "Inflation remains sticky enough that policy stays restrictive, compressing valuation multiples and increasing scrutiny on large capital projects.",
+    "macro_assumptions": {
+      "global_growth": "slower but not recessionary",
+      "policy_rates": "restrictive for longer",
+      "inflation": "sticky",
+      "equity_discount_rates": "higher",
+      "capital_budget_discipline": "tightened"
+    },
+    "company_variable_shocks": {
+      "hyperscaler_capex_growth": "still positive but more scrutinized",
+      "enterprise_ai_adoption": "ROI thresholds rise",
+      "gross_margin_direction": "stable operationally",
+      "valuation_multiple_pressure": "elevated",
+      "customer_purchase_timing": "more uneven"
+    },
+    "stress_flags": ["duration_risk", "capital_allocation_scrutiny"]
+  },
+  {
+    "scenario_id": "export_control_tightening",
+    "scenario_name": "Export Control Tightening",
+    "description": "Trade restrictions broaden to cover additional products or destinations, forcing redesigns, shipment delays, and a change in regional revenue mix.",
+    "macro_assumptions": {
+      "trade_policy": "more restrictive",
+      "geopolitical_tension": "elevated",
+      "global_growth": "mixed by region",
+      "policy_rates": "secondary to policy shock",
+      "supply_chain_reconfiguration": "more likely"
+    },
+    "company_variable_shocks": {
+      "restricted_region_revenue": "declines",
+      "product_mix": "shifts toward compliant offerings",
+      "gross_margin_direction": "pressured by mix and redesign costs",
+      "shipment_timing": "less predictable",
+      "customer_demand_relocation": "partial offset only"
+    },
+    "stress_flags": ["regulatory_escalation", "regional_mix_change", "product_requalification"]
+  },
+  {
+    "scenario_id": "ai_capex_pullback",
+    "scenario_name": "AI Capex Pullback",
+    "description": "Large customers temporarily reduce or delay AI infrastructure purchases after an intense build cycle, citing digestion, utilization review, or power and deployment bottlenecks.",
+    "macro_assumptions": {
+      "global_growth": "mixed",
+      "policy_rates": "not the primary driver",
+      "enterprise_spending": "narrowly targeted",
+      "cloud_spending": "reprioritized toward efficiency",
+      "power_and_capacity_constraints": "continue to matter"
+    },
+    "company_variable_shocks": {
+      "hyperscaler_capex_growth": "flat to negative near term",
+      "enterprise_ai_adoption": "continues but insufficient to offset pause",
+      "gross_margin_direction": "pressured by utilization and mix",
+      "customer_concentration_risk": "higher",
+      "inventory_risk": "higher if demand timing slips"
+    },
+    "stress_flags": ["capex_digest", "customer_concentration", "revenue_conversion_risk"]
+  }
+]

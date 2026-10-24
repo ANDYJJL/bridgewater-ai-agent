@@ -1,0 +1,465 @@
+{
+  "tool_name": "build_dcf_model",
+  "generated_at": "2026-06-05T16:42:46Z",
+  "valuations": {
+    "NVDA": {
+      "ticker": "NVDA",
+      "valuation_date": "2026-06-05",
+      "base_free_cash_flow": 8628154159.17,
+      "projection_years": 5,
+      "revenue_growth_assumptions": [
+        0.18,
+        0.162,
+        0.144,
+        0.126,
+        0.108
+      ],
+      "margin_assumptions": {
+        "operating_margin": 0.373077,
+        "tax_rate": 0.21,
+        "depreciation_pct_revenue": 0.03,
+        "capex_pct_revenue": 0.05,
+        "nwc_pct_incremental_revenue": 0.02
+      },
+      "free_cash_flow_projection": [
+        {
+          "year": 2023,
+          "revenue_growth": 0.18,
+          "revenue": 31758520000.0,
+          "operating_income": 11848373366.04,
+          "nopat": 9360214959.17,
+          "depreciation": 952755600.0,
+          "capital_expenditures": 1587926000.0,
+          "change_in_net_working_capital": 96890400.0,
+          "free_cash_flow": 8628154159.17
+        },
+        {
+          "year": 2024,
+          "revenue_growth": 0.162,
+          "revenue": 36903400240.0,
+          "operating_income": 13767809851.34,
+          "nopat": 10876569782.56,
+          "depreciation": 1107102007.2,
+          "capital_expenditures": 1845170012.0,
+          "change_in_net_working_capital": 102897604.8,
+          "free_cash_flow": 10035604172.96
+        },
+        {
+          "year": 2025,
+          "revenue_growth": 0.144,
+          "revenue": 42217489874.56,
+          "operating_income": 15750374469.93,
+          "nopat": 12442795831.25,
+          "depreciation": 1266524696.24,
+          "capital_expenditures": 2110874493.73,
+          "change_in_net_working_capital": 106281792.69,
+          "free_cash_flow": 11492164241.06
+        },
+        {
+          "year": 2026,
+          "revenue_growth": 0.126,
+          "revenue": 47536893598.75,
+          "operating_income": 17734921653.14,
+          "nopat": 14010588105.98,
+          "depreciation": 1426106807.96,
+          "capital_expenditures": 2376844679.94,
+          "change_in_net_working_capital": 106388074.48,
+          "free_cash_flow": 12953462159.52
+        },
+        {
+          "year": 2027,
+          "revenue_growth": 0.108,
+          "revenue": 52670878107.42,
+          "operating_income": 19650293191.68,
+          "nopat": 15523731621.43,
+          "depreciation": 1580126343.22,
+          "capital_expenditures": 2633543905.37,
+          "change_in_net_working_capital": 102679690.17,
+          "free_cash_flow": 14367634369.11
+        }
+      ],
+      "discount_rate": 0.09,
+      "terminal_growth_rate": 0.027,
+      "terminal_value": 234215245985.33,
+      "present_value_of_fcf": [
+        {
+          "year": 2023,
+          "present_value": 7915737760.71
+        },
+        {
+          "year": 2024,
+          "present_value": 8446767252.72
+        },
+        {
+          "year": 2025,
+          "present_value": 8874059377.1
+        },
+        {
+          "year": 2026,
+          "present_value": 9176559164.38
+        },
+        {
+          "year": 2027,
+          "present_value": 9337976523.34
+        }
+      ],
+      "enterprise_value": 195974939593.71,
+      "net_debt": -3136000000.0,
+      "equity_value": 199110939593.71,
+      "shares_outstanding": null,
+      "implied_share_price": null,
+      "latest_market_price": 207.399994,
+      "upside_downside_pct": null,
+      "sensitivity_table": [
+        {
+          "discount_rate": 0.08,
+          "terminal_growth_rate": 0.022,
+          "enterprise_value": 217316979572.94
+        },
+        {
+          "discount_rate": 0.08,
+          "terminal_growth_rate": 0.027,
+          "enterprise_value": 234494338348.74
+        },
+        {
+          "discount_rate": 0.08,
+          "terminal_growth_rate": 0.032,
+          "enterprise_value": 255250313536.16
+        },
+        {
+          "discount_rate": 0.09,
+          "terminal_growth_rate": 0.022,
+          "enterprise_value": 184095394296.74
+        },
+        {
+          "discount_rate": 0.09,
+          "terminal_growth_rate": 0.027,
+          "enterprise_value": 195974939593.71
+        },
+        {
+          "discount_rate": 0.09,
+          "terminal_growth_rate": 0.032,
+          "enterprise_value": 209902682355.67
+        },
+        {
+          "discount_rate": 0.1,
+          "terminal_growth_rate": 0.022,
+          "enterprise_value": 159430665726.0
+        },
+        {
+          "discount_rate": 0.1,
+          "terminal_growth_rate": 0.027,
+          "enterprise_value": 168047883495.47
+        },
+        {
+          "discount_rate": 0.1,
+          "terminal_growth_rate": 0.032,
+          "enterprise_value": 177932339172.21
+        }
+      ],
+      "display_values": {
+        "base_free_cash_flow_usd_billions": 8.63,
+        "terminal_value_usd_billions": 234.22,
+        "enterprise_value_usd_billions": 195.97,
+        "net_debt_usd_billions": -3.14,
+        "equity_value_usd_billions": 199.11,
+        "latest_market_price": 207.4,
+        "implied_share_price": null,
+        "upside_downside_pct": null
+      },
+      "provenance": {
+        "base_free_cash_flow": {
+          "source": "derived_calculation",
+          "classification": "projection",
+          "formula": "NOPAT plus depreciation minus capex and working-capital assumptions"
+        },
+        "revenue_growth_assumptions": {
+          "source": "processed_filing_evidence",
+          "source_field": "computed_metrics.revenue_growth",
+          "classification": "estimate"
+        },
+        "margin_assumptions": {
+          "operating_margin": {
+            "source": "processed_filing_evidence",
+            "source_field": "computed_metrics.operating_margin",
+            "classification": "estimate"
+          },
+          "tax_rate": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_TAX_RATE",
+            "classification": "assumption"
+          },
+          "depreciation_pct_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_DEPRECIATION_PCT_REVENUE",
+            "classification": "assumption"
+          },
+          "capex_pct_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_CAPEX_PCT_REVENUE",
+            "classification": "assumption"
+          },
+          "nwc_pct_incremental_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_NWC_PCT_REVENUE",
+            "classification": "assumption"
+          }
+        },
+        "discount_rate": {
+          "source": "stock_features",
+          "source_field": "60d_volatility",
+          "classification": "estimate"
+        },
+        "terminal_growth_rate": {
+          "source": "derived_calculation",
+          "source_field": "revenue_growth_start * 0.15 clamped to 2%-3%",
+          "classification": "assumption"
+        },
+        "terminal_value": {
+          "source": "derived_calculation",
+          "source_field": "terminal_fcf / (discount_rate - terminal_growth_rate)",
+          "classification": "estimate"
+        },
+        "present_value_of_fcf": {
+          "source": "derived_calculation",
+          "source_field": "free_cash_flow / (1 + discount_rate) ^ year",
+          "classification": "estimate"
+        },
+        "enterprise_value": {
+          "source": "derived_calculation",
+          "source_field": "present_value_of_fcf + present_value_of_terminal_value",
+          "classification": "estimate"
+        },
+        "net_debt": {
+          "source": "processed_filing_evidence",
+          "source_path": "data/processed/filing_evidence.json",
+          "source_field": "facts.debt.value - facts.cash.value",
+          "classification": "actual"
+        },
+        "equity_value": {
+          "source": "derived_calculation",
+          "source_field": "enterprise_value - net_debt",
+          "classification": "estimate"
+        },
+        "shares_outstanding": {
+          "source": "processed_filing_evidence",
+          "source_path": "data/processed/filing_evidence.json",
+          "source_field": "facts.shares_outstanding.value",
+          "fact_name": null,
+          "fiscal_year": null,
+          "form": null,
+          "classification": "unavailable"
+        },
+        "implied_share_price": {
+          "source": "derived_calculation",
+          "source_field": "equity_value / shares_outstanding",
+          "classification": "unavailable"
+        },
+        "latest_market_price": {
+          "source": "raw_market_price_file",
+          "source_path": "data/raw/market/NVDA_prices.csv",
+          "source_field": "adjusted_close",
+          "classification": "actual"
+        },
+        "upside_downside_pct": {
+          "source": "derived_calculation",
+          "source_field": "(implied_share_price - latest_market_price) / latest_market_price",
+          "classification": "unavailable"
+        },
+        "sensitivity_table": {
+          "source": "derived_calculation",
+          "source_field": "discount-rate and terminal-growth scenario grid",
+          "classification": "estimate"
+        }
+      },
+      "data_sources": {
+        "filing_evidence": "data/processed/filing_evidence.json",
+        "stock_features": "data/processed/stock_features.csv",
+        "market_prices": "data/raw/market/NVDA_prices.csv"
+      },
+      "presentation_guidance": {
+        "not_investment_recommendation": true,
+        "recommended_display_scale": "USD billions",
+        "label_dcf_outputs_as": "assumption-based estimate",
+        "do_not_show_implied_share_price_when_unavailable": true,
+        "show_limitations_with_model": true
+      },
+      "limitations": [
+        "depreciation_capex_and_working_capital_are_assumption_based",
+        "discount_rate_estimated_from_short_term_volatility_proxy",
+        "revenue_growth_assumption_capped_for_dcf_stability",
+        "shares_outstanding_unavailable_implied_share_price_not_calculated",
+        "tax_rate_default_assumption_used"
+      ]
+    },
+    "KO": {
+      "ticker": "KO",
+      "valuation_date": "2026-06-05",
+      "base_free_cash_flow": null,
+      "projection_years": 5,
+      "revenue_growth_assumptions": [],
+      "margin_assumptions": {
+        "operating_margin": 0.2,
+        "tax_rate": 0.21,
+        "depreciation_pct_revenue": 0.03,
+        "capex_pct_revenue": 0.05,
+        "nwc_pct_incremental_revenue": 0.02
+      },
+      "free_cash_flow_projection": [],
+      "discount_rate": 0.08,
+      "terminal_growth_rate": 0.02,
+      "terminal_value": null,
+      "present_value_of_fcf": [],
+      "enterprise_value": null,
+      "net_debt": 25277000000.0,
+      "equity_value": null,
+      "shares_outstanding": null,
+      "implied_share_price": null,
+      "latest_market_price": 79.964996,
+      "upside_downside_pct": null,
+      "sensitivity_table": [],
+      "display_values": {
+        "base_free_cash_flow_usd_billions": null,
+        "terminal_value_usd_billions": null,
+        "enterprise_value_usd_billions": null,
+        "net_debt_usd_billions": 25.28,
+        "equity_value_usd_billions": null,
+        "latest_market_price": 79.96,
+        "implied_share_price": null,
+        "upside_downside_pct": null
+      },
+      "provenance": {
+        "base_free_cash_flow": {
+          "source": "derived_calculation",
+          "classification": "projection",
+          "formula": "NOPAT plus depreciation minus capex and working-capital assumptions"
+        },
+        "revenue_growth_assumptions": {
+          "source": "default_assumption",
+          "source_field": "computed_metrics.revenue_growth",
+          "classification": "estimate"
+        },
+        "margin_assumptions": {
+          "operating_margin": {
+            "source": "default_assumption",
+            "source_field": "computed_metrics.operating_margin",
+            "classification": "estimate"
+          },
+          "tax_rate": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_TAX_RATE",
+            "classification": "assumption"
+          },
+          "depreciation_pct_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_DEPRECIATION_PCT_REVENUE",
+            "classification": "assumption"
+          },
+          "capex_pct_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_CAPEX_PCT_REVENUE",
+            "classification": "assumption"
+          },
+          "nwc_pct_incremental_revenue": {
+            "source": "hardcoded_default",
+            "source_field": "DEFAULT_NWC_PCT_REVENUE",
+            "classification": "assumption"
+          }
+        },
+        "discount_rate": {
+          "source": "stock_features",
+          "source_field": "60d_volatility",
+          "classification": "estimate"
+        },
+        "terminal_growth_rate": {
+          "source": "derived_calculation",
+          "source_field": "revenue_growth_start * 0.15 clamped to 2%-3%",
+          "classification": "assumption"
+        },
+        "terminal_value": {
+          "source": "derived_calculation",
+          "source_field": "terminal_fcf / (discount_rate - terminal_growth_rate)",
+          "classification": "estimate"
+        },
+        "present_value_of_fcf": {
+          "source": "derived_calculation",
+          "source_field": "free_cash_flow / (1 + discount_rate) ^ year",
+          "classification": "estimate"
+        },
+        "enterprise_value": {
+          "source": "derived_calculation",
+          "source_field": "present_value_of_fcf + present_value_of_terminal_value",
+          "classification": "estimate"
+        },
+        "net_debt": {
+          "source": "processed_filing_evidence",
+          "source_path": "data/processed/filing_evidence.json",
+          "source_field": "facts.debt.value - facts.cash.value",
+          "classification": "actual"
+        },
+        "equity_value": {
+          "source": "derived_calculation",
+          "source_field": "enterprise_value - net_debt",
+          "classification": "unavailable"
+        },
+        "shares_outstanding": {
+          "source": "processed_filing_evidence",
+          "source_path": "data/processed/filing_evidence.json",
+          "source_field": "facts.shares_outstanding.value",
+          "fact_name": null,
+          "fiscal_year": null,
+          "form": null,
+          "classification": "unavailable"
+        },
+        "implied_share_price": {
+          "source": "derived_calculation",
+          "source_field": "equity_value / shares_outstanding",
+          "classification": "unavailable"
+        },
+        "latest_market_price": {
+          "source": "raw_market_price_file",
+          "source_path": "data/raw/market/KO_prices.csv",
+          "source_field": "adjusted_close",
+          "classification": "actual"
+        },
+        "upside_downside_pct": {
+          "source": "derived_calculation",
+          "source_field": "(implied_share_price - latest_market_price) / latest_market_price",
+          "classification": "unavailable"
+        },
+        "sensitivity_table": {
+          "source": "derived_calculation",
+          "source_field": "discount-rate and terminal-growth scenario grid",
+          "classification": "estimate"
+        }
+      },
+      "data_sources": {
+        "filing_evidence": "data/processed/filing_evidence.json",
+        "stock_features": "data/processed/stock_features.csv",
+        "market_prices": "data/raw/market/KO_prices.csv"
+      },
+      "presentation_guidance": {
+        "not_investment_recommendation": true,
+        "recommended_display_scale": "USD billions",
+        "label_dcf_outputs_as": "assumption-based estimate",
+        "do_not_show_implied_share_price_when_unavailable": true,
+        "show_limitations_with_model": true
+      },
+      "limitations": [
+        "debt_to_assets:debt_assets_fiscal_year_misalignment",
+        "depreciation_capex_and_working_capital_are_assumption_based",
+        "discount_rate_estimated_from_short_term_volatility_proxy",
+        "gross_margin:missing_required_fact",
+        "income_facts:no_annual_revenue_anchor_year",
+        "liabilities:missing_annual_balance_fact",
+        "operating_margin:missing_required_fact",
+        "operating_margin_missing_default_used",
+        "revenue_growth:insufficient_annual_revenue_history",
+        "revenue_growth_missing_default_used",
+        "revenue_missing_dcf_projection_unavailable",
+        "shares_outstanding_unavailable_implied_share_price_not_calculated",
+        "tax_rate_default_assumption_used"
+      ]
+    }
+  }
+}

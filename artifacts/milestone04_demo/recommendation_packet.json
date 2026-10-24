@@ -1,0 +1,2835 @@
+{
+  "run_id": "m04_20260605T164246Z",
+  "generated_at": "2026-06-05T16:42:46Z",
+  "raw_data_sources": {
+    "run_at": "2026-06-05T16:42:41Z",
+    "sec": {
+      "source": "sec_edgar",
+      "tickers": {
+        "NVDA": {
+          "ticker": "NVDA",
+          "cik": "0001045810",
+          "submissions_url": "https://data.sec.gov/submissions/CIK0001045810.json",
+          "companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+          "submissions_status": "success",
+          "companyfacts_status": "success",
+          "errors": []
+        },
+        "KO": {
+          "ticker": "KO",
+          "cik": "0000021344",
+          "submissions_url": "https://data.sec.gov/submissions/CIK0000021344.json",
+          "companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000021344.json",
+          "submissions_status": "success",
+          "companyfacts_status": "success",
+          "errors": []
+        }
+      }
+    },
+    "fred": {
+      "source": "fred",
+      "collected_at": "2026-06-05T16:42:44Z",
+      "status": "success",
+      "series_requested": [
+        "FEDFUNDS",
+        "CPIAUCSL",
+        "UNRATE",
+        "GDP",
+        "DGS10",
+        "SP500",
+        "VIXCLS"
+      ],
+      "rows_written": 31996,
+      "output_path": "data/raw/fred/macro_observations.csv",
+      "errors": []
+    },
+    "market": {
+      "source": "yfinance",
+      "collected_at": "2026-06-05T16:42:44Z",
+      "symbols": {
+        "NVDA": {
+          "status": "success",
+          "error": null,
+          "rows_written": 502,
+          "output_path": "data/raw/market/NVDA_prices.csv"
+        },
+        "KO": {
+          "status": "success",
+          "error": null,
+          "rows_written": 502,
+          "output_path": "data/raw/market/KO_prices.csv"
+        },
+        "SPY": {
+          "status": "success",
+          "error": null,
+          "rows_written": 502,
+          "output_path": "data/raw/market/SPY_prices.csv"
+        },
+        "QQQ": {
+          "status": "success",
+          "error": null,
+          "rows_written": 502,
+          "output_path": "data/raw/market/QQQ_prices.csv"
+        },
+        "XLP": {
+          "status": "success",
+          "error": null,
+          "rows_written": 502,
+          "output_path": "data/raw/market/XLP_prices.csv"
+        }
+      },
+      "status": "success",
+      "symbols_requested": [
+        "NVDA",
+        "KO",
+        "SPY",
+        "QQQ",
+        "XLP"
+      ],
+      "symbols_collected": [
+        "NVDA",
+        "KO",
+        "SPY",
+        "QQQ",
+        "XLP"
+      ],
+      "rows_written": 2510,
+      "output_path": "data/raw/market",
+      "errors": []
+    },
+    "news": {
+      "source": "rss_news",
+      "collected_at": "2026-06-05T16:42:45Z",
+      "tickers": {
+        "NVDA": {
+          "status": "success",
+          "articles_written": 100,
+          "source_url": "https://news.google.com/rss/search?q=NVDA+stock+when:30d&hl=en-US&gl=US&ceid=US:en"
+        },
+        "KO": {
+          "status": "success",
+          "articles_written": 100,
+          "source_url": "https://news.google.com/rss/search?q=Coca-Cola+KO+stock+when:30d&hl=en-US&gl=US&ceid=US:en"
+        }
+      }
+    }
+  },
+  "missing_data_warnings": [],
+  "mandate": {
+    "mandate_id": "demo_pm_mandate",
+    "benchmark": "SPY",
+    "risk_tolerance": "medium",
+    "max_single_name_weight": 0.2,
+    "max_technology_weight": 0.45,
+    "allowed_actions": [
+      "accumulate",
+      "hold",
+      "reduce",
+      "avoid",
+      "review"
+    ],
+    "pm_approval_required": true,
+    "target_horizon_days": 60
+  },
+  "portfolio": {
+    "portfolio_id": "demo_portfolio_001",
+    "as_of_date": "2026-05-18",
+    "positions": [
+      {
+        "ticker": "NVDA",
+        "weight": 0.1,
+        "bucket": "technology_core"
+      },
+      {
+        "ticker": "KO",
+        "weight": 0.2,
+        "bucket": "defensive_core"
+      },
+      {
+        "ticker": "MSFT",
+        "weight": 0.15,
+        "bucket": "technology_core"
+      },
+      {
+        "ticker": "AAPL",
+        "weight": 0.1,
+        "bucket": "technology_core"
+      },
+      {
+        "ticker": "XLP",
+        "weight": 0.15,
+        "bucket": "defensive_basket"
+      },
+      {
+        "ticker": "SHV",
+        "weight": 0.3,
+        "bucket": "cash"
+      }
+    ],
+    "bucket_weights": {
+      "technology_core": 0.35,
+      "defensive_core": 0.2,
+      "defensive_basket": 0.15,
+      "cash": 0.3
+    }
+  },
+  "news_evidence": {
+    "NVDA": [
+      {
+        "raw_id": "NVDA_100",
+        "ticker": "NVDA",
+        "source_name": "Investing.com",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeEFWSUV3RC13MGllWWlUZGpDQlR6eVdTVUFLbUNmXy1ITHludmZHcjRiUlg2cDJCNWZOQ3g3V0FWRjNpazdFQnUwXzdWUjRpVE1nNDFhRnMzVjRBMUhIOFYxRmkwYmVkQ2pvVy1GNkp3NzlyT1VGdW90Z2ZUbFJNYWU3eHEtLUtYTkNmUUFnaFhKaU9CTk1pNTVwSQ?oc=5",
+        "published_at": "Fri, 05 Jun 2026 15:38:34 GMT",
+        "fetch_status": "success",
+        "clean_text": "Why is NVIDIA stock sliding today? - Investing.com Why is NVIDIA stock sliding today? &nbsp;&nbsp; Investing.com",
+        "evidence_chunks": [
+          "Why is NVIDIA stock sliding today? - Investing.com Why is NVIDIA stock sliding today? &nbsp;&nbsp; Investing.com"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_68",
+        "ticker": "NVDA",
+        "source_name": "Investor's Business Daily",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOeVJwd292MU1RQmlaa1dvYWdpeVJVSS1ZOVA4WVpDdmVFSFhVRjBLNUZfTTUyOVJEcjdQT2FzOWJfb0NmTjQyLWF4YzBjUl9xQTZwNkJnUU15a04taWhfcm5sS21vd0wzWl9odmJKcjI3YTBEZzI4MjFVV3NlRVQyLWpmVW0xV0diMTVkUA?oc=5",
+        "published_at": "Fri, 05 Jun 2026 15:34:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia Stock Falls On Concerns Of Backdoor AI Chip Sales To China - Investor's Business Daily Nvidia Stock Falls On Concerns Of Backdoor AI Chip Sales To China &nbsp;&nbsp; Investor's Business Daily",
+        "evidence_chunks": [
+          "Nvidia Stock Falls On Concerns Of Backdoor AI Chip Sales To China - Investor's Business Daily Nvidia Stock Falls On Concerns Of Backdoor AI Chip Sales To China &nbsp;&nbsp; Investor's Business Daily"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_38",
+        "ticker": "NVDA",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMWU4SkFiZkk1Q1pkQkNRWHBjaFl0WWEzY0ZQX0c3WUVGLWpmZndzMXpyb2J4QThDNUo3czZXZVlHTUswR09RbjdKSWwwaTdUd21tYXRpRldQZVp5WlVTbTBHMzFsOGc4d2lTZGZlOVFZenR0Sjhkek1vbmFtZ1F5T0tFV0tUNVcwdlZzb2NmdTZiYkl3cHJIbA?oc=5",
+        "published_at": "Fri, 05 Jun 2026 15:16:31 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia Stock Nearing 52-Week High: Buy, Sell or Hold? - Yahoo Finance Nvidia Stock Nearing 52-Week High: Buy, Sell or Hold? &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "Nvidia Stock Nearing 52-Week High: Buy, Sell or Hold? - Yahoo Finance Nvidia Stock Nearing 52-Week High: Buy, Sell or Hold? &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_62",
+        "ticker": "NVDA",
+        "source_name": "24/7 Wall St.",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPT3A1Ni1uWTNoR0J2dFA4V2l6VDBicktMM3lKdE54UlNaMTN6c1R0RHZBMkJZbmNwa0FKSWRqREVtTGQtTUpKc3JwSWNCb1UzdjZ1VEVqcGVRbXZsakFhQWZTM2VKem5hNTNYMjNCSHpfb2tOZjVoN2YzTXgtTGNJOHN5MWRzVDVHSGpibHhHazBDeTNsdktnWEJB?oc=5",
+        "published_at": "Fri, 05 Jun 2026 15:16:31 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia Stock Nearing 52-Week High: Buy, Sell or Hold? - 24/7 Wall St. Nvidia Stock Nearing 52-Week High: Buy, Sell or Hold? &nbsp;&nbsp; 24/7 Wall St.",
+        "evidence_chunks": [
+          "Nvidia Stock Nearing 52-Week High: Buy, Sell or Hold? - 24/7 Wall St. Nvidia Stock Nearing 52-Week High: Buy, Sell or Hold? &nbsp;&nbsp; 24/7 Wall St."
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_82",
+        "ticker": "NVDA",
+        "source_name": "The Motley Fool",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZVlzbWVSSllZWmp6UGpaSDZYcmFCX3JieUdJUUxoYlU1ZFgwNENUUXA5SWNJMEdNLXZOTWNjMzAzamVGTnFEVzU0dmRaaFd2OVljcUdnaGpkNWpHVzlSRlJGNzZnenQzdlVzQkJGaVVvRlJpd3Y4Q05wclkzQnh4UXR1Uk5CNjBwY1lkVWMzY3oxaktzSVE?oc=5",
+        "published_at": "Fri, 05 Jun 2026 14:08:56 GMT",
+        "fetch_status": "success",
+        "clean_text": "Meet the Super Semiconductor Stock Crushing Nvidia in 2026 With a Return of 120% - The Motley Fool Meet the Super Semiconductor Stock Crushing Nvidia in 2026 With a Return of 120% &nbsp;&nbsp; The Motley Fool",
+        "evidence_chunks": [
+          "Meet the Super Semiconductor Stock Crushing Nvidia in 2026 With a Return of 120% - The Motley Fool Meet the Super Semiconductor Stock Crushing Nvidia in 2026 With a Return of 120% &nbsp;&nbsp; The Motley Fool"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_26",
+        "ticker": "NVDA",
+        "source_name": "Morningstar",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObXlQaFNORlByVVg5SV92VERCdUg0RnpqQmxCTHI1cDlVM2pVVDVCZEUtMWlzNnFfNVMtSm5HT1IxSzZQWHpDa21wdGJTZ1JaTTV2X0p6c2FPSkNOdFcxZV8xYXhZS3dkRDhGV2pWZ3lYTDdPSWc4UDg4TFNJb3hVeEVJbldGd09wRWY2SjhoeGZTOFkzNWVreGZrV0ZCSzB0a1IxTkcwanZ0T1gyT1Fz?oc=5",
+        "published_at": "Fri, 05 Jun 2026 09:10:09 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia vs. Salesforce vs. Marvell Technology: Which Is the Best Stock to Buy? - Morningstar Nvidia vs. Salesforce vs. Marvell Technology: Which Is the Best Stock to Buy? &nbsp;&nbsp; Morningstar",
+        "evidence_chunks": [
+          "Nvidia vs. Salesforce vs. Marvell Technology: Which Is the Best Stock to Buy? - Morningstar Nvidia vs. Salesforce vs. Marvell Technology: Which Is the Best Stock to Buy? &nbsp;&nbsp; Morningstar"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_57",
+        "ticker": "NVDA",
+        "source_name": "The Motley Fool",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdVJvZHhjdS1adlN1eWp2VjBGUlFocXhLRVp6MERzYk0xZHFyQUF3eTdjdTZYaUg2TjBiMGxHQ3dpQmY4b3NsX2o5eFo4bkRiZkFKQ0oxLUZPeFhBWDBsS1l2dm9rOXdmZ29ITGs0enJBTWNRQ1gxaWZhcmwxTWFuUkpmUXJ6dEN3QVVr?oc=5",
+        "published_at": "Fri, 05 Jun 2026 01:25:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia Stock Analysis: My Final Verdict - The Motley Fool Nvidia Stock Analysis: My Final Verdict &nbsp;&nbsp; The Motley Fool",
+        "evidence_chunks": [
+          "Nvidia Stock Analysis: My Final Verdict - The Motley Fool Nvidia Stock Analysis: My Final Verdict &nbsp;&nbsp; The Motley Fool"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_28",
+        "ticker": "NVDA",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQM2hSYzdIX1l0TnFXQ0RubzlSSmZmNWVkWEdUakNiaG01clBGUzBZYk9aVmNzTlRGN2hVdmtqVDA5N0pyNmxGOXBadkliRlFHMTBmRUxzT2N4bzY1Tzl1cXlXMGVQd3N6bTVSenpoZl9ldjZUd21zekFfbTBxMFNJYUtHTTNvSzJyVTlBYURB?oc=5",
+        "published_at": "Thu, 04 Jun 2026 21:01:48 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia stock performance a sign of changing AI market, says investor - Yahoo Finance Nvidia stock performance a sign of changing AI market, says investor &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "Nvidia stock performance a sign of changing AI market, says investor - Yahoo Finance Nvidia stock performance a sign of changing AI market, says investor &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_46",
+        "ticker": "NVDA",
+        "source_name": "The Motley Fool",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWDJ6X19zc2dxYVoyNGJUcFQxMXdsdnhqZENMUjROeG9xRlg1QkhKSUIxc0IwMzBwQ2VqTjAzSUozYkd3OThRSUNuUlhjck4tdjNSLVkxOUtvTHFlSExfYVBZSDhKMVhXRlhHdlB2cFh1dmpoalRsTWptSVMxU1V0MWZob2c?oc=5",
+        "published_at": "Thu, 04 Jun 2026 20:09:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Is Nvidia Stock Too Cheap to Ignore? - The Motley Fool Is Nvidia Stock Too Cheap to Ignore? &nbsp;&nbsp; The Motley Fool",
+        "evidence_chunks": [
+          "Is Nvidia Stock Too Cheap to Ignore? - The Motley Fool Is Nvidia Stock Too Cheap to Ignore? &nbsp;&nbsp; The Motley Fool"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_15",
+        "ticker": "NVDA",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPU19naFc0VU5kSVp1bDc3WVhpQmJOZWlIOFFpYmU3d3NhUnVSeXZFRXdnanpVMFZWR2NBRjZCcllGMU5sYkItcVRRa0NGOXhUVDV1YWdtUFo4RGtxS3VsM2tlS0t2WjJ5OHRPRDVXcG9MY25rN1NQSkFwSHdmcVBSVXhZVWR3bVVTMEZ2Mm5VcUZDZDNRNjVWU1ZWVQ?oc=5",
+        "published_at": "Thu, 04 Jun 2026 10:58:12 GMT",
+        "fetch_status": "success",
+        "clean_text": "Jim Cramer Explains Why NVIDIA Stock Rallied - Yahoo Finance Jim Cramer Explains Why NVIDIA Stock Rallied &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "Jim Cramer Explains Why NVIDIA Stock Rallied - Yahoo Finance Jim Cramer Explains Why NVIDIA Stock Rallied &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      }
+    ],
+    "KO": [
+      {
+        "raw_id": "KO_55",
+        "ticker": "KO",
+        "source_name": "Quiver Quantitative",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOaFFCMkYtUnR2WWVIajF2RGRTUTJZT2w2aEp4a0xXc01CZVNYRHhwV1dvLU9FamtjdXdPYU1uUHZRamMtZEZmdHFyaTZHcGVQZkZaODRvSm92c2tpcmVxVHduZ0xEUm9fWFdVMWg2eDFqMk5BZ05DNnN1T3E5RTZ5aFhjQVhjRDJUVVJPQWs4SWpiQk5fbUd2RF9scWhKb2J5aGUyOUpWVm1YaVpFVUJYT05PbDBqUHhNVGtOdGliblc3eWZDaWxEd2Mwd3VTQXhKZzBMcmRCOFF6dw?oc=5",
+        "published_at": "Fri, 05 Jun 2026 15:52:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola (KO) jumps 3.1% as investors refocus on raised 2026 outlook and recent bullish Street actions - Quiver Quantitative Coca-Cola (KO) jumps 3.1% as investors refocus on raised 2026 outlook and recent bullish Street actions &nbsp;&nbsp; Quiver Quantitative",
+        "evidence_chunks": [
+          "Coca-Cola (KO) jumps 3.1% as investors refocus on raised 2026 outlook and recent bullish Street actions - Quiver Quantitative Coca-Cola (KO) jumps 3.1% as investors refocus on raised 2026 outlook and recent bullish Street actions &nbsp;&nbsp; Quiver Quantitative"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_94",
+        "ticker": "KO",
+        "source_name": "StocksToTrade",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5Jd0xudlhtVnR6QklpdDJ2RmFJRldDZVFRNmY2bzdDZFBSbWE4S1RqcEwyTGRKd1pxX0t3SnQ0bjhBTlM5MEZFam9LR2F4RG5zWmdUMkRCdkxIUHdFTno2WXhiVy1kX2MtZWV6dGMxa0luQlpCSXpYT21UZFU?oc=5",
+        "published_at": "Fri, 05 Jun 2026 14:03:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "KO Stock Draws Bullish Targets As India IPO Plan Emerges - StocksToTrade KO Stock Draws Bullish Targets As India IPO Plan Emerges &nbsp;&nbsp; StocksToTrade",
+        "evidence_chunks": [
+          "KO Stock Draws Bullish Targets As India IPO Plan Emerges - StocksToTrade KO Stock Draws Bullish Targets As India IPO Plan Emerges &nbsp;&nbsp; StocksToTrade"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_67",
+        "ticker": "KO",
+        "source_name": "Stocktwits",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVGdHelNlVkRSbmdJNXR2U2k1UkUtdGtWb0FOZmlVdmtIN3ZlRDRBQldTcGFrelM5UnV4MEo2WDJ1eXM5aDFDRmNHNC1xZ09NVVBDQUloMXRGMzNVM05nZ0haOGxlQnZaZF9WS1VPdnNkSENRXzEwaVBDSmJTNGF4WHdkTF9pV2VaR05yNEZlRVdaLU5rZ0dEbmQ5a3kwS0wwRm5KRjVYTUdVVjQxdXVGRFZVOC1iRUJCMklEOFpiZw?oc=5",
+        "published_at": "Fri, 05 Jun 2026 08:15:38 GMT",
+        "fetch_status": "success",
+        "clean_text": "KO Stock In Focus: Middle East Risk, Consumer Weakness, CEO Stock Sale Amplify Uncertainty - Stocktwits KO Stock In Focus: Middle East Risk, Consumer Weakness, CEO Stock Sale Amplify Uncertainty &nbsp;&nbsp; Stocktwits",
+        "evidence_chunks": [
+          "KO Stock In Focus: Middle East Risk, Consumer Weakness, CEO Stock Sale Amplify Uncertainty - Stocktwits KO Stock In Focus: Middle East Risk, Consumer Weakness, CEO Stock Sale Amplify Uncertainty &nbsp;&nbsp; Stocktwits"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_63",
+        "ticker": "KO",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPS3JWWTMwMEd3dHF0VXpCNGpZbjlnMFlkNC1PWE1HM09JMVVOclpHUDREajlwNzNia2R6b3ZJRkg4VGltOXFLUUtYWWtLTUUtWlphaXpzYzBmelZtT1FoakMzUzFNbEE5cURQV2Y5TXZERi1ZazZzNHFuSVc3Qm9oSU1qMGpJcENnZTlpMUN3M0RZT3dYV0xXVHFZcw?oc=5",
+        "published_at": "Fri, 05 Jun 2026 07:35:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "This Warren Buffett Stock Is Beating the S&P 500 in 2026 - Yahoo Finance This Warren Buffett Stock Is Beating the S&P 500 in 2026 &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "This Warren Buffett Stock Is Beating the S&P 500 in 2026 - Yahoo Finance This Warren Buffett Stock Is Beating the S&P 500 in 2026 &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_14",
+        "ticker": "KO",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONTRNTmV0S2lpcWRyeEswVFdWendzR05neEc5ckhWLU9vQ3ExdHVjemZkTzNxSENRaUlGZER5OTlfUE9BQ21nSGFOU0xIQWQ3aHJJQndLd0tQX1pyelRCNm1lUDMxaHptazlkajg1UXdkdFA3TkJmbnBZS0lFS3lFM2ZGYklhUndncUFZU0NxSUR5NEtwM0xobG1QbzVvZw?oc=5",
+        "published_at": "Fri, 05 Jun 2026 02:12:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Assessing Coca-Cola (KO) Valuation As Recent Share Weakness Meets Conflicting Fair Value Signals - Yahoo Finance Assessing Coca-Cola (KO) Valuation As Recent Share Weakness Meets Conflicting Fair Value Signals &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "Assessing Coca-Cola (KO) Valuation As Recent Share Weakness Meets Conflicting Fair Value Signals - Yahoo Finance Assessing Coca-Cola (KO) Valuation As Recent Share Weakness Meets Conflicting Fair Value Signals &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_59",
+        "ticker": "KO",
+        "source_name": "simplywall.st",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNdjlJaDhaWXJaUU91S1BTUEZCOFVlYWc3R3JvNDBHZGRrN0lpb2UycG5QaVFEeXZmUS0tdF9VamZ0OVBVNjhYdjRnZkpfRDNMejI1Z3RyVjlsYTNFaDd3bW5naGNlQllMV0xtelNYb1h5NzhPakZtZHNHb2NDY1l5LWlaTTlOYjZjTEFQQXlPTzJuY3dRVWw2Z0ZPRVN5RHQ4a0JkbjA5NWZEQ0Y4N1I5RlQ3c3lyc09EN1BES1dfR0d4NlphUXp1NnhYVUJBdDFLX1U40gHYAUFVX3lxTFBmY1FrVF9RU2pFbTQxN1ZzSnNscXppamllWHdQaWlwb3A2am14NVllbGxtWHM2ZWF4TGd3d1NRTzJkZ0cwaGhlbVh0T2FRSGVfSnNHS2twSGVGZEo5ck1HeDU3bTlJUWwzdTF3QTZoeUpnTHpSR2J2UlQ3Y0VjcGlOYi1sa1l2amQ4dkk1OXM1WEh5TkNHTUhHdmFSZGN5VlpJa1doWXVha3F2MXVabjh3amdWOWNCTlVPb180TFNTZ2t2LXdzOE9Tck0xVEpLd1hvY1ZmSTFqVw?oc=5",
+        "published_at": "Thu, 04 Jun 2026 12:49:03 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola (KO) Valuation Check As Investor Narratives Split On Future Returns - simplywall.st Coca-Cola (KO) Valuation Check As Investor Narratives Split On Future Returns &nbsp;&nbsp; simplywall.st",
+        "evidence_chunks": [
+          "Coca-Cola (KO) Valuation Check As Investor Narratives Split On Future Returns - simplywall.st Coca-Cola (KO) Valuation Check As Investor Narratives Split On Future Returns &nbsp;&nbsp; simplywall.st"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_74",
+        "ticker": "KO",
+        "source_name": "MarketBeat",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTUlQQkhyU19nWnpLQ2ZzMkcxS0RFbURjZmJIOVVOSGdINTNWWFN6RlVPa0NqNkk5bXNmSXEzMGhlYzdwaFRlRGRtY1N6dHgtSEJJRDZTUV9NVjdwWFgwLUhKZlI5SlItX0NnbnkwVzBTd1RrY0tIa3prTU9DaFdRNlJUeVRUcDNRZjFvZ3VCUi1PdnQxZXcxQ3NyaU5RM0IzSTAzdVRFallGd01KUE1KT1o2UVdxR3JoaWQxTTRZZjlvY1NFQ3pfYm45Yw?oc=5",
+        "published_at": "Thu, 04 Jun 2026 08:35:22 GMT",
+        "fetch_status": "success",
+        "clean_text": "Cibc World Market Inc. Raises Stock Position in CocaCola Company (The) $KO - MarketBeat Cibc World Market Inc. Raises Stock Position in CocaCola Company (The) $KO &nbsp;&nbsp; MarketBeat",
+        "evidence_chunks": [
+          "Cibc World Market Inc. Raises Stock Position in CocaCola Company (The) $KO - MarketBeat Cibc World Market Inc. Raises Stock Position in CocaCola Company (The) $KO &nbsp;&nbsp; MarketBeat"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_3",
+        "ticker": "KO",
+        "source_name": "CNN",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9hcjBNREdjdmpqcVpRbHhoSDRELXZyUXotNkFWMGw1UEFKckpFZG5weVExM2NRNlMzWHI0T2dhZGRVQXJIVmtGNVU1b0xBZw?oc=5",
+        "published_at": "Wed, 03 Jun 2026 13:46:57 GMT",
+        "fetch_status": "success",
+        "clean_text": "KO Stock Quote Price and Forecast - CNN KO Stock Quote Price and Forecast &nbsp;&nbsp; CNN",
+        "evidence_chunks": [
+          "KO Stock Quote Price and Forecast - CNN KO Stock Quote Price and Forecast &nbsp;&nbsp; CNN"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_30",
+        "ticker": "KO",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQeWNPOTJCdU1FZ25GWHI5NHkwaE8xTkI0UWl2bWtpd2pteURqSFY2UnNqRFNkQ0JUaUtyZWM5Umh5UnJucWU4TUFENFAyVEZNSmV0d3FxNmJzSVBQUHdiYmhIaHB3QU8yak1SNC12X3BwcDhLdm1XM21ESVFzNmtwMjVWT2VYWFJkOXdqaXVNb2NHVTYzSnBHRU5pd2tvdw?oc=5",
+        "published_at": "Wed, 03 Jun 2026 13:40:03 GMT",
+        "fetch_status": "success",
+        "clean_text": "Is Coca-Cola (KO) Outperforming Other Consumer Staples Stocks This Year? - Yahoo Finance Is Coca-Cola (KO) Outperforming Other Consumer Staples Stocks This Year? &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "Is Coca-Cola (KO) Outperforming Other Consumer Staples Stocks This Year? - Yahoo Finance Is Coca-Cola (KO) Outperforming Other Consumer Staples Stocks This Year? &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_17",
+        "ticker": "KO",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcUJCenpJVVlqSGNJRGt4UUFIYm0xQzZrRGNYdWdsYlU2bE5HQnJENEFkNmxsak9RVDRwSmVuYlN5M1VKUjRheHI0UTd6OHVEWmZtSDRwTTBCZFlQcm1xdWtyV3FBZXRVSzk1eE5tOFlJQTFpb2ZrVV9WVUREYnl1RVBFZGQ0X2k2eUh6QVViS09NaFE?oc=5",
+        "published_at": "Wed, 03 Jun 2026 13:25:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola Stock Rises 12.1% YTD: Buy Now or Wait for a Pullback? - Yahoo Finance Coca-Cola Stock Rises 12.1% YTD: Buy Now or Wait for a Pullback? &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "Coca-Cola Stock Rises 12.1% YTD: Buy Now or Wait for a Pullback? - Yahoo Finance Coca-Cola Stock Rises 12.1% YTD: Buy Now or Wait for a Pullback? &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      }
+    ]
+  },
+  "filing_evidence": {
+    "NVDA": {
+      "cik": "0001045810",
+      "latest_10k": {
+        "form": "10-K",
+        "accession_number": "0001045810-26-000021",
+        "filing_date": "2026-02-25",
+        "primary_document": "nvda-20260125.htm"
+      },
+      "latest_10q": {
+        "form": "10-Q",
+        "accession_number": "0001045810-26-000052",
+        "filing_date": "2026-05-20",
+        "primary_document": "nvda-20260426.htm"
+      },
+      "facts": {
+        "revenue": {
+          "fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "value": 26914000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "net_income": {
+          "fact_name": "NetIncomeLoss",
+          "value": 9752000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "operating_income": {
+          "fact_name": "OperatingIncomeLoss",
+          "value": 10041000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "gross_profit": {
+          "fact_name": "GrossProfit",
+          "value": 17475000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "debt": {
+          "fact_name": "LongTermDebtNoncurrent",
+          "value": 7469000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "cash": {
+          "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+          "value": 10605000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "fact_name": "Liabilities",
+          "value": 49510000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "assets": {
+          "fact_name": "Assets",
+          "value": 206803000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "income_anchor_fiscal_year": 2022
+      },
+      "limitations": []
+    },
+    "KO": {
+      "cik": "0000021344",
+      "latest_10k": {
+        "form": "10-K",
+        "accession_number": "0001628280-26-010047",
+        "filing_date": "2026-02-20",
+        "primary_document": "ko-20251231.htm"
+      },
+      "latest_10q": {
+        "form": "10-Q",
+        "accession_number": "0001628280-26-028802",
+        "filing_date": "2026-04-30",
+        "primary_document": "ko-20260403.htm"
+      },
+      "facts": {
+        "revenue": {
+          "fact_name": null,
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "net_income": {
+          "fact_name": "NetIncomeLoss",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "operating_income": {
+          "fact_name": "OperatingIncomeLoss",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "gross_profit": {
+          "fact_name": "GrossProfit",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "debt": {
+          "fact_name": "LongTermDebtNoncurrent",
+          "value": 35547000000.0,
+          "period_end": "2023-12-31",
+          "filed": "2024-02-20",
+          "unit": "USD",
+          "fiscal_year": 2023,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "cash": {
+          "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+          "value": 10270000000.0,
+          "period_end": "2025-12-31",
+          "filed": "2026-02-20",
+          "unit": "USD",
+          "fiscal_year": 2025,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "fact_name": null,
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "assets": {
+          "fact_name": "Assets",
+          "value": 104816000000.0,
+          "period_end": "2025-12-31",
+          "filed": "2026-02-20",
+          "unit": "USD",
+          "fiscal_year": 2025,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "income_anchor_fiscal_year": null
+      },
+      "limitations": [
+        "debt_to_assets:debt_assets_fiscal_year_misalignment",
+        "gross_margin:missing_required_fact",
+        "income_facts:no_annual_revenue_anchor_year",
+        "liabilities:missing_annual_balance_fact",
+        "operating_margin:missing_required_fact",
+        "revenue_growth:insufficient_annual_revenue_history"
+      ]
+    }
+  },
+  "company_theses": {
+    "NVDA": {
+      "ticker": "NVDA",
+      "company_name": "NVIDIA Corporation",
+      "thesis_date": "2026-05-01",
+      "core_thesis": "NVIDIA remains positioned to capture a large share of enterprise and hyperscaler AI infrastructure spending because its compute, networking, software, and developer ecosystem remain tightly integrated and difficult to displace in the near term.",
+      "key_assumptions": [
+        "AI training and inference demand continues to grow across hyperscalers and enterprise customers.",
+        "NVIDIA maintains performance and ecosystem advantages that support premium pricing.",
+        "Customers continue to view accelerated computing as a high-priority capital allocation area.",
+        "Supply availability improves enough to support shipment growth without a major deterioration in customer relationships.",
+        "Export restrictions and competitive responses slow some regions or products but do not fully offset broader demand growth."
+      ],
+      "upside_drivers": [
+        "Faster-than-expected inference demand broadens the customer base beyond a small set of hyperscalers.",
+        "New product ramps increase system-level revenue through combined GPU, networking, and software sales.",
+        "Enterprise adoption shortens the path from pilot workloads to production deployments.",
+        "Gross margin remains resilient despite mix shifts as software and platform attach rates increase."
+      ],
+      "downside_risks": [
+        "Hyperscaler capital spending becomes more cyclical or more concentrated in fewer customers.",
+        "Tighter export controls reduce addressable demand or create product segmentation challenges.",
+        "Competition from internal silicon or rival accelerators pressures pricing, share, or workload mix.",
+        "Supply chain or packaging constraints delay shipments and compress near-term revenue conversion.",
+        "Margin pressure emerges if product transitions or regional mix changes dilute the current economics."
+      ],
+      "macro_sensitivities": [
+        "Large customer capex appetite",
+        "Cost of capital and duration-sensitive equity valuation",
+        "Global growth and enterprise IT spending conditions",
+        "Industrial policy and trade restrictions",
+        "Semiconductor supply chain stability"
+      ],
+      "metrics_to_monitor": [
+        "Data center revenue growth",
+        "Hyperscaler and enterprise capex commentary",
+        "Gross margin trend",
+        "Customer concentration disclosures",
+        "Inventory and supply commitments",
+        "Export-control-related regional exposure",
+        "New product ramp timing",
+        "Networking and platform attach rates"
+      ]
+    },
+    "KO": {
+      "ticker": "KO",
+      "company_name": "The Coca-Cola Company",
+      "thesis_date": "2026-05-19",
+      "core_thesis": "Coca-Cola remains positioned as a defensive consumer staples business because its brand portfolio, global distribution system, and pricing power help support resilient cash generation across a wide range of macro environments.",
+      "key_assumptions": [
+        "Consumers continue to treat core beverage categories as repeat-purchase products even in slower growth environments.",
+        "Coca-Cola maintains brand strength and route-to-market advantages that support pricing actions without a severe erosion in demand.",
+        "The company continues to balance pricing, mix, and packaging decisions in a way that protects margins over time.",
+        "Global distribution and franchise execution remain strong enough to support broad market coverage across regions and channels.",
+        "FX volatility and input cost inflation create pressure at times but do not fully overwhelm the defensive quality of the business."
+      ],
+      "upside_drivers": [
+        "Pricing power remains durable while consumer demand stays stable across key markets.",
+        "Volume trends improve as execution, channel mix, or international recovery supports broader consumption.",
+        "Margin stability holds as management offsets input cost pressure through mix, pricing, and operating discipline.",
+        "The stock retains defensive appeal if investors rotate toward cash-generative and dividend-oriented businesses."
+      ],
+      "downside_risks": [
+        "Input cost inflation compresses margins if pricing actions lag cost pressure.",
+        "FX headwinds weigh on reported results or reduce the benefit of underlying operating performance.",
+        "Volume growth weakens if consumers trade down, reduce discretionary purchases, or face sustained macro pressure.",
+        "Execution or channel disruptions limit the benefit of the company's global distribution footprint.",
+        "Defensive quality becomes less valuable to investors if growth-sensitive assets re-rate more strongly."
+      ],
+      "macro_sensitivities": [
+        "Consumer spending resilience",
+        "Input cost inflation",
+        "Foreign exchange volatility",
+        "Global growth and emerging market demand conditions",
+        "Defensive equity factor leadership"
+      ],
+      "metrics_to_monitor": [
+        "Organic revenue growth",
+        "Pricing versus volume balance",
+        "Gross margin and operating margin stability",
+        "FX commentary",
+        "Input cost inflation trends",
+        "Cash generation and dividend support",
+        "Channel and geographic mix"
+      ]
+    }
+  },
+  "frontend_contract": {
+    "source_of_truth": "backend_generated_recommendation_packet",
+    "frontend_should_not_use_mock_data": true,
+    "static_packet_generated_at": "2026-06-05T16:42:46Z"
+  },
+  "model_predictions": {
+    "model_run_id": "model_20260605T164246Z",
+    "model_type": "transparent_fallback",
+    "target": "outperform benchmark over next 60 trading days",
+    "training_row_count": 764,
+    "predictions": {
+      "NVDA": {
+        "benchmark": "QQQ",
+        "outperform_probability": 0.584,
+        "model_confidence": 0.1512,
+        "predicted_return_bucket": "slightly_positive",
+        "top_features": [
+          "relative_return_vs_benchmark_60d",
+          "revenue_growth",
+          "gross_margin"
+        ],
+        "data_limitations": [
+          "official_model_kept_as_transparent_fallback",
+          "transparent_fallback_used_due_to_official_model_policy"
+        ]
+      },
+      "KO": {
+        "benchmark": "XLP",
+        "outperform_probability": 0.596,
+        "model_confidence": 0.1728,
+        "predicted_return_bucket": "slightly_positive",
+        "top_features": [
+          "relative_return_vs_benchmark_60d"
+        ],
+        "data_limitations": [
+          "missing_gross_margin",
+          "missing_revenue_growth",
+          "official_model_kept_as_transparent_fallback",
+          "transparent_fallback_used_due_to_official_model_policy"
+        ]
+      }
+    },
+    "legacy_ml_output": true,
+    "deprecated_for_senior_model_quality": true,
+    "not_senior_evidence": true,
+    "retained_for_legacy_compatibility": true,
+    "presentation_guidance": {
+      "do_not_use_as_senior_model_quality_section": true,
+      "do_not_present_as_current_senior_evidence": true,
+      "use_instead": [
+        "three_statement_models.models.{ticker}",
+        "dcf_valuations.valuations.{ticker}",
+        "entry_price_models.entry_prices.{ticker}",
+        "indicator_scorecards.scorecards.{ticker}"
+      ],
+      "reason": "Senior Analyst workflow now reviews synthesis memo, 3-statement model, DCF valuation, entry price reference, and evidence challenge."
+    }
+  },
+  "model_comparison": {
+    "tool_name": "model_comparison",
+    "status": "deprecated",
+    "legacy_ml_output": true,
+    "deprecated_for_senior_model_quality": true,
+    "not_senior_evidence": true,
+    "retained_for_legacy_compatibility": true,
+    "replacement_sources": [
+      "three_statement_models.models.{ticker}",
+      "dcf_valuations.valuations.{ticker}",
+      "entry_price_models.entry_prices.{ticker}",
+      "indicator_scorecards.scorecards.{ticker}"
+    ],
+    "original_status": "success",
+    "models_present": [
+      "logistic_regression",
+      "random_forest"
+    ],
+    "target_price_models_present": [
+      "linear_regression",
+      "random_forest_regressor"
+    ],
+    "limitations": [
+      "legacy_regression_and_random_forest_model_quality_removed_from_senior_workflow",
+      "use_three_statement_dcf_entry_price_and_evidence_challenge_for_senior_review"
+    ],
+    "presentation_guidance": {
+      "do_not_render_model_quality_page": true,
+      "do_not_show_regression_rmse_or_outperform_probability_as_senior_evidence": true
+    }
+  },
+  "three_statement_models": {
+    "tool_name": "build_three_statement_model",
+    "generated_at": "2026-06-05T16:42:46Z",
+    "models": {
+      "NVDA": {
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "base_year": 2022,
+        "historical_inputs": {
+          "revenue": 26914000000.0,
+          "gross_profit": 17475000000.0,
+          "operating_income": 10041000000.0,
+          "net_income": 9752000000.0,
+          "cash": 10605000000.0,
+          "debt": 7469000000.0,
+          "assets": 206803000000.0,
+          "liabilities": 49510000000.0
+        },
+        "assumptions": {
+          "projection_years": 5,
+          "revenue_growth_start": 0.18,
+          "revenue_growth_tapers_by": 0.1,
+          "gross_margin": 0.64929,
+          "operating_margin": 0.373077,
+          "tax_rate": 0.21,
+          "depreciation_pct_revenue": 0.03,
+          "capex_pct_revenue": 0.05,
+          "nwc_pct_incremental_revenue": 0.02
+        },
+        "income_statement_projection": [
+          {
+            "year": 2023,
+            "revenue_growth": 0.18,
+            "revenue": 31758520000.0,
+            "gross_profit": 20620489450.8,
+            "operating_income": 11848373366.04,
+            "tax_expense": 2488158406.87,
+            "net_income": 9360214959.17
+          },
+          {
+            "year": 2024,
+            "revenue_growth": 0.162,
+            "revenue": 36903400240.0,
+            "gross_profit": 23961008741.83,
+            "operating_income": 13767809851.34,
+            "tax_expense": 2891240068.78,
+            "net_income": 10876569782.56
+          },
+          {
+            "year": 2025,
+            "revenue_growth": 0.144,
+            "revenue": 42217489874.56,
+            "gross_profit": 27411394000.65,
+            "operating_income": 15750374469.93,
+            "tax_expense": 3307578638.69,
+            "net_income": 12442795831.25
+          },
+          {
+            "year": 2026,
+            "revenue_growth": 0.126,
+            "revenue": 47536893598.75,
+            "gross_profit": 30865229644.74,
+            "operating_income": 17734921653.14,
+            "tax_expense": 3724333547.16,
+            "net_income": 14010588105.98
+          },
+          {
+            "year": 2027,
+            "revenue_growth": 0.108,
+            "revenue": 52670878107.42,
+            "gross_profit": 34198674446.37,
+            "operating_income": 19650293191.68,
+            "tax_expense": 4126561570.25,
+            "net_income": 15523731621.43
+          }
+        ],
+        "cash_flow_projection": [
+          {
+            "year": 2023,
+            "net_income": 9360214959.17,
+            "depreciation": 952755600.0,
+            "capital_expenditures": 1587926000.0,
+            "change_in_net_working_capital": 96890400.0,
+            "free_cash_flow": 8628154159.17
+          },
+          {
+            "year": 2024,
+            "net_income": 10876569782.56,
+            "depreciation": 1107102007.2,
+            "capital_expenditures": 1845170012.0,
+            "change_in_net_working_capital": 102897604.8,
+            "free_cash_flow": 10035604172.96
+          },
+          {
+            "year": 2025,
+            "net_income": 12442795831.25,
+            "depreciation": 1266524696.24,
+            "capital_expenditures": 2110874493.73,
+            "change_in_net_working_capital": 106281792.69,
+            "free_cash_flow": 11492164241.06
+          },
+          {
+            "year": 2026,
+            "net_income": 14010588105.98,
+            "depreciation": 1426106807.96,
+            "capital_expenditures": 2376844679.94,
+            "change_in_net_working_capital": 106388074.48,
+            "free_cash_flow": 12953462159.52
+          },
+          {
+            "year": 2027,
+            "net_income": 15523731621.43,
+            "depreciation": 1580126343.22,
+            "capital_expenditures": 2633543905.37,
+            "change_in_net_working_capital": 102679690.17,
+            "free_cash_flow": 14367634369.11
+          }
+        ],
+        "balance_sheet_stub": {
+          "cash": 10605000000.0,
+          "debt": 7469000000.0,
+          "assets": 206803000000.0,
+          "liabilities": 49510000000.0,
+          "net_debt": -3136000000.0,
+          "debt_to_assets": 0.036116
+        },
+        "key_metrics": {
+          "gross_margin": 0.64929,
+          "operating_margin": 0.373077,
+          "net_margin": 0.362339,
+          "projected_year_5_revenue": 52670878107.42,
+          "projected_year_5_free_cash_flow": 14367634369.11
+        },
+        "display_values": {
+          "historical_inputs_usd_billions": {
+            "revenue": 26.91,
+            "gross_profit": 17.48,
+            "operating_income": 10.04,
+            "net_income": 9.75,
+            "cash": 10.61,
+            "debt": 7.47,
+            "assets": 206.8,
+            "liabilities": 49.51
+          },
+          "projected_year_5_revenue_usd_billions": 52.67,
+          "projected_year_5_free_cash_flow_usd_billions": 14.37,
+          "gross_margin_pct": 64.9,
+          "operating_margin_pct": 37.3
+        },
+        "provenance": {
+          "base_year": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.revenue.value",
+            "fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "fiscal_year": 2022,
+            "form": "10-K",
+            "classification": "actual"
+          },
+          "historical_inputs": {
+            "revenue": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.revenue.value",
+              "fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "fiscal_year": 2022,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "gross_profit": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.gross_profit.value",
+              "fact_name": "GrossProfit",
+              "fiscal_year": 2022,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "operating_income": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.operating_income.value",
+              "fact_name": "OperatingIncomeLoss",
+              "fiscal_year": 2022,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "net_income": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.net_income.value",
+              "fact_name": "NetIncomeLoss",
+              "fiscal_year": 2022,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "cash": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.cash.value",
+              "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+              "fiscal_year": 2026,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "debt": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.debt.value",
+              "fact_name": "LongTermDebtNoncurrent",
+              "fiscal_year": 2026,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "assets": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.assets.value",
+              "fact_name": "Assets",
+              "fiscal_year": 2026,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "liabilities": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.liabilities.value",
+              "fact_name": "Liabilities",
+              "fiscal_year": 2026,
+              "form": "10-K",
+              "classification": "actual"
+            }
+          },
+          "assumptions": {
+            "revenue_growth_start": {
+              "source": "processed_filing_evidence",
+              "source_field": "computed_metrics.revenue_growth",
+              "classification": "estimate"
+            },
+            "gross_margin": {
+              "source": "processed_filing_evidence",
+              "source_field": "computed_metrics.gross_margin",
+              "classification": "estimate"
+            },
+            "operating_margin": {
+              "source": "processed_filing_evidence",
+              "source_field": "computed_metrics.operating_margin",
+              "classification": "estimate"
+            },
+            "tax_rate": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_TAX_RATE",
+              "classification": "assumption"
+            },
+            "depreciation_pct_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_DEPRECIATION_PCT_REVENUE",
+              "classification": "assumption"
+            },
+            "capex_pct_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_CAPEX_PCT_REVENUE",
+              "classification": "assumption"
+            },
+            "nwc_pct_incremental_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_NWC_PCT_REVENUE",
+              "classification": "assumption"
+            }
+          },
+          "income_statement_projection": {
+            "source": "derived_calculation",
+            "classification": "projection",
+            "formula": "base revenue grown by tapered growth; margins and tax assumptions applied"
+          },
+          "cash_flow_projection": {
+            "source": "derived_calculation",
+            "classification": "projection",
+            "formula": "net income plus depreciation minus capex and working-capital assumptions"
+          }
+        },
+        "data_sources": {
+          "filing_evidence": "data/processed/filing_evidence.json",
+          "stock_features": "data/processed/stock_features.csv",
+          "company_thesis": "data/thesis/company_theses.json"
+        },
+        "presentation_guidance": {
+          "not_investment_recommendation": true,
+          "recommended_display_scale": "USD billions",
+          "label_projection_fields_as": "assumption-based estimate",
+          "show_limitations_with_model": true
+        },
+        "limitations": [
+          "depreciation_capex_and_working_capital_are_assumption_based",
+          "revenue_growth_assumption_capped_for_projection_stability",
+          "tax_rate_default_assumption_used"
+        ]
+      },
+      "KO": {
+        "ticker": "KO",
+        "company_name": "The Coca-Cola Company",
+        "base_year": 2026,
+        "historical_inputs": {
+          "revenue": null,
+          "gross_profit": null,
+          "operating_income": null,
+          "net_income": null,
+          "cash": 10270000000.0,
+          "debt": 35547000000.0,
+          "assets": 104816000000.0,
+          "liabilities": null
+        },
+        "assumptions": {
+          "projection_years": 5,
+          "revenue_growth_start": 0.03,
+          "revenue_growth_tapers_by": 0.1,
+          "gross_margin": 0.45,
+          "operating_margin": 0.2,
+          "tax_rate": 0.21,
+          "depreciation_pct_revenue": 0.03,
+          "capex_pct_revenue": 0.05,
+          "nwc_pct_incremental_revenue": 0.02
+        },
+        "income_statement_projection": [],
+        "cash_flow_projection": [],
+        "balance_sheet_stub": {
+          "cash": 10270000000.0,
+          "debt": 35547000000.0,
+          "assets": 104816000000.0,
+          "liabilities": null,
+          "net_debt": 25277000000.0,
+          "debt_to_assets": 0.339137
+        },
+        "key_metrics": {
+          "gross_margin": 0.45,
+          "operating_margin": 0.2,
+          "net_margin": null,
+          "projected_year_5_revenue": null,
+          "projected_year_5_free_cash_flow": null
+        },
+        "display_values": {
+          "historical_inputs_usd_billions": {
+            "revenue": null,
+            "gross_profit": null,
+            "operating_income": null,
+            "net_income": null,
+            "cash": 10.27,
+            "debt": 35.55,
+            "assets": 104.82,
+            "liabilities": null
+          },
+          "projected_year_5_revenue_usd_billions": null,
+          "projected_year_5_free_cash_flow_usd_billions": null,
+          "gross_margin_pct": 45.0,
+          "operating_margin_pct": 20.0
+        },
+        "provenance": {
+          "base_year": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.revenue.value",
+            "fact_name": null,
+            "fiscal_year": null,
+            "form": null,
+            "classification": "unavailable"
+          },
+          "historical_inputs": {
+            "revenue": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.revenue.value",
+              "fact_name": null,
+              "fiscal_year": null,
+              "form": null,
+              "classification": "unavailable"
+            },
+            "gross_profit": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.gross_profit.value",
+              "fact_name": "GrossProfit",
+              "fiscal_year": null,
+              "form": null,
+              "classification": "unavailable"
+            },
+            "operating_income": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.operating_income.value",
+              "fact_name": "OperatingIncomeLoss",
+              "fiscal_year": null,
+              "form": null,
+              "classification": "unavailable"
+            },
+            "net_income": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.net_income.value",
+              "fact_name": "NetIncomeLoss",
+              "fiscal_year": null,
+              "form": null,
+              "classification": "unavailable"
+            },
+            "cash": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.cash.value",
+              "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "debt": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.debt.value",
+              "fact_name": "LongTermDebtNoncurrent",
+              "fiscal_year": 2023,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "assets": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.assets.value",
+              "fact_name": "Assets",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "classification": "actual"
+            },
+            "liabilities": {
+              "source": "processed_filing_evidence",
+              "source_path": "data/processed/filing_evidence.json",
+              "source_field": "facts.liabilities.value",
+              "fact_name": null,
+              "fiscal_year": null,
+              "form": null,
+              "classification": "unavailable"
+            }
+          },
+          "assumptions": {
+            "revenue_growth_start": {
+              "source": "default_assumption",
+              "source_field": "computed_metrics.revenue_growth",
+              "classification": "estimate"
+            },
+            "gross_margin": {
+              "source": "default_assumption",
+              "source_field": "computed_metrics.gross_margin",
+              "classification": "estimate"
+            },
+            "operating_margin": {
+              "source": "default_assumption",
+              "source_field": "computed_metrics.operating_margin",
+              "classification": "estimate"
+            },
+            "tax_rate": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_TAX_RATE",
+              "classification": "assumption"
+            },
+            "depreciation_pct_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_DEPRECIATION_PCT_REVENUE",
+              "classification": "assumption"
+            },
+            "capex_pct_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_CAPEX_PCT_REVENUE",
+              "classification": "assumption"
+            },
+            "nwc_pct_incremental_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_NWC_PCT_REVENUE",
+              "classification": "assumption"
+            }
+          },
+          "income_statement_projection": {
+            "source": "derived_calculation",
+            "classification": "projection",
+            "formula": "base revenue grown by tapered growth; margins and tax assumptions applied"
+          },
+          "cash_flow_projection": {
+            "source": "derived_calculation",
+            "classification": "projection",
+            "formula": "net income plus depreciation minus capex and working-capital assumptions"
+          }
+        },
+        "data_sources": {
+          "filing_evidence": "data/processed/filing_evidence.json",
+          "stock_features": "data/processed/stock_features.csv",
+          "company_thesis": "data/thesis/company_theses.json"
+        },
+        "presentation_guidance": {
+          "not_investment_recommendation": true,
+          "recommended_display_scale": "USD billions",
+          "label_projection_fields_as": "assumption-based estimate",
+          "show_limitations_with_model": true
+        },
+        "limitations": [
+          "debt_to_assets:debt_assets_fiscal_year_misalignment",
+          "depreciation_capex_and_working_capital_are_assumption_based",
+          "gross_margin:missing_required_fact",
+          "gross_margin_missing_default_used",
+          "income_facts:no_annual_revenue_anchor_year",
+          "liabilities:missing_annual_balance_fact",
+          "operating_margin:missing_required_fact",
+          "operating_margin_missing_default_used",
+          "revenue_growth:insufficient_annual_revenue_history",
+          "revenue_growth_missing_default_used",
+          "revenue_missing_projection_unavailable",
+          "tax_rate_default_assumption_used"
+        ]
+      }
+    }
+  },
+  "dcf_valuations": {
+    "tool_name": "build_dcf_model",
+    "generated_at": "2026-06-05T16:42:46Z",
+    "valuations": {
+      "NVDA": {
+        "ticker": "NVDA",
+        "valuation_date": "2026-06-05",
+        "base_free_cash_flow": 8628154159.17,
+        "projection_years": 5,
+        "revenue_growth_assumptions": [
+          0.18,
+          0.162,
+          0.144,
+          0.126,
+          0.108
+        ],
+        "margin_assumptions": {
+          "operating_margin": 0.373077,
+          "tax_rate": 0.21,
+          "depreciation_pct_revenue": 0.03,
+          "capex_pct_revenue": 0.05,
+          "nwc_pct_incremental_revenue": 0.02
+        },
+        "free_cash_flow_projection": [
+          {
+            "year": 2023,
+            "revenue_growth": 0.18,
+            "revenue": 31758520000.0,
+            "operating_income": 11848373366.04,
+            "nopat": 9360214959.17,
+            "depreciation": 952755600.0,
+            "capital_expenditures": 1587926000.0,
+            "change_in_net_working_capital": 96890400.0,
+            "free_cash_flow": 8628154159.17
+          },
+          {
+            "year": 2024,
+            "revenue_growth": 0.162,
+            "revenue": 36903400240.0,
+            "operating_income": 13767809851.34,
+            "nopat": 10876569782.56,
+            "depreciation": 1107102007.2,
+            "capital_expenditures": 1845170012.0,
+            "change_in_net_working_capital": 102897604.8,
+            "free_cash_flow": 10035604172.96
+          },
+          {
+            "year": 2025,
+            "revenue_growth": 0.144,
+            "revenue": 42217489874.56,
+            "operating_income": 15750374469.93,
+            "nopat": 12442795831.25,
+            "depreciation": 1266524696.24,
+            "capital_expenditures": 2110874493.73,
+            "change_in_net_working_capital": 106281792.69,
+            "free_cash_flow": 11492164241.06
+          },
+          {
+            "year": 2026,
+            "revenue_growth": 0.126,
+            "revenue": 47536893598.75,
+            "operating_income": 17734921653.14,
+            "nopat": 14010588105.98,
+            "depreciation": 1426106807.96,
+            "capital_expenditures": 2376844679.94,
+            "change_in_net_working_capital": 106388074.48,
+            "free_cash_flow": 12953462159.52
+          },
+          {
+            "year": 2027,
+            "revenue_growth": 0.108,
+            "revenue": 52670878107.42,
+            "operating_income": 19650293191.68,
+            "nopat": 15523731621.43,
+            "depreciation": 1580126343.22,
+            "capital_expenditures": 2633543905.37,
+            "change_in_net_working_capital": 102679690.17,
+            "free_cash_flow": 14367634369.11
+          }
+        ],
+        "discount_rate": 0.09,
+        "terminal_growth_rate": 0.027,
+        "terminal_value": 234215245985.33,
+        "present_value_of_fcf": [
+          {
+            "year": 2023,
+            "present_value": 7915737760.71
+          },
+          {
+            "year": 2024,
+            "present_value": 8446767252.72
+          },
+          {
+            "year": 2025,
+            "present_value": 8874059377.1
+          },
+          {
+            "year": 2026,
+            "present_value": 9176559164.38
+          },
+          {
+            "year": 2027,
+            "present_value": 9337976523.34
+          }
+        ],
+        "enterprise_value": 195974939593.71,
+        "net_debt": -3136000000.0,
+        "equity_value": 199110939593.71,
+        "shares_outstanding": null,
+        "implied_share_price": null,
+        "latest_market_price": 207.399994,
+        "upside_downside_pct": null,
+        "sensitivity_table": [
+          {
+            "discount_rate": 0.08,
+            "terminal_growth_rate": 0.022,
+            "enterprise_value": 217316979572.94
+          },
+          {
+            "discount_rate": 0.08,
+            "terminal_growth_rate": 0.027,
+            "enterprise_value": 234494338348.74
+          },
+          {
+            "discount_rate": 0.08,
+            "terminal_growth_rate": 0.032,
+            "enterprise_value": 255250313536.16
+          },
+          {
+            "discount_rate": 0.09,
+            "terminal_growth_rate": 0.022,
+            "enterprise_value": 184095394296.74
+          },
+          {
+            "discount_rate": 0.09,
+            "terminal_growth_rate": 0.027,
+            "enterprise_value": 195974939593.71
+          },
+          {
+            "discount_rate": 0.09,
+            "terminal_growth_rate": 0.032,
+            "enterprise_value": 209902682355.67
+          },
+          {
+            "discount_rate": 0.1,
+            "terminal_growth_rate": 0.022,
+            "enterprise_value": 159430665726.0
+          },
+          {
+            "discount_rate": 0.1,
+            "terminal_growth_rate": 0.027,
+            "enterprise_value": 168047883495.47
+          },
+          {
+            "discount_rate": 0.1,
+            "terminal_growth_rate": 0.032,
+            "enterprise_value": 177932339172.21
+          }
+        ],
+        "display_values": {
+          "base_free_cash_flow_usd_billions": 8.63,
+          "terminal_value_usd_billions": 234.22,
+          "enterprise_value_usd_billions": 195.97,
+          "net_debt_usd_billions": -3.14,
+          "equity_value_usd_billions": 199.11,
+          "latest_market_price": 207.4,
+          "implied_share_price": null,
+          "upside_downside_pct": null
+        },
+        "provenance": {
+          "base_free_cash_flow": {
+            "source": "derived_calculation",
+            "classification": "projection",
+            "formula": "NOPAT plus depreciation minus capex and working-capital assumptions"
+          },
+          "revenue_growth_assumptions": {
+            "source": "processed_filing_evidence",
+            "source_field": "computed_metrics.revenue_growth",
+            "classification": "estimate"
+          },
+          "margin_assumptions": {
+            "operating_margin": {
+              "source": "processed_filing_evidence",
+              "source_field": "computed_metrics.operating_margin",
+              "classification": "estimate"
+            },
+            "tax_rate": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_TAX_RATE",
+              "classification": "assumption"
+            },
+            "depreciation_pct_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_DEPRECIATION_PCT_REVENUE",
+              "classification": "assumption"
+            },
+            "capex_pct_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_CAPEX_PCT_REVENUE",
+              "classification": "assumption"
+            },
+            "nwc_pct_incremental_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_NWC_PCT_REVENUE",
+              "classification": "assumption"
+            }
+          },
+          "discount_rate": {
+            "source": "stock_features",
+            "source_field": "60d_volatility",
+            "classification": "estimate"
+          },
+          "terminal_growth_rate": {
+            "source": "derived_calculation",
+            "source_field": "revenue_growth_start * 0.15 clamped to 2%-3%",
+            "classification": "assumption"
+          },
+          "terminal_value": {
+            "source": "derived_calculation",
+            "source_field": "terminal_fcf / (discount_rate - terminal_growth_rate)",
+            "classification": "estimate"
+          },
+          "present_value_of_fcf": {
+            "source": "derived_calculation",
+            "source_field": "free_cash_flow / (1 + discount_rate) ^ year",
+            "classification": "estimate"
+          },
+          "enterprise_value": {
+            "source": "derived_calculation",
+            "source_field": "present_value_of_fcf + present_value_of_terminal_value",
+            "classification": "estimate"
+          },
+          "net_debt": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.debt.value - facts.cash.value",
+            "classification": "actual"
+          },
+          "equity_value": {
+            "source": "derived_calculation",
+            "source_field": "enterprise_value - net_debt",
+            "classification": "estimate"
+          },
+          "shares_outstanding": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.shares_outstanding.value",
+            "fact_name": null,
+            "fiscal_year": null,
+            "form": null,
+            "classification": "unavailable"
+          },
+          "implied_share_price": {
+            "source": "derived_calculation",
+            "source_field": "equity_value / shares_outstanding",
+            "classification": "unavailable"
+          },
+          "latest_market_price": {
+            "source": "raw_market_price_file",
+            "source_path": "data/raw/market/NVDA_prices.csv",
+            "source_field": "adjusted_close",
+            "classification": "actual"
+          },
+          "upside_downside_pct": {
+            "source": "derived_calculation",
+            "source_field": "(implied_share_price - latest_market_price) / latest_market_price",
+            "classification": "unavailable"
+          },
+          "sensitivity_table": {
+            "source": "derived_calculation",
+            "source_field": "discount-rate and terminal-growth scenario grid",
+            "classification": "estimate"
+          }
+        },
+        "data_sources": {
+          "filing_evidence": "data/processed/filing_evidence.json",
+          "stock_features": "data/processed/stock_features.csv",
+          "market_prices": "data/raw/market/NVDA_prices.csv"
+        },
+        "presentation_guidance": {
+          "not_investment_recommendation": true,
+          "recommended_display_scale": "USD billions",
+          "label_dcf_outputs_as": "assumption-based estimate",
+          "do_not_show_implied_share_price_when_unavailable": true,
+          "show_limitations_with_model": true
+        },
+        "limitations": [
+          "depreciation_capex_and_working_capital_are_assumption_based",
+          "discount_rate_estimated_from_short_term_volatility_proxy",
+          "revenue_growth_assumption_capped_for_dcf_stability",
+          "shares_outstanding_unavailable_implied_share_price_not_calculated",
+          "tax_rate_default_assumption_used"
+        ]
+      },
+      "KO": {
+        "ticker": "KO",
+        "valuation_date": "2026-06-05",
+        "base_free_cash_flow": null,
+        "projection_years": 5,
+        "revenue_growth_assumptions": [],
+        "margin_assumptions": {
+          "operating_margin": 0.2,
+          "tax_rate": 0.21,
+          "depreciation_pct_revenue": 0.03,
+          "capex_pct_revenue": 0.05,
+          "nwc_pct_incremental_revenue": 0.02
+        },
+        "free_cash_flow_projection": [],
+        "discount_rate": 0.08,
+        "terminal_growth_rate": 0.02,
+        "terminal_value": null,
+        "present_value_of_fcf": [],
+        "enterprise_value": null,
+        "net_debt": 25277000000.0,
+        "equity_value": null,
+        "shares_outstanding": null,
+        "implied_share_price": null,
+        "latest_market_price": 79.964996,
+        "upside_downside_pct": null,
+        "sensitivity_table": [],
+        "display_values": {
+          "base_free_cash_flow_usd_billions": null,
+          "terminal_value_usd_billions": null,
+          "enterprise_value_usd_billions": null,
+          "net_debt_usd_billions": 25.28,
+          "equity_value_usd_billions": null,
+          "latest_market_price": 79.96,
+          "implied_share_price": null,
+          "upside_downside_pct": null
+        },
+        "provenance": {
+          "base_free_cash_flow": {
+            "source": "derived_calculation",
+            "classification": "projection",
+            "formula": "NOPAT plus depreciation minus capex and working-capital assumptions"
+          },
+          "revenue_growth_assumptions": {
+            "source": "default_assumption",
+            "source_field": "computed_metrics.revenue_growth",
+            "classification": "estimate"
+          },
+          "margin_assumptions": {
+            "operating_margin": {
+              "source": "default_assumption",
+              "source_field": "computed_metrics.operating_margin",
+              "classification": "estimate"
+            },
+            "tax_rate": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_TAX_RATE",
+              "classification": "assumption"
+            },
+            "depreciation_pct_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_DEPRECIATION_PCT_REVENUE",
+              "classification": "assumption"
+            },
+            "capex_pct_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_CAPEX_PCT_REVENUE",
+              "classification": "assumption"
+            },
+            "nwc_pct_incremental_revenue": {
+              "source": "hardcoded_default",
+              "source_field": "DEFAULT_NWC_PCT_REVENUE",
+              "classification": "assumption"
+            }
+          },
+          "discount_rate": {
+            "source": "stock_features",
+            "source_field": "60d_volatility",
+            "classification": "estimate"
+          },
+          "terminal_growth_rate": {
+            "source": "derived_calculation",
+            "source_field": "revenue_growth_start * 0.15 clamped to 2%-3%",
+            "classification": "assumption"
+          },
+          "terminal_value": {
+            "source": "derived_calculation",
+            "source_field": "terminal_fcf / (discount_rate - terminal_growth_rate)",
+            "classification": "estimate"
+          },
+          "present_value_of_fcf": {
+            "source": "derived_calculation",
+            "source_field": "free_cash_flow / (1 + discount_rate) ^ year",
+            "classification": "estimate"
+          },
+          "enterprise_value": {
+            "source": "derived_calculation",
+            "source_field": "present_value_of_fcf + present_value_of_terminal_value",
+            "classification": "estimate"
+          },
+          "net_debt": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.debt.value - facts.cash.value",
+            "classification": "actual"
+          },
+          "equity_value": {
+            "source": "derived_calculation",
+            "source_field": "enterprise_value - net_debt",
+            "classification": "unavailable"
+          },
+          "shares_outstanding": {
+            "source": "processed_filing_evidence",
+            "source_path": "data/processed/filing_evidence.json",
+            "source_field": "facts.shares_outstanding.value",
+            "fact_name": null,
+            "fiscal_year": null,
+            "form": null,
+            "classification": "unavailable"
+          },
+          "implied_share_price": {
+            "source": "derived_calculation",
+            "source_field": "equity_value / shares_outstanding",
+            "classification": "unavailable"
+          },
+          "latest_market_price": {
+            "source": "raw_market_price_file",
+            "source_path": "data/raw/market/KO_prices.csv",
+            "source_field": "adjusted_close",
+            "classification": "actual"
+          },
+          "upside_downside_pct": {
+            "source": "derived_calculation",
+            "source_field": "(implied_share_price - latest_market_price) / latest_market_price",
+            "classification": "unavailable"
+          },
+          "sensitivity_table": {
+            "source": "derived_calculation",
+            "source_field": "discount-rate and terminal-growth scenario grid",
+            "classification": "estimate"
+          }
+        },
+        "data_sources": {
+          "filing_evidence": "data/processed/filing_evidence.json",
+          "stock_features": "data/processed/stock_features.csv",
+          "market_prices": "data/raw/market/KO_prices.csv"
+        },
+        "presentation_guidance": {
+          "not_investment_recommendation": true,
+          "recommended_display_scale": "USD billions",
+          "label_dcf_outputs_as": "assumption-based estimate",
+          "do_not_show_implied_share_price_when_unavailable": true,
+          "show_limitations_with_model": true
+        },
+        "limitations": [
+          "debt_to_assets:debt_assets_fiscal_year_misalignment",
+          "depreciation_capex_and_working_capital_are_assumption_based",
+          "discount_rate_estimated_from_short_term_volatility_proxy",
+          "gross_margin:missing_required_fact",
+          "income_facts:no_annual_revenue_anchor_year",
+          "liabilities:missing_annual_balance_fact",
+          "operating_margin:missing_required_fact",
+          "operating_margin_missing_default_used",
+          "revenue_growth:insufficient_annual_revenue_history",
+          "revenue_growth_missing_default_used",
+          "revenue_missing_dcf_projection_unavailable",
+          "shares_outstanding_unavailable_implied_share_price_not_calculated",
+          "tax_rate_default_assumption_used"
+        ]
+      }
+    }
+  },
+  "entry_price_models": {
+    "tool_name": "build_entry_price_model",
+    "generated_at": "2026-06-05T16:42:46Z",
+    "entry_prices": {
+      "NVDA": {
+        "ticker": "NVDA",
+        "valuation_date": "2026-06-05",
+        "latest_market_price": 207.399994,
+        "dcf_equity_value": 199110939593.71,
+        "shares_outstanding": 960033487.72,
+        "shares_outstanding_source": "simulated",
+        "shares_outstanding_is_simulated": true,
+        "simulated_shares_outstanding_reason": "actual shares outstanding unavailable; simulated for demo entry price using dcf_equity_value / latest_market_price",
+        "implied_fair_value_per_share": 207.399994,
+        "margin_of_safety": 0.33,
+        "entry_price": 138.957996,
+        "current_price_vs_entry_price_pct": 0.492537,
+        "current_price_vs_fair_value_pct": 0.0,
+        "entry_status": "watchlist_below_fair_value",
+        "risk_adjustments": [
+          {
+            "reason": "base_margin_of_safety",
+            "adjustment": 0.15,
+            "source": "hardcoded_default"
+          },
+          {
+            "reason": "pm_review_required",
+            "adjustment": 0.03,
+            "source": "data/processed/portfolio_stress_test.json"
+          },
+          {
+            "reason": "large_stress_test_downside",
+            "adjustment": 0.07,
+            "source": "data/processed/portfolio_stress_test.json"
+          },
+          {
+            "reason": "negative_valuation_sensitivity_indicator",
+            "adjustment": 0.04,
+            "source": "data/processed/indicator_scorecards.json"
+          },
+          {
+            "reason": "dcf_assumption_heavy_or_proxy_based",
+            "adjustment": 0.04,
+            "source": "data/processed/dcf_valuations.json"
+          }
+        ],
+        "assumptions": {
+          "base_margin_of_safety": 0.15,
+          "min_margin_of_safety": 0.1,
+          "max_margin_of_safety": 0.4,
+          "entry_price_formula": "implied_fair_value_per_share * (1 - margin_of_safety)",
+          "not_a_price_target_or_trade_recommendation": true,
+          "simulated_shares_fallback_enabled": true,
+          "simulated_shares_formula": "dcf_equity_value / latest_market_price"
+        },
+        "limitations": [
+          "depreciation_capex_and_working_capital_are_assumption_based",
+          "discount_rate_estimated_from_short_term_volatility_proxy",
+          "revenue_growth_assumption_capped_for_dcf_stability",
+          "revenue_growth_assumption_capped_for_projection_stability",
+          "shares_outstanding_simulated_for_demo_entry_price",
+          "shares_outstanding_unavailable_implied_share_price_not_calculated",
+          "tax_rate_default_assumption_used"
+        ],
+        "provenance": {
+          "dcf_equity_value": {
+            "source": "data/processed/dcf_valuations.json",
+            "source_field": "valuations.NVDA.equity_value",
+            "classification": "estimate"
+          },
+          "shares_outstanding": {
+            "source": "simulated_demo_fallback",
+            "source_field": "dcf_equity_value / latest_market_price",
+            "classification": "simulated"
+          },
+          "latest_market_price": {
+            "source": "data/processed/dcf_valuations.json or data/raw/market/{TICKER}_prices.csv",
+            "source_field": "valuations.NVDA.latest_market_price or NVDA_prices.adjusted_close",
+            "classification": "actual"
+          },
+          "margin_of_safety": {
+            "source": "derived_risk_adjustment",
+            "source_field": "indicator_scorecards, portfolio_stress_test, dcf limitations",
+            "classification": "assumption"
+          },
+          "entry_price": {
+            "source": "derived_calculation",
+            "source_field": "implied_fair_value_per_share * (1 - margin_of_safety)",
+            "classification": "estimate"
+          }
+        },
+        "display_values": {
+          "latest_market_price": 207.4,
+          "dcf_equity_value_usd_billions": 199.11,
+          "implied_fair_value_per_share": 207.4,
+          "margin_of_safety_pct": 33.0,
+          "entry_price": 138.96,
+          "current_price_vs_entry_price_pct": 49.3,
+          "current_price_vs_fair_value_pct": 0.0
+        },
+        "presentation_guidance": "For analyst review only. Not a trade approval. Entry price is illustrative because share count is simulated."
+      },
+      "KO": {
+        "ticker": "KO",
+        "valuation_date": "2026-06-05",
+        "latest_market_price": 79.964996,
+        "dcf_equity_value": null,
+        "shares_outstanding": null,
+        "shares_outstanding_source": "unavailable",
+        "shares_outstanding_is_simulated": false,
+        "simulated_shares_outstanding_reason": null,
+        "implied_fair_value_per_share": null,
+        "margin_of_safety": 0.27,
+        "entry_price": null,
+        "current_price_vs_entry_price_pct": null,
+        "current_price_vs_fair_value_pct": null,
+        "entry_status": "unavailable",
+        "risk_adjustments": [
+          {
+            "reason": "base_margin_of_safety",
+            "adjustment": 0.15,
+            "source": "hardcoded_default"
+          },
+          {
+            "reason": "low_indicator_evidence_confidence",
+            "adjustment": 0.05,
+            "source": "data/processed/indicator_scorecards.json"
+          },
+          {
+            "reason": "pm_review_required",
+            "adjustment": 0.03,
+            "source": "data/processed/portfolio_stress_test.json"
+          },
+          {
+            "reason": "dcf_assumption_heavy_or_proxy_based",
+            "adjustment": 0.04,
+            "source": "data/processed/dcf_valuations.json"
+          }
+        ],
+        "assumptions": {
+          "base_margin_of_safety": 0.15,
+          "min_margin_of_safety": 0.1,
+          "max_margin_of_safety": 0.4,
+          "entry_price_formula": "implied_fair_value_per_share * (1 - margin_of_safety)",
+          "not_a_price_target_or_trade_recommendation": true,
+          "simulated_shares_fallback_enabled": true,
+          "simulated_shares_formula": "dcf_equity_value / latest_market_price"
+        },
+        "limitations": [
+          "dcf_equity_value_unavailable",
+          "debt_to_assets:debt_assets_fiscal_year_misalignment",
+          "depreciation_capex_and_working_capital_are_assumption_based",
+          "discount_rate_estimated_from_short_term_volatility_proxy",
+          "gross_margin:missing_required_fact",
+          "gross_margin_missing_default_used",
+          "income_facts:no_annual_revenue_anchor_year",
+          "liabilities:missing_annual_balance_fact",
+          "operating_margin:missing_required_fact",
+          "operating_margin_missing_default_used",
+          "revenue_growth:insufficient_annual_revenue_history",
+          "revenue_growth_missing_default_used",
+          "revenue_missing_dcf_projection_unavailable",
+          "revenue_missing_projection_unavailable",
+          "shares_outstanding_unavailable_entry_price_not_calculated",
+          "shares_outstanding_unavailable_implied_share_price_not_calculated",
+          "tax_rate_default_assumption_used"
+        ],
+        "provenance": {
+          "dcf_equity_value": {
+            "source": "data/processed/dcf_valuations.json",
+            "source_field": "valuations.KO.equity_value",
+            "classification": "unavailable"
+          },
+          "shares_outstanding": {
+            "source": "data/processed/dcf_valuations.json or data/processed/filing_evidence.json",
+            "source_field": "valuations.KO.shares_outstanding or tickers.KO.facts.*shares*.value",
+            "classification": "unavailable"
+          },
+          "latest_market_price": {
+            "source": "data/processed/dcf_valuations.json or data/raw/market/{TICKER}_prices.csv",
+            "source_field": "valuations.KO.latest_market_price or KO_prices.adjusted_close",
+            "classification": "actual"
+          },
+          "margin_of_safety": {
+            "source": "derived_risk_adjustment",
+            "source_field": "indicator_scorecards, portfolio_stress_test, dcf limitations",
+            "classification": "assumption"
+          },
+          "entry_price": {
+            "source": "derived_calculation",
+            "source_field": "implied_fair_value_per_share * (1 - margin_of_safety)",
+            "classification": "unavailable"
+          }
+        },
+        "display_values": {
+          "latest_market_price": 79.96,
+          "dcf_equity_value_usd_billions": null,
+          "implied_fair_value_per_share": null,
+          "margin_of_safety_pct": 27.0,
+          "entry_price": null,
+          "current_price_vs_entry_price_pct": null,
+          "current_price_vs_fair_value_pct": null
+        },
+        "presentation_guidance": "For analyst review only. Not a trade approval."
+      }
+    }
+  },
+  "indicator_scorecards": {
+    "tool_name": "score_stock_indicators",
+    "generated_at": "2026-06-05T16:42:46Z",
+    "scorecards": [
+      {
+        "ticker": "NVDA",
+        "aggregate_indicator_score": -0.373371,
+        "confidence_score": 0.61804,
+        "recommendation_band": "reduce",
+        "benchmark": "QQQ",
+        "portfolio_weight": 0.1,
+        "pm_approval_required": true,
+        "indicators": [
+          {
+            "name": "AI demand momentum",
+            "score": -0.608067,
+            "weight": 0.17,
+            "confidence": 0.5756,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:20d_return",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "data center growth",
+            "score": 1.0,
+            "weight": 0.14,
+            "confidence": 0.5756,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:revenue_growth",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "gross margin quality",
+            "score": 1.0,
+            "weight": 0.14,
+            "confidence": 0.5756,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:gross_margin",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "export control risk",
+            "score": -1.0,
+            "weight": 0.15,
+            "confidence": 0.5756,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:export_control_keyword_count",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "supply chain risk",
+            "score": -1.0,
+            "weight": 0.12,
+            "confidence": 0.5756,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:supply_chain_keyword_count",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "valuation sensitivity",
+            "score": -1.0,
+            "weight": 0.12,
+            "confidence": 0.5756,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:60d_volatility",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "hyperscaler capex dependence",
+            "score": -1.0,
+            "weight": 0.16,
+            "confidence": 0.5756,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:capex_keyword_count",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          }
+        ],
+        "data_limitations": [
+          "official_model_kept_as_transparent_fallback",
+          "transparent_fallback_used_due_to_official_model_policy"
+        ]
+      },
+      {
+        "ticker": "KO",
+        "aggregate_indicator_score": 0.047004,
+        "confidence_score": 0.489299,
+        "recommendation_band": "review",
+        "benchmark": "XLP",
+        "portfolio_weight": 0.2,
+        "pm_approval_required": true,
+        "indicators": [
+          {
+            "name": "pricing power",
+            "score": 0.0,
+            "weight": 0.18,
+            "confidence": 0.432554,
+            "direction": "mixed",
+            "evidence_refs": [
+              "stock_features:gross_margin",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": [
+              "missing_source_field:gross_margin"
+            ]
+          },
+          {
+            "name": "volume growth",
+            "score": 0.9786,
+            "weight": 0.14,
+            "confidence": 0.432554,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:20d_return",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "margin stability",
+            "score": 0.0,
+            "weight": 0.17,
+            "confidence": 0.432554,
+            "direction": "mixed",
+            "evidence_refs": [
+              "stock_features:operating_margin",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": [
+              "missing_source_field:operating_margin"
+            ]
+          },
+          {
+            "name": "dividend stability",
+            "score": 0.0,
+            "weight": 0.12,
+            "confidence": 0.432554,
+            "direction": "mixed",
+            "evidence_refs": [
+              "stock_features:debt_to_assets",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": [
+              "missing_source_field:debt_to_assets"
+            ]
+          },
+          {
+            "name": "input cost inflation",
+            "score": -1.0,
+            "weight": 0.13,
+            "confidence": 0.432554,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:inflation_keyword_count",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "FX exposure",
+            "score": -1.0,
+            "weight": 0.11,
+            "confidence": 0.432554,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:macro_unrate_latest",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "defensive quality",
+            "score": 1.0,
+            "weight": 0.15,
+            "confidence": 0.432554,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:60d_volatility",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          }
+        ],
+        "data_limitations": [
+          "missing_gross_margin",
+          "missing_revenue_growth",
+          "missing_source_field:debt_to_assets",
+          "missing_source_field:gross_margin",
+          "missing_source_field:operating_margin",
+          "official_model_kept_as_transparent_fallback",
+          "transparent_fallback_used_due_to_official_model_policy"
+        ]
+      }
+    ]
+  },
+  "rag_evidence": {
+    "recommendation_rules": {
+      "query": "investment recommendation confidence weighting committee approval",
+      "top_k": 3,
+      "results": [
+        {
+          "document_path": "rag/knowledge_base/bridgewater_style_investment_process_principles.md",
+          "title": "Bridgewater-Style Investment Process Principles",
+          "score": 21,
+          "excerpt": "bridgewater style, investment process, raw data governance, recommendation workflow, mandate, evidence separation, confidence, review, hold_review, PM approval, auditable process"
+        },
+        {
+          "document_path": "rag/knowledge_base/trade_approval_policy.md",
+          "title": "Trade Approval Policy",
+          "score": 20,
+          "excerpt": "- PM approval is required for review-oriented cases - PM approval is required when confidence is low - PM approval is required when market data is missing - PM approval is required when recommendation logic relies on fallback scoring - PM approval is required when scenario stress indicates fragility"
+        },
+        {
+          "document_path": "rag/knowledge_base/recommendation_rating_policy.md",
+          "title": "Recommendation Rating Policy",
+          "score": 16,
+          "excerpt": "recommendation rating, accumulate, hold, reduce, avoid, review, hold_review, confidence threshold, missing data, PM review, directional action"
+        }
+      ]
+    },
+    "risk_rules": {
+      "query": "portfolio stress test escalation risk review approval",
+      "top_k": 3,
+      "results": [
+        {
+          "document_path": "rag/knowledge_base/risk_escalation_rules.md",
+          "title": "Risk Escalation Rules",
+          "score": 22,
+          "excerpt": "## Required Escalation Output When the model escalates, it should specify: - which assumption is at risk - what evidence triggered the escalation - whether the issue is timing, economics, access, or structure - what a human analyst should review next"
+        },
+        {
+          "document_path": "rag/knowledge_base/trade_approval_policy.md",
+          "title": "Trade Approval Policy",
+          "score": 19,
+          "excerpt": "- PM approval is required for review-oriented cases - PM approval is required when confidence is low - PM approval is required when market data is missing - PM approval is required when recommendation logic relies on fallback scoring - PM approval is required when scenario stress indicates fragility"
+        },
+        {
+          "document_path": "rag/knowledge_base/scenario_stress_testing_policy.md",
+          "title": "Scenario Stress Testing Policy",
+          "score": 16,
+          "excerpt": "## Escalation Guidance Escalate when: - a stress case shows failure of more than one core assumption - the scenario reveals hidden dependence on one customer, one geography, or one policy regime - scenario outcomes are highly sensitive to an input the team cannot currently observe well - the scenario would require a..."
+        }
+      ]
+    }
+  },
+  "ai_committee_views": [
+    {
+      "ticker": "NVDA",
+      "views": [
+        {
+          "role": "macro_analyst",
+          "status": "placeholder"
+        },
+        {
+          "role": "fundamentals_analyst",
+          "status": "placeholder"
+        },
+        {
+          "role": "risk_analyst",
+          "status": "placeholder"
+        }
+      ]
+    },
+    {
+      "ticker": "KO",
+      "views": [
+        {
+          "role": "macro_analyst",
+          "status": "placeholder"
+        },
+        {
+          "role": "fundamentals_analyst",
+          "status": "placeholder"
+        },
+        {
+          "role": "risk_analyst",
+          "status": "placeholder"
+        }
+      ]
+    }
+  ],
+  "portfolio_stress_test": {
+    "tool_name": "run_portfolio_stress_test",
+    "generated_at": "2026-06-05T16:42:46Z",
+    "scenarios": [
+      {
+        "scenario_id": "ai_capex_pullback",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.417965,
+              -0.278643
+            ],
+            "main_driver": "ai_capex_pullback"
+          },
+          "KO": {
+            "downside_range": [
+              -0.055088,
+              -0.036726
+            ],
+            "main_driver": "ai_capex_pullback"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.052814,
+          -0.035209
+        ]
+      },
+      {
+        "scenario_id": "export_control_tightening",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.379968,
+              -0.253312
+            ],
+            "main_driver": "export_control_tightening"
+          },
+          "KO": {
+            "downside_range": [
+              -0.027544,
+              -0.018363
+            ],
+            "main_driver": "export_control_tightening"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.043506,
+          -0.029004
+        ]
+      },
+      {
+        "scenario_id": "rates_higher_for_longer",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.303974,
+              -0.20265
+            ],
+            "main_driver": "rates_higher_for_longer"
+          },
+          "KO": {
+            "downside_range": [
+              -0.06886,
+              -0.045907
+            ],
+            "main_driver": "rates_higher_for_longer"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.04417,
+          -0.029446
+        ]
+      },
+      {
+        "scenario_id": "recession_consumer_slowdown",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.189984,
+              -0.126656
+            ],
+            "main_driver": "recession_consumer_slowdown"
+          },
+          "KO": {
+            "downside_range": [
+              -0.123949,
+              -0.082633
+            ],
+            "main_driver": "recession_consumer_slowdown"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.043788,
+          -0.029192
+        ]
+      },
+      {
+        "scenario_id": "valuation_multiple_compression",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.341971,
+              -0.227981
+            ],
+            "main_driver": "valuation_multiple_compression"
+          },
+          "KO": {
+            "downside_range": [
+              -0.082633,
+              -0.055088
+            ],
+            "main_driver": "valuation_multiple_compression"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.050724,
+          -0.033816
+        ]
+      }
+    ],
+    "ticker_level_impact_ranges": {
+      "NVDA": [
+        -0.417965,
+        -0.278643
+      ],
+      "KO": [
+        -0.055088,
+        -0.036726
+      ]
+    },
+    "portfolio_downside_range": [
+      -0.052814,
+      -0.035209
+    ],
+    "main_risk_drivers": [
+      "NVDA:ai_capex_pullback",
+      "NVDA:export_control_tightening",
+      "NVDA:rates_higher_for_longer",
+      "NVDA:recession_consumer_slowdown",
+      "NVDA:valuation_multiple_compression"
+    ],
+    "constraint_violations": [],
+    "risk_action": "review",
+    "pm_review_required": true
+  },
+  "recommendations": {
+    "NVDA": {
+      "action": "hold_review",
+      "confidence_score": 0.61804,
+      "reason": "Legacy recommendation status was derived from band reduce with aggregate indicator score -0.373371.",
+      "blocked_strong_action_reason": "pm_review_required_by_stress_test",
+      "data_limitation_reason": "official_model_kept_as_transparent_fallback; transparent_fallback_used_due_to_official_model_policy",
+      "benchmark": "QQQ",
+      "outperform_probability": 0.584,
+      "aggregate_indicator_score": -0.373371,
+      "requires_pm_review": true,
+      "legacy_recommendation_gate": true,
+      "not_senior_model_quality_evidence": true,
+      "presentation_scope": "legacy_status_only",
+      "senior_evidence_replacement_sources": [
+        "three_statement_models.models.NVDA",
+        "dcf_valuations.valuations.NVDA",
+        "entry_price_models.entry_prices.NVDA",
+        "indicator_scorecards.scorecards.NVDA"
+      ]
+    },
+    "KO": {
+      "action": "review",
+      "confidence_score": 0.489299,
+      "reason": "Legacy recommendation status was derived from band review with aggregate indicator score 0.047004.",
+      "blocked_strong_action_reason": "pm_review_required_by_stress_test",
+      "data_limitation_reason": "missing_gross_margin; missing_revenue_growth; missing_source_field:debt_to_assets; missing_source_field:gross_margin; missing_source_field:operating_margin",
+      "benchmark": "XLP",
+      "outperform_probability": 0.596,
+      "aggregate_indicator_score": 0.047004,
+      "requires_pm_review": true,
+      "legacy_recommendation_gate": true,
+      "not_senior_model_quality_evidence": true,
+      "presentation_scope": "legacy_status_only",
+      "senior_evidence_replacement_sources": [
+        "three_statement_models.models.KO",
+        "dcf_valuations.valuations.KO",
+        "entry_price_models.entry_prices.KO",
+        "indicator_scorecards.scorecards.KO"
+      ]
+    }
+  },
+  "draft_trade_tickets": [
+    {
+      "ticker": "NVDA",
+      "status": "draft",
+      "action": "hold_review",
+      "target_weight_change": 0.0,
+      "pm_approval_required": true
+    },
+    {
+      "ticker": "KO",
+      "status": "draft",
+      "action": "review",
+      "target_weight_change": 0.0,
+      "pm_approval_required": true
+    }
+  ],
+  "human_review": {
+    "status": "pending_pm_review",
+    "pm_approval_required": true
+  },
+  "legacy_backend_fields": {
+    "model_predictions": "Retained for compatibility only; not Senior Analyst model-quality evidence.",
+    "model_comparison": "Deprecated regression/RF model-quality artifact; not generated for updated Senior workflow.",
+    "recommendations": "Legacy recommendation status/gate fields retained for compatibility; Senior review should use valuation and evidence artifacts."
+  },
+  "disclaimer": "Educational workflow artifact only. Not real investment advice."
+}

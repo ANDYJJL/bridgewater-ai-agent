@@ -1,0 +1,118 @@
+{
+  "NVDA": {
+    "benchmark": "QQQ",
+    "indicators": [
+      {
+        "name": "AI demand momentum",
+        "weight": 0.17,
+        "source_field": "20d_return",
+        "positive_threshold": 0.03,
+        "negative_threshold": -0.03
+      },
+      {
+        "name": "data center growth",
+        "weight": 0.14,
+        "source_field": "revenue_growth",
+        "positive_threshold": 0.08,
+        "negative_threshold": 0.0
+      },
+      {
+        "name": "gross margin quality",
+        "weight": 0.14,
+        "source_field": "gross_margin",
+        "positive_threshold": 0.5,
+        "negative_threshold": 0.35
+      },
+      {
+        "name": "export control risk",
+        "weight": 0.15,
+        "source_field": "export_control_keyword_count",
+        "inverse": true,
+        "positive_threshold": 0.0,
+        "negative_threshold": 2.0
+      },
+      {
+        "name": "supply chain risk",
+        "weight": 0.12,
+        "source_field": "supply_chain_keyword_count",
+        "inverse": true,
+        "positive_threshold": 0.0,
+        "negative_threshold": 2.0
+      },
+      {
+        "name": "valuation sensitivity",
+        "weight": 0.12,
+        "source_field": "60d_volatility",
+        "inverse": true,
+        "positive_threshold": 0.02,
+        "negative_threshold": 0.05
+      },
+      {
+        "name": "hyperscaler capex dependence",
+        "weight": 0.16,
+        "source_field": "capex_keyword_count",
+        "inverse": true,
+        "positive_threshold": 0.0,
+        "negative_threshold": 2.0
+      }
+    ]
+  },
+  "KO": {
+    "benchmark": "XLP",
+    "indicators": [
+      {
+        "name": "pricing power",
+        "weight": 0.18,
+        "source_field": "gross_margin",
+        "positive_threshold": 0.45,
+        "negative_threshold": 0.3
+      },
+      {
+        "name": "volume growth",
+        "weight": 0.14,
+        "source_field": "20d_return",
+        "positive_threshold": 0.02,
+        "negative_threshold": -0.02
+      },
+      {
+        "name": "margin stability",
+        "weight": 0.17,
+        "source_field": "operating_margin",
+        "positive_threshold": 0.2,
+        "negative_threshold": 0.12
+      },
+      {
+        "name": "dividend stability",
+        "weight": 0.12,
+        "source_field": "debt_to_assets",
+        "inverse": true,
+        "positive_threshold": 0.25,
+        "negative_threshold": 0.55
+      },
+      {
+        "name": "input cost inflation",
+        "weight": 0.13,
+        "source_field": "inflation_keyword_count",
+        "inverse": true,
+        "positive_threshold": 0.0,
+        "negative_threshold": 2.0
+      },
+      {
+        "name": "FX exposure",
+        "weight": 0.11,
+        "source_field": "macro_unrate_latest",
+        "inverse": true,
+        "positive_threshold": 4.0,
+        "negative_threshold": 6.0
+      },
+      {
+        "name": "defensive quality",
+        "weight": 0.15,
+        "source_field": "60d_volatility",
+        "inverse": true,
+        "positive_threshold": 0.015,
+        "negative_threshold": 0.035
+      }
+    ]
+  }
+}

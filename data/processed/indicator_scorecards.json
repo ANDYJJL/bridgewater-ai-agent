@@ -1,0 +1,243 @@
+{
+  "tool_name": "score_stock_indicators",
+  "generated_at": "2026-06-05T16:42:46Z",
+  "scorecards": [
+    {
+      "ticker": "NVDA",
+      "aggregate_indicator_score": -0.373371,
+      "confidence_score": 0.61804,
+      "recommendation_band": "reduce",
+      "benchmark": "QQQ",
+      "portfolio_weight": 0.1,
+      "pm_approval_required": true,
+      "indicators": [
+        {
+          "name": "AI demand momentum",
+          "score": -0.608067,
+          "weight": 0.17,
+          "confidence": 0.5756,
+          "direction": "negative",
+          "evidence_refs": [
+            "stock_features:20d_return",
+            "model_prediction:QQQ",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "data center growth",
+          "score": 1.0,
+          "weight": 0.14,
+          "confidence": 0.5756,
+          "direction": "positive",
+          "evidence_refs": [
+            "stock_features:revenue_growth",
+            "model_prediction:QQQ",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "gross margin quality",
+          "score": 1.0,
+          "weight": 0.14,
+          "confidence": 0.5756,
+          "direction": "positive",
+          "evidence_refs": [
+            "stock_features:gross_margin",
+            "model_prediction:QQQ",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "export control risk",
+          "score": -1.0,
+          "weight": 0.15,
+          "confidence": 0.5756,
+          "direction": "negative",
+          "evidence_refs": [
+            "stock_features:export_control_keyword_count",
+            "model_prediction:QQQ",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "supply chain risk",
+          "score": -1.0,
+          "weight": 0.12,
+          "confidence": 0.5756,
+          "direction": "negative",
+          "evidence_refs": [
+            "stock_features:supply_chain_keyword_count",
+            "model_prediction:QQQ",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "valuation sensitivity",
+          "score": -1.0,
+          "weight": 0.12,
+          "confidence": 0.5756,
+          "direction": "negative",
+          "evidence_refs": [
+            "stock_features:60d_volatility",
+            "model_prediction:QQQ",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "hyperscaler capex dependence",
+          "score": -1.0,
+          "weight": 0.16,
+          "confidence": 0.5756,
+          "direction": "negative",
+          "evidence_refs": [
+            "stock_features:capex_keyword_count",
+            "model_prediction:QQQ",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        }
+      ],
+      "data_limitations": [
+        "official_model_kept_as_transparent_fallback",
+        "transparent_fallback_used_due_to_official_model_policy"
+      ]
+    },
+    {
+      "ticker": "KO",
+      "aggregate_indicator_score": 0.047004,
+      "confidence_score": 0.489299,
+      "recommendation_band": "review",
+      "benchmark": "XLP",
+      "portfolio_weight": 0.2,
+      "pm_approval_required": true,
+      "indicators": [
+        {
+          "name": "pricing power",
+          "score": 0.0,
+          "weight": 0.18,
+          "confidence": 0.432554,
+          "direction": "mixed",
+          "evidence_refs": [
+            "stock_features:gross_margin",
+            "model_prediction:XLP",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": [
+            "missing_source_field:gross_margin"
+          ]
+        },
+        {
+          "name": "volume growth",
+          "score": 0.9786,
+          "weight": 0.14,
+          "confidence": 0.432554,
+          "direction": "positive",
+          "evidence_refs": [
+            "stock_features:20d_return",
+            "model_prediction:XLP",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "margin stability",
+          "score": 0.0,
+          "weight": 0.17,
+          "confidence": 0.432554,
+          "direction": "mixed",
+          "evidence_refs": [
+            "stock_features:operating_margin",
+            "model_prediction:XLP",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": [
+            "missing_source_field:operating_margin"
+          ]
+        },
+        {
+          "name": "dividend stability",
+          "score": 0.0,
+          "weight": 0.12,
+          "confidence": 0.432554,
+          "direction": "mixed",
+          "evidence_refs": [
+            "stock_features:debt_to_assets",
+            "model_prediction:XLP",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": [
+            "missing_source_field:debt_to_assets"
+          ]
+        },
+        {
+          "name": "input cost inflation",
+          "score": -1.0,
+          "weight": 0.13,
+          "confidence": 0.432554,
+          "direction": "negative",
+          "evidence_refs": [
+            "stock_features:inflation_keyword_count",
+            "model_prediction:XLP",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "FX exposure",
+          "score": -1.0,
+          "weight": 0.11,
+          "confidence": 0.432554,
+          "direction": "negative",
+          "evidence_refs": [
+            "stock_features:macro_unrate_latest",
+            "model_prediction:XLP",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        },
+        {
+          "name": "defensive quality",
+          "score": 1.0,
+          "weight": 0.15,
+          "confidence": 0.432554,
+          "direction": "positive",
+          "evidence_refs": [
+            "stock_features:60d_volatility",
+            "model_prediction:XLP",
+            "news_evidence",
+            "filing_evidence"
+          ],
+          "data_limitations": []
+        }
+      ],
+      "data_limitations": [
+        "missing_gross_margin",
+        "missing_revenue_growth",
+        "missing_source_field:debt_to_assets",
+        "missing_source_field:gross_margin",
+        "missing_source_field:operating_margin",
+        "official_model_kept_as_transparent_fallback",
+        "transparent_fallback_used_due_to_official_model_policy"
+      ]
+    }
+  ]
+}

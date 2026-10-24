@@ -1,0 +1,38 @@
+{
+  "model_run_id": "model_20260605T164246Z",
+  "model_type": "transparent_fallback",
+  "target": "outperform benchmark over next 60 trading days",
+  "training_row_count": 764,
+  "predictions": {
+    "NVDA": {
+      "benchmark": "QQQ",
+      "outperform_probability": 0.584,
+      "model_confidence": 0.1512,
+      "predicted_return_bucket": "slightly_positive",
+      "top_features": [
+        "relative_return_vs_benchmark_60d",
+        "revenue_growth",
+        "gross_margin"
+      ],
+      "data_limitations": [
+        "official_model_kept_as_transparent_fallback",
+        "transparent_fallback_used_due_to_official_model_policy"
+      ]
+    },
+    "KO": {
+      "benchmark": "XLP",
+      "outperform_probability": 0.596,
+      "model_confidence": 0.1728,
+      "predicted_return_bucket": "slightly_positive",
+      "top_features": [
+        "relative_return_vs_benchmark_60d"
+      ],
+      "data_limitations": [
+        "missing_gross_margin",
+        "missing_revenue_growth",
+        "official_model_kept_as_transparent_fallback",
+        "transparent_fallback_used_due_to_official_model_policy"
+      ]
+    }
+  }
+}

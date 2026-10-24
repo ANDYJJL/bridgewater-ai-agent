@@ -1,0 +1,250 @@
+{
+  "tool_name": "prepare_filing_evidence",
+  "generated_at": "2026-06-05T16:42:46Z",
+  "sec_root": "data/raw/sec",
+  "tickers": {
+    "NVDA": {
+      "ticker": "NVDA",
+      "cik": "0001045810",
+      "latest_10k": {
+        "form": "10-K",
+        "accession_number": "0001045810-26-000021",
+        "filing_date": "2026-02-25",
+        "primary_document": "nvda-20260125.htm"
+      },
+      "latest_10q": {
+        "form": "10-Q",
+        "accession_number": "0001045810-26-000052",
+        "filing_date": "2026-05-20",
+        "primary_document": "nvda-20260426.htm"
+      },
+      "facts": {
+        "revenue": {
+          "fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "value": 26914000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "net_income": {
+          "fact_name": "NetIncomeLoss",
+          "value": 9752000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "operating_income": {
+          "fact_name": "OperatingIncomeLoss",
+          "value": 10041000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "gross_profit": {
+          "fact_name": "GrossProfit",
+          "value": 17475000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "debt": {
+          "fact_name": "LongTermDebtNoncurrent",
+          "value": 7469000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "cash": {
+          "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+          "value": 10605000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "fact_name": "Liabilities",
+          "value": 49510000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "assets": {
+          "fact_name": "Assets",
+          "value": 206803000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "income_anchor_fiscal_year": 2022
+      },
+      "computed_metrics": {
+        "revenue_growth": 0.614033,
+        "gross_margin": 0.64929,
+        "operating_margin": 0.373077,
+        "debt_to_assets": 0.036116
+      },
+      "data_availability_flags": {
+        "submissions_available": true,
+        "companyfacts_available": true,
+        "revenue_available": true,
+        "gross_profit_available": true,
+        "operating_income_available": true,
+        "net_income_available": true,
+        "assets_available": true,
+        "liabilities_available": true,
+        "cash_available": true,
+        "debt_available": true
+      },
+      "data_limitations": []
+    },
+    "KO": {
+      "ticker": "KO",
+      "cik": "0000021344",
+      "latest_10k": {
+        "form": "10-K",
+        "accession_number": "0001628280-26-010047",
+        "filing_date": "2026-02-20",
+        "primary_document": "ko-20251231.htm"
+      },
+      "latest_10q": {
+        "form": "10-Q",
+        "accession_number": "0001628280-26-028802",
+        "filing_date": "2026-04-30",
+        "primary_document": "ko-20260403.htm"
+      },
+      "facts": {
+        "revenue": {
+          "fact_name": null,
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "net_income": {
+          "fact_name": "NetIncomeLoss",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "operating_income": {
+          "fact_name": "OperatingIncomeLoss",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "gross_profit": {
+          "fact_name": "GrossProfit",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "debt": {
+          "fact_name": "LongTermDebtNoncurrent",
+          "value": 35547000000.0,
+          "period_end": "2023-12-31",
+          "filed": "2024-02-20",
+          "unit": "USD",
+          "fiscal_year": 2023,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "cash": {
+          "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+          "value": 10270000000.0,
+          "period_end": "2025-12-31",
+          "filed": "2026-02-20",
+          "unit": "USD",
+          "fiscal_year": 2025,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "fact_name": null,
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "assets": {
+          "fact_name": "Assets",
+          "value": 104816000000.0,
+          "period_end": "2025-12-31",
+          "filed": "2026-02-20",
+          "unit": "USD",
+          "fiscal_year": 2025,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "income_anchor_fiscal_year": null
+      },
+      "computed_metrics": {
+        "revenue_growth": null,
+        "gross_margin": null,
+        "operating_margin": null,
+        "debt_to_assets": null
+      },
+      "data_availability_flags": {
+        "submissions_available": true,
+        "companyfacts_available": true,
+        "revenue_available": false,
+        "gross_profit_available": true,
+        "operating_income_available": true,
+        "net_income_available": true,
+        "assets_available": true,
+        "liabilities_available": false,
+        "cash_available": true,
+        "debt_available": true
+      },
+      "data_limitations": [
+        "debt_to_assets:debt_assets_fiscal_year_misalignment",
+        "gross_margin:missing_required_fact",
+        "income_facts:no_annual_revenue_anchor_year",
+        "liabilities:missing_annual_balance_fact",
+        "operating_margin:missing_required_fact",
+        "revenue_growth:insufficient_annual_revenue_history"
+      ]
+    }
+  }
+}

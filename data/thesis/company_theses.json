@@ -1,0 +1,87 @@
+[
+  {
+    "ticker": "NVDA",
+    "company_name": "NVIDIA Corporation",
+    "thesis_date": "2026-05-01",
+    "core_thesis": "NVIDIA remains positioned to capture a large share of enterprise and hyperscaler AI infrastructure spending because its compute, networking, software, and developer ecosystem remain tightly integrated and difficult to displace in the near term.",
+    "key_assumptions": [
+      "AI training and inference demand continues to grow across hyperscalers and enterprise customers.",
+      "NVIDIA maintains performance and ecosystem advantages that support premium pricing.",
+      "Customers continue to view accelerated computing as a high-priority capital allocation area.",
+      "Supply availability improves enough to support shipment growth without a major deterioration in customer relationships.",
+      "Export restrictions and competitive responses slow some regions or products but do not fully offset broader demand growth."
+    ],
+    "upside_drivers": [
+      "Faster-than-expected inference demand broadens the customer base beyond a small set of hyperscalers.",
+      "New product ramps increase system-level revenue through combined GPU, networking, and software sales.",
+      "Enterprise adoption shortens the path from pilot workloads to production deployments.",
+      "Gross margin remains resilient despite mix shifts as software and platform attach rates increase."
+    ],
+    "downside_risks": [
+      "Hyperscaler capital spending becomes more cyclical or more concentrated in fewer customers.",
+      "Tighter export controls reduce addressable demand or create product segmentation challenges.",
+      "Competition from internal silicon or rival accelerators pressures pricing, share, or workload mix.",
+      "Supply chain or packaging constraints delay shipments and compress near-term revenue conversion.",
+      "Margin pressure emerges if product transitions or regional mix changes dilute the current economics."
+    ],
+    "macro_sensitivities": [
+      "Large customer capex appetite",
+      "Cost of capital and duration-sensitive equity valuation",
+      "Global growth and enterprise IT spending conditions",
+      "Industrial policy and trade restrictions",
+      "Semiconductor supply chain stability"
+    ],
+    "metrics_to_monitor": [
+      "Data center revenue growth",
+      "Hyperscaler and enterprise capex commentary",
+      "Gross margin trend",
+      "Customer concentration disclosures",
+      "Inventory and supply commitments",
+      "Export-control-related regional exposure",
+      "New product ramp timing",
+      "Networking and platform attach rates"
+    ]
+  },
+  {
+    "ticker": "KO",
+    "company_name": "The Coca-Cola Company",
+    "thesis_date": "2026-05-19",
+    "core_thesis": "Coca-Cola remains positioned as a defensive consumer staples business because its brand portfolio, global distribution system, and pricing power help support resilient cash generation across a wide range of macro environments.",
+    "key_assumptions": [
+      "Consumers continue to treat core beverage categories as repeat-purchase products even in slower growth environments.",
+      "Coca-Cola maintains brand strength and route-to-market advantages that support pricing actions without a severe erosion in demand.",
+      "The company continues to balance pricing, mix, and packaging decisions in a way that protects margins over time.",
+      "Global distribution and franchise execution remain strong enough to support broad market coverage across regions and channels.",
+      "FX volatility and input cost inflation create pressure at times but do not fully overwhelm the defensive quality of the business."
+    ],
+    "upside_drivers": [
+      "Pricing power remains durable while consumer demand stays stable across key markets.",
+      "Volume trends improve as execution, channel mix, or international recovery supports broader consumption.",
+      "Margin stability holds as management offsets input cost pressure through mix, pricing, and operating discipline.",
+      "The stock retains defensive appeal if investors rotate toward cash-generative and dividend-oriented businesses."
+    ],
+    "downside_risks": [
+      "Input cost inflation compresses margins if pricing actions lag cost pressure.",
+      "FX headwinds weigh on reported results or reduce the benefit of underlying operating performance.",
+      "Volume growth weakens if consumers trade down, reduce discretionary purchases, or face sustained macro pressure.",
+      "Execution or channel disruptions limit the benefit of the company's global distribution footprint.",
+      "Defensive quality becomes less valuable to investors if growth-sensitive assets re-rate more strongly."
+    ],
+    "macro_sensitivities": [
+      "Consumer spending resilience",
+      "Input cost inflation",
+      "Foreign exchange volatility",
+      "Global growth and emerging market demand conditions",
+      "Defensive equity factor leadership"
+    ],
+    "metrics_to_monitor": [
+      "Organic revenue growth",
+      "Pricing versus volume balance",
+      "Gross margin and operating margin stability",
+      "FX commentary",
+      "Input cost inflation trends",
+      "Cash generation and dividend support",
+      "Channel and geographic mix"
+    ]
+  }
+]

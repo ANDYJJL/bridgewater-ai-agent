@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Next.js build output
+.next/
+out/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Bulk raw data pulls (regenerate with scripts/collect_real_raw_data.py)
+data/raw/
+
+# Agent / editor local state
+.claude/
+.DS_Store

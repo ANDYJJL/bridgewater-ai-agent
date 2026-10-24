@@ -1,0 +1,65 @@
+[
+  {
+    "id": "nvda_news_001",
+    "ticker": "NVDA",
+    "date": "2026-05-06",
+    "source_type": "wire",
+    "headline": "Large cloud providers continue expanding AI infrastructure spending plans",
+    "summary": "Several hyperscale cloud operators said AI infrastructure remains a leading capital priority for the coming quarters, with management teams emphasizing continued demand for training clusters and inference capacity.",
+    "topics": ["hyperscaler capex", "AI demand", "cloud infrastructure"]
+  },
+  {
+    "id": "nvda_news_002",
+    "ticker": "NVDA",
+    "date": "2026-05-04",
+    "source_type": "financial_press",
+    "headline": "U.S. officials weigh tighter controls on advanced AI chip exports to additional markets",
+    "summary": "Policy discussions around expanding export restrictions on advanced semiconductors have resurfaced, raising questions about product eligibility, regional mix, and the durability of demand from restricted geographies.",
+    "topics": ["export restrictions", "policy", "regional demand"]
+  },
+  {
+    "id": "nvda_news_003",
+    "ticker": "NVDA",
+    "date": "2026-05-02",
+    "source_type": "trade_press",
+    "headline": "Advanced packaging bottlenecks remain a focus across the AI server supply chain",
+    "summary": "Suppliers and component partners said packaging capacity has improved from prior peaks but remains tight enough that delivery schedules and product mix can still shift when demand changes quickly.",
+    "topics": ["supply constraints", "advanced packaging", "shipments"]
+  },
+  {
+    "id": "nvda_news_004",
+    "ticker": "NVDA",
+    "date": "2026-04-30",
+    "source_type": "wire",
+    "headline": "Rival accelerator vendors highlight lower total-cost-of-ownership claims for new platforms",
+    "summary": "Competing chip providers used recent product events to argue that newer accelerator platforms can narrow performance gaps in targeted workloads, especially where buyers prioritize power efficiency or lower system cost.",
+    "topics": ["competition", "pricing", "accelerator market"]
+  },
+  {
+    "id": "nvda_news_005",
+    "ticker": "NVDA",
+    "date": "2026-04-28",
+    "source_type": "financial_press",
+    "headline": "Server makers discuss margin pressure during next-generation AI system transitions",
+    "summary": "Hardware vendors and channel partners said next-generation system ramps can introduce short-term pricing and component cost friction before manufacturing yields and deployment scale normalize.",
+    "topics": ["margin pressure", "product transition", "system costs"]
+  },
+  {
+    "id": "nvda_news_006",
+    "ticker": "NVDA",
+    "date": "2026-04-26",
+    "source_type": "company_event_coverage",
+    "headline": "NVIDIA and partners promote new platform cycle built around higher-bandwidth networking and inference throughput",
+    "summary": "Recent product-cycle coverage highlighted new system designs that combine compute, networking, and software stack updates, with partners focusing on deployment efficiency and broader inference use cases.",
+    "topics": ["new product cycle", "networking", "inference demand"]
+  },
+  {
+    "id": "nvda_news_007",
+    "ticker": "NVDA",
+    "date": "2026-04-24",
+    "source_type": "wire",
+    "headline": "Some enterprise buyers say AI projects are moving from experimentation to staged production rollouts",
+    "summary": "Chief information officers and enterprise software partners said selected AI workloads are progressing from pilot programs toward broader production deployment, though budgets remain concentrated in clearer-return use cases.",
+    "topics": ["enterprise adoption", "AI demand", "budget discipline"]
+  }
+]

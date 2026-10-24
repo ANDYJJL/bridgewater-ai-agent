@@ -1,0 +1,42 @@
+{
+  "portfolio_id": "demo_portfolio_001",
+  "as_of_date": "2026-05-18",
+  "positions": [
+    {
+      "ticker": "NVDA",
+      "weight": 0.1,
+      "bucket": "technology_core"
+    },
+    {
+      "ticker": "KO",
+      "weight": 0.2,
+      "bucket": "defensive_core"
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 0.15,
+      "bucket": "technology_core"
+    },
+    {
+      "ticker": "AAPL",
+      "weight": 0.1,
+      "bucket": "technology_core"
+    },
+    {
+      "ticker": "XLP",
+      "weight": 0.15,
+      "bucket": "defensive_basket"
+    },
+    {
+      "ticker": "SHV",
+      "weight": 0.3,
+      "bucket": "cash"
+    }
+  ],
+  "bucket_weights": {
+    "technology_core": 0.35,
+    "defensive_core": 0.2,
+    "defensive_basket": 0.15,
+    "cash": 0.3
+  }
+}

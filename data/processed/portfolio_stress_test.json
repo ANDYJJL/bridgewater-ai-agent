@@ -1,0 +1,145 @@
+{
+  "tool_name": "run_portfolio_stress_test",
+  "generated_at": "2026-06-05T16:42:46Z",
+  "scenarios": [
+    {
+      "scenario_id": "ai_capex_pullback",
+      "ticker_level_impacts": {
+        "NVDA": {
+          "downside_range": [
+            -0.417965,
+            -0.278643
+          ],
+          "main_driver": "ai_capex_pullback"
+        },
+        "KO": {
+          "downside_range": [
+            -0.055088,
+            -0.036726
+          ],
+          "main_driver": "ai_capex_pullback"
+        }
+      },
+      "portfolio_downside_range": [
+        -0.052814,
+        -0.035209
+      ]
+    },
+    {
+      "scenario_id": "export_control_tightening",
+      "ticker_level_impacts": {
+        "NVDA": {
+          "downside_range": [
+            -0.379968,
+            -0.253312
+          ],
+          "main_driver": "export_control_tightening"
+        },
+        "KO": {
+          "downside_range": [
+            -0.027544,
+            -0.018363
+          ],
+          "main_driver": "export_control_tightening"
+        }
+      },
+      "portfolio_downside_range": [
+        -0.043506,
+        -0.029004
+      ]
+    },
+    {
+      "scenario_id": "rates_higher_for_longer",
+      "ticker_level_impacts": {
+        "NVDA": {
+          "downside_range": [
+            -0.303974,
+            -0.20265
+          ],
+          "main_driver": "rates_higher_for_longer"
+        },
+        "KO": {
+          "downside_range": [
+            -0.06886,
+            -0.045907
+          ],
+          "main_driver": "rates_higher_for_longer"
+        }
+      },
+      "portfolio_downside_range": [
+        -0.04417,
+        -0.029446
+      ]
+    },
+    {
+      "scenario_id": "recession_consumer_slowdown",
+      "ticker_level_impacts": {
+        "NVDA": {
+          "downside_range": [
+            -0.189984,
+            -0.126656
+          ],
+          "main_driver": "recession_consumer_slowdown"
+        },
+        "KO": {
+          "downside_range": [
+            -0.123949,
+            -0.082633
+          ],
+          "main_driver": "recession_consumer_slowdown"
+        }
+      },
+      "portfolio_downside_range": [
+        -0.043788,
+        -0.029192
+      ]
+    },
+    {
+      "scenario_id": "valuation_multiple_compression",
+      "ticker_level_impacts": {
+        "NVDA": {
+          "downside_range": [
+            -0.341971,
+            -0.227981
+          ],
+          "main_driver": "valuation_multiple_compression"
+        },
+        "KO": {
+          "downside_range": [
+            -0.082633,
+            -0.055088
+          ],
+          "main_driver": "valuation_multiple_compression"
+        }
+      },
+      "portfolio_downside_range": [
+        -0.050724,
+        -0.033816
+      ]
+    }
+  ],
+  "ticker_level_impact_ranges": {
+    "NVDA": [
+      -0.417965,
+      -0.278643
+    ],
+    "KO": [
+      -0.055088,
+      -0.036726
+    ]
+  },
+  "portfolio_downside_range": [
+    -0.052814,
+    -0.035209
+  ],
+  "main_risk_drivers": [
+    "NVDA:ai_capex_pullback",
+    "NVDA:export_control_tightening",
+    "NVDA:rates_higher_for_longer",
+    "NVDA:recession_consumer_slowdown",
+    "NVDA:valuation_multiple_compression"
+  ],
+  "constraint_violations": [],
+  "risk_action": "review",
+  "pm_review_required": true
+}

@@ -1,0 +1,16 @@
+{
+  "mandate_id": "demo_pm_mandate",
+  "benchmark": "SPY",
+  "risk_tolerance": "medium",
+  "max_single_name_weight": 0.2,
+  "max_technology_weight": 0.45,
+  "allowed_actions": [
+    "accumulate",
+    "hold",
+    "reduce",
+    "avoid",
+    "review"
+  ],
+  "pm_approval_required": true,
+  "target_horizon_days": 60
+}

@@ -1,0 +1,116 @@
+# Milestone 03: AI Workflows, Tool Calling (MCP), and Retrieval Augmented Generation (RAG)
+
+## Overview
+
+In this milestone, your team will individual skills into a connected AI coworker that can complete a multi-step workflow, use tools through the Model Context Protocol (MCP), and ground its responses in (simulated) proprietary company knowledge using Retrieval Augmented Generation (RAG).
+
+**Building on Milestone 02**: Your M02 skills and Python functions are the foundation for M03. The skills you developed will be extended (or new ones added) so they can be invoked in sequence as part of a larger workflow. The Python functions you wrote will be re-exposed to the model through MCP as callable tools. The RAG knowledge base is a *new*, separate corpus that simulates proprietary internal information your AI coworker would not have access to through public data alone -- it is in addition to, not a replacement for, the data prepared in M02.
+
+## Deliverables
+
+### 1. AI Workflows (Due: May 14)
+
+Develop a set of additional and connected skills that teach your AI coworker to complete a multi-step workflow. Each skill must be clearly linked to consecutive steps in your Milestone 01 workflow diagram.
+
+**What is an AI workflow?** A single skill teaches the model to do one task. An AI workflow chains multiple skills so the model can complete a sequence of tasks in one session -- typically by invoking skills one after another, passing intermediate outputs between them (in conversation or written to/read from disk), and making decisions about which skill to invoke next based on prior results.
+
+Your work should include:
+
+- **3-5 connected skills** that together complete a meaningful multi-step portion of your Milestone 01 workflow. These can be extensions of existing M02 skills or new skills purpose-built for chaining
+- A description of how the skills hand off to each other (sequential invocation, intermediate file outputs, decision points where the model picks the next skill, etc.)
+- Testing and validation that demonstrates the chained workflow produces robust and accurate results end-to-end, not just skill-by-skill
+
+### 2. Tool Calling and Model Context Protocol (MCP) (Due: May 14)
+
+Develop tool-calling capabilities for your AI coworker by exposing your project's Python functions as tools through the Model Context Protocol (MCP).
+
+**What is MCP?** MCP is a protocol that lets a GenAI model invoke tools, read external resources, and call functions through a consistent interface. Rather than embedding all logic inside skills, you author an MCP server that publishes a list of tools the model can call (with arguments and return types), and the model decides when to invoke them. This lets your skills stay focused on *what* to do, while the MCP server defines *how* the work gets done in code.
+
+> Note: MCP is an open standard pioneered by Anthropic and is widely supported. It cleanly separates skill content from tool implementation, and the same MCP server can be reused across projects.
+
+Your work should include:
+
+- **2-3 tools** exposed via MCP that connect directly to steps in your Milestone 01 workflow. These tools should wrap the Python functions you wrote in M02 (and any new ones needed for the chained workflow in section 1)
+- Documentation of each tool: its name, purpose, input arguments, return value, and which workflow step it supports
+- A description of how your skills (from section 1) are designed to call these tools, and how the model decides which tool to invoke at which step
+- Testing and validation showing the tools behave correctly when invoked by the model under realistic inputs
+
+> Note: Prepare 3-5 slides to illustrate how your skills connect to each other, how they use MCP and how they connect to your work in Milestone 01 workflow diagram and your work in Milestone 02.
+
+### 3. Retrieval Augmented Generation (RAG) (Due: May 21)
+
+Implement RAG capabilities that allow your AI coworker to access and use simulated proprietary company information during task execution.
+
+**What is RAG?** RAG is a technique for grounding a model's responses in specific source documents that the model would not otherwise have seen. At a high level: you (1) prepare a knowledge base of documents, (2) index them so they can be searched (typically with vector embeddings, keyword search, or both), and (3) at query time retrieve the most relevant chunks and include them in the prompt so the model can answer using that content rather than relying only on its training data or general reasoning.
+
+Your work should include:
+
+- A simulated **proprietary knowledge base** of **10-20 documents** relevant to your Milestone 01 workflow. Examples can include internal policies, FAQs, employee handbook, SOPs, product catalog, contracts, meeting notes, etc.
+- This corpus is *separate* from the data prepared in Milestone 02 and should represent information that would realistically only exist inside the company
+- A retrieval mechanism that selects the most relevant content for a given query at workflow execution time
+- Integration with one or more skills and/or tools so retrieved content informs the model's responses
+- Testing and validation showing the AI coworker uses retrieved information correctly and degrades gracefully when no relevant content is found
+
+> Note: We ask for a *separate* simulated proprietary corpus (rather than reusing the M02 `data/` folder) because the pedagogical point of RAG is to teach the model facts it could not otherwise know. The corpus simulates the kind of internal knowledge a real AI coworker would need but that is not in any public dataset or in the model's training data.
+
+### 4. README.md Documentation (Due: May 21)
+
+Create a `README.md` file in the root of your `milestone03` folder that serves as the central map for your work. This document should clearly describe all components of the AI workflow and how the pieces fit together: Which skills chain together, which tools a skill calls, where the RAG knowledge base lives, and how to run the workflow end-to-end.
+
+This README.md is how your instructional team (and your peers) will navigate your work. Make it clear and well-organized.
+
+### 5. Demo Video (Due: May 21)
+
+Prepare and submit a 10-minute demo video that clearly shows:
+
+- **AI Workflow in Action**: Demonstrate the fully functional chained workflow using realistic inputs and corresponding outputs
+- **Workflow Connection**: Describe how the workflow connects to your Milestone 01 diagram and the tasks it addresses
+- **Tools via MCP**: Show how the model invokes your MCP tools at the right points in the workflow
+- **RAG Capabilities**: Show how retrieved proprietary content is used by the AI coworker to answer questions or complete tasks it could not handle without it
+
+All team members should meaningfully participate in preparing and delivering the demonstration. **The recording should take place with all team members in the same room. Do not read from a script but explain your work to your peers in your own words as if you were walking a colleague through what you built and why.**
+
+## Evaluation Criteria
+
+- **Coherence and Robustness of the Connected AI Workflow**: 20%
+- **Design and Implementation of MCP Tools**: 20%
+- **Quality and Effectiveness of the RAG Implementation**: 20%
+- **Clarity and Completeness of Documentation**: 20%
+- **Professionalism and Clarity of Demo Video**: 20%
+
+## Submission Instructions
+
+Push your work to GitHub before the start of class on **May 21**. Your presentation video should be recorded and uploaded to Canvas through the Panopto tab.
+
+Your `milestone03/` folder should be structured as follows:
+
+```text
+milestone03/
+  README.md             -- maps the workflow to skills, tools, and RAG
+  skills/               -- new or extended skills (workflow-connected)
+    skill-name-1/
+    ...
+  tools/                -- Python implementations of MCP tools
+    ...
+  mcp_servers/          -- MCP server config / manifest
+    ...
+  rag/
+    knowledge_base/     -- simulated proprietary documents
+    index/              -- vector store
+    retrieval.py        -- retrieval code (can be an MCP tool or separate module)
+```
+
+All source files should be clearly labeled and pushed to your GitHub repo.
+
+## Resources
+
+- [Overview of how skills work](https://www.youtube.com/watch?v=vEvytl7wrGM)
+- [Model Context Protocol -- Introduction](https://modelcontextprotocol.io/introduction)
+- [MCP Quickstart for Server Developers](https://modelcontextprotocol.io/quickstart/server)
+- [Example MCP Servers](https://github.com/modelcontextprotocol/servers)
+- [RAG's Evolution: From Simple Retrieval to Agentic AI](https://www.youtube.com/watch?v=JB2P5Gk23VI)
+
+For those that want to explore a more advanced RAG implementation, we recommend the following resources:
+
+- [Claude Code + LightRAG](https://www.youtube.com/watch?v=QHlB-RJfx8w)
+- [Claude Code + RAG-Anything](https://www.youtube.com/watch?v=rJCgvnXgOiU)

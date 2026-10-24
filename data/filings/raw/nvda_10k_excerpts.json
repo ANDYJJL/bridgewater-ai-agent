@@ -1,0 +1,39 @@
+{
+  "ticker": "NVDA",
+  "filing_type": "10-K",
+  "fiscal_year": "FY2026",
+  "sections": [
+    {
+      "section_name": "Business overview",
+      "excerpt": "We provide accelerated computing platforms spanning data center, gaming, professional visualization, automotive, and embedded markets. Our strategy is to combine compute, interconnect, systems, and software into a unified platform that customers can adopt across AI training, inference, simulation, and high-performance computing workloads."
+    },
+    {
+      "section_name": "Revenue discussion",
+      "excerpt": "Revenue growth during the fiscal year was driven primarily by continued demand for accelerated computing infrastructure, particularly in data center end markets. Customer purchasing patterns remained influenced by the pace of AI deployment, product availability, and timing of large-scale platform transitions. Results also reflected continued variation in regional demand conditions."
+    },
+    {
+      "section_name": "Segment discussion",
+      "excerpt": "Data center remained our largest platform category and benefited from demand across hyperscale and enterprise customers. Gaming results were influenced by channel inventory normalization and product-cycle timing. Networking and system-level offerings increased in importance as customers sought integrated cluster performance rather than standalone component purchases."
+    },
+    {
+      "section_name": "Gross margin and supply chain",
+      "excerpt": "Gross margin was influenced by product mix, early-ramp manufacturing costs, memory and substrate availability, and the timing of next-generation system launches. Supply chain execution improved in several areas during the year; however, advanced packaging, component lead times, and yield learning curves continued to affect shipment cadence and cost absorption in certain periods."
+    },
+    {
+      "section_name": "Risk factors",
+      "excerpt": "Our business is exposed to rapid technology transitions, competition from established and emerging providers, customer concentration, and restrictions affecting the sale of advanced products in certain markets. Demand may fluctuate if customers delay infrastructure deployments, reprioritize capital budgets, or develop alternative internal solutions. Changes in trade policy, export controls, and geopolitical conditions may affect product design, market access, and revenue mix."
+    },
+    {
+      "section_name": "Customer concentration",
+      "excerpt": "A limited number of direct and indirect customers account for a meaningful portion of revenue in some periods, particularly in large data center deployments. Revenue concentration may increase when a small number of customers accelerate platform buildouts or when shipment timing is linked to large cluster installations. The loss, delay, or reprioritization of purchases by major customers could materially affect period-to-period results."
+    },
+    {
+      "section_name": "Inventory and supply commitments",
+      "excerpt": "To support expected demand and secure critical capacity, we entered into supply and capacity commitments with manufacturing and component partners. These arrangements may require prepayments, minimum purchase commitments, or long-lead planning assumptions. If demand, product mix, or regulatory conditions shift, inventory balances and purchase commitments could require reassessment."
+    },
+    {
+      "section_name": "Management outlook",
+      "excerpt": "Management expects customer interest in AI infrastructure to remain elevated, but results may continue to be affected by the pace of product transitions, supply availability, regional restrictions, and the degree to which customers move from pilot environments to scaled production deployments. We remain focused on expanding our platform footprint while managing operational complexity associated with rapid market growth."
+    }
+  ]
+}

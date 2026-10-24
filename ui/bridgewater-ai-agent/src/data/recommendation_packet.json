@@ -1,0 +1,1994 @@
+{
+  "run_id": "m04_20260520T054021Z",
+  "generated_at": "2026-05-20T05:40:21Z",
+  "raw_data_sources": {
+    "run_at": "2026-05-20T05:40:11Z",
+    "sec": {
+      "source": "sec_edgar",
+      "tickers": {
+        "NVDA": {
+          "ticker": "NVDA",
+          "cik": "0001045810",
+          "submissions_url": "https://data.sec.gov/submissions/CIK0001045810.json",
+          "companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+          "submissions_status": "success",
+          "companyfacts_status": "success",
+          "errors": []
+        },
+        "KO": {
+          "ticker": "KO",
+          "cik": "0000021344",
+          "submissions_url": "https://data.sec.gov/submissions/CIK0000021344.json",
+          "companyfacts_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000021344.json",
+          "submissions_status": "success",
+          "companyfacts_status": "success",
+          "errors": []
+        }
+      }
+    },
+    "fred": {
+      "source": "fred",
+      "collected_at": "2026-05-20T05:40:14Z",
+      "status": "cached_file_used",
+      "series_requested": [
+        "FEDFUNDS",
+        "CPIAUCSL",
+        "UNRATE",
+        "GDP",
+        "DGS10",
+        "SP500",
+        "VIXCLS"
+      ],
+      "output_path": "data/raw/fred/macro_observations.csv",
+      "message": null
+    },
+    "market": {
+      "source": "yfinance",
+      "collected_at": "2026-05-20T05:40:14Z",
+      "symbols": {
+        "NVDA": {
+          "status": "success",
+          "error": null,
+          "rows_written": 501,
+          "output_path": "data/raw/market/NVDA_prices.csv"
+        },
+        "KO": {
+          "status": "success",
+          "error": null,
+          "rows_written": 501,
+          "output_path": "data/raw/market/KO_prices.csv"
+        },
+        "SPY": {
+          "status": "success",
+          "error": null,
+          "rows_written": 501,
+          "output_path": "data/raw/market/SPY_prices.csv"
+        },
+        "QQQ": {
+          "status": "success",
+          "error": null,
+          "rows_written": 501,
+          "output_path": "data/raw/market/QQQ_prices.csv"
+        },
+        "XLP": {
+          "status": "success",
+          "error": null,
+          "rows_written": 501,
+          "output_path": "data/raw/market/XLP_prices.csv"
+        }
+      },
+      "status": "success",
+      "symbols_requested": [
+        "NVDA",
+        "KO",
+        "SPY",
+        "QQQ",
+        "XLP"
+      ],
+      "symbols_collected": [
+        "NVDA",
+        "KO",
+        "SPY",
+        "QQQ",
+        "XLP"
+      ],
+      "rows_written": 2505,
+      "output_path": "data/raw/market",
+      "errors": []
+    },
+    "news": {
+      "source": "rss_news",
+      "collected_at": "2026-05-20T05:40:18Z",
+      "tickers": {
+        "NVDA": {
+          "status": "success",
+          "articles_written": 100,
+          "source_url": "https://news.google.com/rss/search?q=NVDA+stock+when:30d&hl=en-US&gl=US&ceid=US:en"
+        },
+        "KO": {
+          "status": "success",
+          "articles_written": 100,
+          "source_url": "https://news.google.com/rss/search?q=Coca-Cola+KO+stock+when:30d&hl=en-US&gl=US&ceid=US:en"
+        }
+      }
+    }
+  },
+  "missing_data_warnings": [],
+  "mandate": {
+    "mandate_id": "demo_pm_mandate",
+    "benchmark": "SPY",
+    "risk_tolerance": "medium",
+    "max_single_name_weight": 0.2,
+    "max_technology_weight": 0.45,
+    "allowed_actions": [
+      "accumulate",
+      "hold",
+      "reduce",
+      "avoid",
+      "review"
+    ],
+    "pm_approval_required": true,
+    "target_horizon_days": 60
+  },
+  "portfolio": {
+    "portfolio_id": "demo_portfolio_001",
+    "as_of_date": "2026-05-18",
+    "positions": [
+      {
+        "ticker": "NVDA",
+        "weight": 0.1,
+        "bucket": "technology_core"
+      },
+      {
+        "ticker": "KO",
+        "weight": 0.2,
+        "bucket": "defensive_core"
+      },
+      {
+        "ticker": "MSFT",
+        "weight": 0.15,
+        "bucket": "technology_core"
+      },
+      {
+        "ticker": "AAPL",
+        "weight": 0.1,
+        "bucket": "technology_core"
+      },
+      {
+        "ticker": "XLP",
+        "weight": 0.15,
+        "bucket": "defensive_basket"
+      },
+      {
+        "ticker": "SHV",
+        "weight": 0.3,
+        "bucket": "cash"
+      }
+    ],
+    "bucket_weights": {
+      "technology_core": 0.35,
+      "defensive_core": 0.2,
+      "defensive_basket": 0.15,
+      "cash": 0.3
+    }
+  },
+  "news_evidence": {
+    "NVDA": [
+      {
+        "raw_id": "NVDA_83",
+        "ticker": "NVDA",
+        "source_name": "The Motley Fool",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdnNIeWxXbmpwbTVZRE9ibG1RUVRyU3BpNlk0dDNZRVYta2dJOWI2U3B2dkJiNmRKUnpuSnRRcUNYWnhCT2pDdjBkdkR0TTNWZDdxeWlvT3JMYXk1alhHaW04S0tvb0hJa2Uwc0tCVTVnNWJvcC1jQndJMkpETTZWcmczdWJFQXBCWDJ3X2MtdUQxTC1WbWZZWA?oc=5",
+        "published_at": "Wed, 20 May 2026 04:23:10 GMT",
+        "fetch_status": "success",
+        "clean_text": "Should You Buy Nvidia Stock Before Its Next Earnings Report? - The Motley Fool Should You Buy Nvidia Stock Before Its Next Earnings Report? &nbsp;&nbsp; The Motley Fool",
+        "evidence_chunks": [
+          "Should You Buy Nvidia Stock Before Its Next Earnings Report? - The Motley Fool Should You Buy Nvidia Stock Before Its Next Earnings Report? &nbsp;&nbsp; The Motley Fool"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_37",
+        "ticker": "NVDA",
+        "source_name": "Barron's",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE42eFBYUTR3RTZtLUFUS1Q2TUVKRnRULVVsNnlBQk1la1VheVI0NmFqempzQUtBTkw1YmpaaHVtOGRHRG9lbXR3d2UtbmpZeWVMWHNjR0ktU0JZb3QyWlQxdWdBWGFERDNwNVVnNUZGaFVidWVKVElCNHoxeWM?oc=5",
+        "published_at": "Tue, 19 May 2026 21:17:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia Stock: The Upside of a 3-Day Pre-Earnings Slump - Barron's Nvidia Stock: The Upside of a 3-Day Pre-Earnings Slump &nbsp;&nbsp; Barron's",
+        "evidence_chunks": [
+          "Nvidia Stock: The Upside of a 3-Day Pre-Earnings Slump - Barron's Nvidia Stock: The Upside of a 3-Day Pre-Earnings Slump &nbsp;&nbsp; Barron's"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_94",
+        "ticker": "NVDA",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZzEwMkVhLTRWb3BEQmRNQU1EWWdlXy1VNnE0cHdrbS1wVmdVY0pJWTBFN3JTQk1DeTVHN1MwWjRJVU5McGtfU21tRHc5ODhUTmctdG1MSWNUMmFMbE8wMlRIc1BGWVliYUEwaUZ1c0U1YkZWYmNnekM2Q0swN04yTlFydHpHaWtvdTdMQmcza1ZrSUpGY09wbTd2NnRXdDZtbktfNEFRd3RLUmduamN3dXlwQl80Z3RUVFE?oc=5",
+        "published_at": "Tue, 19 May 2026 19:13:28 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia to report Q1 earnings as chip competition grows - Yahoo Finance Nvidia to report Q1 earnings as chip competition grows &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "Nvidia to report Q1 earnings as chip competition grows - Yahoo Finance Nvidia to report Q1 earnings as chip competition grows &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_40",
+        "ticker": "NVDA",
+        "source_name": "thestreet.com",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUjdWT0ZjeTM0R2ZzZFJiX2o0WXNpcVdMVXNSNlBhWXNBb3JKMGM0MzFycHNUUzgwWm5mdHRHMWg3TmF3TUtfOGJCN1lQQWJIRDVYeXZmTW41T0p5Q0xSa1pPa1pxckdtWGVIRmZRdGs3OU1vQ2lac19MZ1JVTURQejJmalpEWk54WFRBRndkUlVpYmFiQ2piWWp4Y09DbHZv?oc=5",
+        "published_at": "Tue, 19 May 2026 19:11:24 GMT",
+        "fetch_status": "success",
+        "clean_text": "Keybanc sets jaw-dropping Nvidia stock price target before earnings - thestreet.com Keybanc sets jaw-dropping Nvidia stock price target before earnings &nbsp;&nbsp; thestreet.com",
+        "evidence_chunks": [
+          "Keybanc sets jaw-dropping Nvidia stock price target before earnings - thestreet.com Keybanc sets jaw-dropping Nvidia stock price target before earnings &nbsp;&nbsp; thestreet.com"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_76",
+        "ticker": "NVDA",
+        "source_name": "The Motley Fool",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOXdZeEJXamF6RG1MMnh2YTNBdUk0UEdQNU0tajM1akZvZzdMSmNRV3B3eDlfenExOWNKNHZyRjMzdFRyRFI3d0lhY1V1MGRORDAyNURFaUN2VjBXRWtyMjktelRzU21fZGRTRjl5SmY2dmxGN0EyV0I3TmVPMFdWQi1EVFZZQTBNSktCV1hjUzJhOHB0RHZZ?oc=5",
+        "published_at": "Tue, 19 May 2026 18:51:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Should You Buy Nvidia Stock Before May 20? History Offers a Startling Conclusion. - The Motley Fool Should You Buy Nvidia Stock Before May 20? History Offers a Startling Conclusion. &nbsp;&nbsp; The Motley Fool",
+        "evidence_chunks": [
+          "Should You Buy Nvidia Stock Before May 20? History Offers a Startling Conclusion. - The Motley Fool Should You Buy Nvidia Stock Before May 20? History Offers a Startling Conclusion. &nbsp;&nbsp; The Motley Fool"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_58",
+        "ticker": "NVDA",
+        "source_name": "Yahoo Finance",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZlNnLUxTWVhqRU1jYWNwN1NpUDNrZUdEWFdNbnhKT0pRbXMxWGstdFptVnNJVkdEQlRkM2NRUUhLYzltUHcwLXNMOWxZdmNCblo2SG9YUDVReW8yVlhTZ3N4QTFYb09Gd2dJeGZNTkVlSUpid0N5NzVLQmFYcjRnR3ZHMXcwbGpmU2FnN3NlYm41WUR6TlY0Q1VFRDVYMm9oM3ctbFhmWldtYmwzamJWSVEwYw?oc=5",
+        "published_at": "Tue, 19 May 2026 15:25:34 GMT",
+        "fetch_status": "success",
+        "clean_text": "Take a closer look at Nvidia stock using Yahoo Finance's AlphaSpace - Yahoo Finance Take a closer look at Nvidia stock using Yahoo Finance's AlphaSpace &nbsp;&nbsp; Yahoo Finance",
+        "evidence_chunks": [
+          "Take a closer look at Nvidia stock using Yahoo Finance's AlphaSpace - Yahoo Finance Take a closer look at Nvidia stock using Yahoo Finance's AlphaSpace &nbsp;&nbsp; Yahoo Finance"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_35",
+        "ticker": "NVDA",
+        "source_name": "The Motley Fool",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQS19MbS1lVE81RW1YUEZJQWpuanNHR0VNU1BLekxNV3k4NlBFNTdsZUlCQ0ZFeFExN3J5M2N2TEc3dXRXbGw4eFFrTktIS1hPcjVRM2NrVkZYTmVSc2Q4aU1iZllfczRaX1lfQlNRWTJVN0VtQTlaTGJmcDQ0TU1zaGJnQWhvUQ?oc=5",
+        "published_at": "Tue, 19 May 2026 13:15:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia Earnings on May 20: What History Tells Us About Nvidia Stock's Post-Earnings-Release Moves - The Motley Fool Nvidia Earnings on May 20: What History Tells Us About Nvidia Stock's Post-Earnings-Release Moves &nbsp;&nbsp; The Motley Fool",
+        "evidence_chunks": [
+          "Nvidia Earnings on May 20: What History Tells Us About Nvidia Stock's Post-Earnings-Release Moves - The Motley Fool Nvidia Earnings on May 20: What History Tells Us About Nvidia Stock's Post-Earnings-Release Moves &nbsp;&nbsp; The Motley Fool"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_99",
+        "ticker": "NVDA",
+        "source_name": "The Motley Fool",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYzdIeWs5bHFKU1E0bWdFUUZ4QXY0U09MYmk5MWZTcTRsRDVGZjQ0UzN3MGVsOXZqT21vQkZtaFZaUnctd2c5NHFYbW5SMGw4QjhjRm80QjUxNHZ5RG9xSmdiLTBDanc4aFNhYWhsWjZ3SlVZTkJlb2JTZTVwbGtaRGVpZENrN0dUbmtyUFM5X2l3eGluaGx1OQ?oc=5",
+        "published_at": "Tue, 19 May 2026 09:23:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Nvidia Stock May or May Not Soar on May 20, But This Super AI Semiconductor Stock Could Pop and Go On a Terrific Bull Run - The Motley Fool Nvidia Stock May or May Not Soar on May 20, But This Super AI Semiconductor Stock Could Pop and Go On a Terrific Bull Run &nbsp;&nbsp; The Motley Fool",
+        "evidence_chunks": [
+          "Nvidia Stock May or May Not Soar on May 20, But This Super AI Semiconductor Stock Could Pop and Go On a Terrific Bull Run - The Motley Fool Nvidia Stock May or May Not Soar on May 20, But This Super AI Semiconductor Stock Could Pop and Go On a Terrific Bull Run &nbsp;&nbsp; The Motley",
+          "Fool"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_53",
+        "ticker": "NVDA",
+        "source_name": "Morningstar Canada",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNclp3MUk5QjBPQUpLSVp6Mm9NV2tuNl8yeVFWM1JQOWNPZ0xoQzh1by00QnV5NGhFdHpIeGd5eGI3d29ZVnlLLXEtc2hqLUotOHNxbXI1cG1VR1lvREhha19leko5b3FsamVMTldlQm9fUnNOTm1CNE5tbUVMVGFJRDdzUFo1eEszYndfUFBBOExnakZMN3Rr?oc=5",
+        "published_at": "Tue, 19 May 2026 09:17:40 GMT",
+        "fetch_status": "success",
+        "clean_text": "Markets Brief: Echoes of 1999 in the Latest AI Stock Rally? - Morningstar Canada Markets Brief: Echoes of 1999 in the Latest AI Stock Rally? &nbsp;&nbsp; Morningstar Canada",
+        "evidence_chunks": [
+          "Markets Brief: Echoes of 1999 in the Latest AI Stock Rally? - Morningstar Canada Markets Brief: Echoes of 1999 in the Latest AI Stock Rally? &nbsp;&nbsp; Morningstar Canada"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "NVDA_11",
+        "ticker": "NVDA",
+        "source_name": "Barron's",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQMElCbzk5Z2JFOTNmUFRMNnc3NHlMbzlsZlplV0RXdnM1cE5LNmZubEl4UlVJNW04MDNqNUlfMVRiZUdHU1M4c1JxemI0a2tpVHlGeWdCYTBXZUpPSzZMek0yRWdMa2N0WlkyZGhkR1hYSUZTemNhY2JoQlQ5bTV0R1NzeUY?oc=5",
+        "published_at": "Mon, 18 May 2026 20:54:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "How Nvidia Stock Can Hit $300 After Earnings - Barron's How Nvidia Stock Can Hit $300 After Earnings &nbsp;&nbsp; Barron's",
+        "evidence_chunks": [
+          "How Nvidia Stock Can Hit $300 After Earnings - Barron's How Nvidia Stock Can Hit $300 After Earnings &nbsp;&nbsp; Barron's"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      }
+    ],
+    "KO": [
+      {
+        "raw_id": "KO_33",
+        "ticker": "KO",
+        "source_name": "Investing.com",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcUdocVpiclJtcVNWNEZ1dFoteEx6RHlmQWppZDhqdlpWZ19iMVVkSzI3Zld2d3FNWVZ6d3ljSHN6SDNlUHptcjVuekZiVV8wNFluQ1lUdnJJbzhRaloxVjgwWmdhbkFweDRuWnNlMHpQeWtfSE9kWkxFUjU4Z09ydDZpclUzazNpLXhjbFhUb0FHRXE3a3d6NHVjaDlNdnNwa2FTb0N5WjgyM3ZHVF9YekU4X1hQUGpBaGc?oc=5",
+        "published_at": "Tue, 19 May 2026 22:37:42 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola EVP Nancy Quan sells $2.56 million in KO stock - Investing.com Coca-Cola EVP Nancy Quan sells $2.56 million in KO stock &nbsp;&nbsp; Investing.com",
+        "evidence_chunks": [
+          "Coca-Cola EVP Nancy Quan sells $2.56 million in KO stock - Investing.com Coca-Cola EVP Nancy Quan sells $2.56 million in KO stock &nbsp;&nbsp; Investing.com"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_86",
+        "ticker": "KO",
+        "source_name": "Stock Titan",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPd18tUnNkQm5YTjhQem9hV1RVTVhiLWNqRTNsQ3pOblpOVHB5ZUs2MEllZFdFbFMwZDFuVzY4VEZLWkxLS2hHRi1nb09IMTVIZ0xyNHJqVVkwRmtuSWlQaDAwekstVUlRamxRRnB5UEl5ZzczQ0lPaGZ0czRobEE2TXE2aktVbFgzR1NybDY1MDhzT09iWll5RF9OdGdkaEVsbFpqa2dXdw?oc=5",
+        "published_at": "Tue, 19 May 2026 22:03:38 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola (KO) EVP Nancy Quan exercises options and sells 31,625 shares at about $80.93 - Stock Titan Coca-Cola (KO) EVP Nancy Quan exercises options and sells 31,625 shares at about $80.93 &nbsp;&nbsp; Stock Titan",
+        "evidence_chunks": [
+          "Coca-Cola (KO) EVP Nancy Quan exercises options and sells 31,625 shares at about $80.93 - Stock Titan Coca-Cola (KO) EVP Nancy Quan exercises options and sells 31,625 shares at about $80.93 &nbsp;&nbsp; Stock Titan"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_84",
+        "ticker": "KO",
+        "source_name": "GuruFocus",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOS3ZwREExVEo3OElMQ2hEWFY2YlZaVTJUdkV6eG45Snp6cWVLN1drX0t5TW9tcHg2SjZxYUt1dWEteXYxaVFnOXZQS3l1VjJ5RmdEckF2Q2ZCSEZhZUhKOE43Tm5ldDFTM0Y0RHh6dERnQUUzSGlXSncwQnM1THR2MGhUdEpqcEZnTFEwNm43OGo?oc=5",
+        "published_at": "Tue, 19 May 2026 21:24:13 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola (KO) Continues Upward Trend with 0.89% Gain - GuruFocus Coca-Cola (KO) Continues Upward Trend with 0.89% Gain &nbsp;&nbsp; GuruFocus",
+        "evidence_chunks": [
+          "Coca-Cola (KO) Continues Upward Trend with 0.89% Gain - GuruFocus Coca-Cola (KO) Continues Upward Trend with 0.89% Gain &nbsp;&nbsp; GuruFocus"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_76",
+        "ticker": "KO",
+        "source_name": "simplywall.st",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPeFRPUDJ6Zk4yNzFCOG1MWC0yUk9wMzh4RXhEa294MTRRT2JLNXMtMTd5VFU2ajczWUJrbkJVcF9GVXBNNXhfaE52YktLZzZzTWlOQUxUOENXRDl0OWlkR2toM21jQ3VyRUJISEVVeU1NX3dSY241Y0NtX1pXZ08zaVRPYWFEM1dMMXFQR2JxYnQ5Q2ZpQ29VbVFoZ3J6aU5Xbm56eFJsNGZ3UzZfeXJGbi10T2dQdHJkNUhiYmFpMUFFWHUxdXhEaEdZQjVsRXhON3Bn0gHYAUFVX3lxTE5BSHFJM2dFbUNQa05FaHlQUEVZSDhwWlgzZjdXczV2d1Nzay1sVlQ1VjZGZ3g1Ujg5Y3lSZlJ4ZnlpdGcxUV9mMzZ5eXlheDRVT184ekJ4VkZpQklmQmhCQndnVDZVcGJZRUdjX0EwZ0JLTkFsX0FHNDMzZmVnV3VwaHhWR3NDZWhlNVF4TW5pUmpweUxFTGlyT0hmNFhRTlJaLVA3ZFhhR2U0Z0stWkZtRXNNOVp4SVlwa28xZHQyV1BVSTlGRHh2RkJzck1RX2h4YWUwVm5Uag?oc=5",
+        "published_at": "Tue, 19 May 2026 17:56:41 GMT",
+        "fetch_status": "success",
+        "clean_text": "Assessing Coca-Cola (KO) Valuation As Recent Share Price Strength Fuels Mixed Signals On Fair Value - simplywall.st Assessing Coca-Cola (KO) Valuation As Recent Share Price Strength Fuels Mixed Signals On Fair Value &nbsp;&nbsp; simplywall.st",
+        "evidence_chunks": [
+          "Assessing Coca-Cola (KO) Valuation As Recent Share Price Strength Fuels Mixed Signals On Fair Value - simplywall.st Assessing Coca-Cola (KO) Valuation As Recent Share Price Strength Fuels Mixed Signals On Fair Value &nbsp;&nbsp; simplywall.st"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_94",
+        "ticker": "KO",
+        "source_name": "CoinCentral",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOS3lsVWdOMlc3dEJfbkowN1RTMTNUZHd1NnRGUzlSSE1VS1hDYTVkQW9vUDBfbm10M0dvZ21Bd3NaRmZjZmtTM2RuSlM5RlNLSWYtTzg1TF9JX2RkeFdKQzVXY19Hb1VHX1BZUXRiTnIxZXc4cldfV2FwTmpNRWhNWVQtazRWQnNINGpkbHNKcw?oc=5",
+        "published_at": "Tue, 19 May 2026 14:31:54 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola (KO) Stock Hits All-Time High as Analyst Targets Rise - CoinCentral Coca-Cola (KO) Stock Hits All-Time High as Analyst Targets Rise &nbsp;&nbsp; CoinCentral",
+        "evidence_chunks": [
+          "Coca-Cola (KO) Stock Hits All-Time High as Analyst Targets Rise - CoinCentral Coca-Cola (KO) Stock Hits All-Time High as Analyst Targets Rise &nbsp;&nbsp; CoinCentral"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_95",
+        "ticker": "KO",
+        "source_name": "Stock Titan",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxONTEtblFBc3hsam1oN2ZUSm5FNW12dVlGM293RkVsaTJEQUJ3RmFvSkMxN1dQRUh4Vi1vU2Q2LTZ1RzlqZG1NM3NYRlczVGJmRFlmbWFtMTVVVjVHN3pNZGRncDdkYW4xa013OUl1RHMwMUFNU1JWUE5EY21zdEdsUEptZnQxNjFyaE44VDYzMktES0xSeGR1QzdObVlzV2x0YVU1WHFxWUxiQ0V4S1pDTExlZkNSWWJFVHc?oc=5",
+        "published_at": "Tue, 19 May 2026 13:30:00 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola CFO John Murphy to speak at dbAccess Global Consumer Conference - Stock Titan Coca-Cola CFO John Murphy to speak at dbAccess Global Consumer Conference &nbsp;&nbsp; Stock Titan",
+        "evidence_chunks": [
+          "Coca-Cola CFO John Murphy to speak at dbAccess Global Consumer Conference - Stock Titan Coca-Cola CFO John Murphy to speak at dbAccess Global Consumer Conference &nbsp;&nbsp; Stock Titan"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_83",
+        "ticker": "KO",
+        "source_name": "StockStory",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPaG85cURuWkR2X1NQOXVQeDBDdlFaMVF6OGFzM2NOR2p5V2xpQzhVU0Njc1lGYy15SXJ0bTE5U1cwV2V2cFFhWEhkZldTV0xvakRDd0VnWDdiaWF3cFFmSElVRUJjRnlUZmRFTHN3VENXSFZ2T0NoaHljeWtMMUo4UVVxc2ZyZEROcXhuMzB5RmJtR2lLc0ZMRjlZS3hfTENYT0FzZUFrSnpRMF91QzRLamV5LVZyVjdnZ3ZaNjhHelFKNURQRUZONlRPVlJPbG82?oc=5",
+        "published_at": "Tue, 19 May 2026 08:27:35 GMT",
+        "fetch_status": "success",
+        "clean_text": "Spotting Winners: Coca-Cola (NYSE:KO) And Beverages, Alcohol, and Tobacco Stocks In Q1 - StockStory Spotting Winners: Coca-Cola (NYSE:KO) And Beverages, Alcohol, and Tobacco Stocks In Q1 &nbsp;&nbsp; StockStory",
+        "evidence_chunks": [
+          "Spotting Winners: Coca-Cola (NYSE:KO) And Beverages, Alcohol, and Tobacco Stocks In Q1 - StockStory Spotting Winners: Coca-Cola (NYSE:KO) And Beverages, Alcohol, and Tobacco Stocks In Q1 &nbsp;&nbsp; StockStory"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_6",
+        "ticker": "KO",
+        "source_name": "GuruFocus",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBFV0lUQS1nVGFhbEY4Y3l5VkxTUjh4QTlkRlQ2emlyY2lINE5BLTVkaWdwVUY3OFJZMVNUaDRWd3I5WjlYekZJSnhOMHRqcHd6VHVGWg?oc=5",
+        "published_at": "Mon, 18 May 2026 19:17:13 GMT",
+        "fetch_status": "success",
+        "clean_text": "Coca-Cola Co (KO) Stock Price, Trades & News - GuruFocus Coca-Cola Co (KO) Stock Price, Trades & News &nbsp;&nbsp; GuruFocus",
+        "evidence_chunks": [
+          "Coca-Cola Co (KO) Stock Price, Trades & News - GuruFocus Coca-Cola Co (KO) Stock Price, Trades & News &nbsp;&nbsp; GuruFocus"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_91",
+        "ticker": "KO",
+        "source_name": "24/7 Wall St.",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQRHJMWFZEV2VTTmlQdkFhNmVoaFNzOWZVcHlOMW5WWDVZR3RNZVdmQUpDbDFudkJqcVUzdWJpY29ZVmRmbnEzeDhuOGk3UjljcUVZUXBlQjgxNTk5NHFpdEY3c3NRNUMwYXZOc0YxQVYtY19Gb0ZQNW1UbEdSLXA1Y2hlemhyODkzNk9xT3FrU0QyWUNxTHdacnBlSmwwSFFhS1FyckU2a0VxVU9rOW44MlQ5RFhvTEpUS0NIVQ?oc=5",
+        "published_at": "Mon, 18 May 2026 15:17:48 GMT",
+        "fetch_status": "success",
+        "clean_text": "Citi Raises Coca-Cola Price Target to $91: World Cup Could Pour Volumes Higher - 24/7 Wall St. Citi Raises Coca-Cola Price Target to $91: World Cup Could Pour Volumes Higher &nbsp;&nbsp; 24/7 Wall St.",
+        "evidence_chunks": [
+          "Citi Raises Coca-Cola Price Target to $91: World Cup Could Pour Volumes Higher - 24/7 Wall St. Citi Raises Coca-Cola Price Target to $91: World Cup Could Pour Volumes Higher &nbsp;&nbsp; 24/7 Wall St."
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 2,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      },
+      {
+        "raw_id": "KO_71",
+        "ticker": "KO",
+        "source_name": "MarketBeat",
+        "source_domain": "news.google.com",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQUjVGRXAtSHZHeExRZjhQRUpZRW15clpnMUFYSGlRRjlSUkZteDhoVFBlRzVGaXM4RldqYmVVakE5SXQwcm5tVnpYOGJmRUR5ZjdoODl1Vk5tZE9nSDVqWkh6YkJzeFVILWVSX1Q3VUNHdVc2NkV5T0FXX244WHR3VVBONGVpUE9wcjhNSnJsNl9wNmRpd0xwT0hsY0hOUEdBcC1iRUVhWWY1ODBnUU4teUZjaF9zRVRBdzZlUkVvT2RORUI5eHJyVE53?oc=5",
+        "published_at": "Mon, 18 May 2026 14:35:33 GMT",
+        "fetch_status": "success",
+        "clean_text": "Wells Fargo & Company Issues Positive Forecast for CocaCola (NYSE:KO) Stock Price - MarketBeat Wells Fargo & Company Issues Positive Forecast for CocaCola (NYSE:KO) Stock Price &nbsp;&nbsp; MarketBeat",
+        "evidence_chunks": [
+          "Wells Fargo & Company Issues Positive Forecast for CocaCola (NYSE:KO) Stock Price - MarketBeat Wells Fargo & Company Issues Positive Forecast for CocaCola (NYSE:KO) Stock Price &nbsp;&nbsp; MarketBeat"
+        ],
+        "keyword_hits": {
+          "export_control": 0,
+          "supply_chain": 0,
+          "capex": 0,
+          "margin": 0,
+          "AI_demand": 0,
+          "pricing_power": 0,
+          "volume": 0,
+          "inflation": 0,
+          "FX": 0,
+          "dividend": 0
+        },
+        "duplicate_url": false,
+        "duplicate_title": false
+      }
+    ]
+  },
+  "filing_evidence": {
+    "NVDA": {
+      "cik": "0001045810",
+      "latest_10k": {
+        "form": "10-K",
+        "accession_number": "0001045810-26-000021",
+        "filing_date": "2026-02-25",
+        "primary_document": "nvda-20260125.htm"
+      },
+      "latest_10q": {
+        "form": "10-Q",
+        "accession_number": "0001045810-25-000230",
+        "filing_date": "2025-11-19",
+        "primary_document": "nvda-20251026.htm"
+      },
+      "facts": {
+        "gross_profit": {
+          "fact_name": "GrossProfit",
+          "value": 17475000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "net_income": {
+          "fact_name": "NetIncomeLoss",
+          "value": 9752000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "operating_income": {
+          "fact_name": "OperatingIncomeLoss",
+          "value": 10041000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "revenue": {
+          "fact_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "value": 26914000000.0,
+          "period_end": "2022-01-30",
+          "filed": "2022-03-18",
+          "unit": "USD",
+          "fiscal_year": 2022,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "debt": {
+          "fact_name": "LongTermDebtNoncurrent",
+          "value": 7469000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "cash": {
+          "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+          "value": 10605000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "fact_name": "Liabilities",
+          "value": 49510000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "assets": {
+          "fact_name": "Assets",
+          "value": 206803000000.0,
+          "period_end": "2026-01-25",
+          "filed": "2026-02-25",
+          "unit": "USD",
+          "fiscal_year": 2026,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "income_anchor_fiscal_year": 2022
+      },
+      "limitations": []
+    },
+    "KO": {
+      "cik": "0000021344",
+      "latest_10k": {
+        "form": "10-K",
+        "accession_number": "0001628280-26-010047",
+        "filing_date": "2026-02-20",
+        "primary_document": "ko-20251231.htm"
+      },
+      "latest_10q": {
+        "form": "10-Q",
+        "accession_number": "0001628280-26-028802",
+        "filing_date": "2026-04-30",
+        "primary_document": "ko-20260403.htm"
+      },
+      "facts": {
+        "gross_profit": {
+          "fact_name": "GrossProfit",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "net_income": {
+          "fact_name": "NetIncomeLoss",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "operating_income": {
+          "fact_name": "OperatingIncomeLoss",
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "revenue": {
+          "fact_name": null,
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "debt": {
+          "fact_name": "LongTermDebtNoncurrent",
+          "value": 35547000000.0,
+          "period_end": "2023-12-31",
+          "filed": "2024-02-20",
+          "unit": "USD",
+          "fiscal_year": 2023,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "cash": {
+          "fact_name": "CashAndCashEquivalentsAtCarryingValue",
+          "value": 10270000000.0,
+          "period_end": "2025-12-31",
+          "filed": "2026-02-20",
+          "unit": "USD",
+          "fiscal_year": 2025,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "fact_name": null,
+          "value": null,
+          "period_end": null,
+          "filed": null,
+          "unit": null,
+          "fiscal_year": null,
+          "fiscal_period": null,
+          "form": null
+        },
+        "assets": {
+          "fact_name": "Assets",
+          "value": 104816000000.0,
+          "period_end": "2025-12-31",
+          "filed": "2026-02-20",
+          "unit": "USD",
+          "fiscal_year": 2025,
+          "fiscal_period": "FY",
+          "form": "10-K"
+        },
+        "income_anchor_fiscal_year": null
+      },
+      "limitations": [
+        "debt_to_assets:debt_assets_fiscal_year_misalignment",
+        "gross_margin:missing_required_fact",
+        "income_facts:no_annual_revenue_anchor_year",
+        "liabilities:missing_annual_balance_fact",
+        "operating_margin:missing_required_fact",
+        "revenue_growth:insufficient_annual_revenue_history"
+      ]
+    }
+  },
+  "company_theses": {
+    "NVDA": {
+      "ticker": "NVDA",
+      "company_name": "NVIDIA Corporation",
+      "thesis_date": "2026-05-01",
+      "core_thesis": "NVIDIA remains positioned to capture a large share of enterprise and hyperscaler AI infrastructure spending because its compute, networking, software, and developer ecosystem remain tightly integrated and difficult to displace in the near term.",
+      "key_assumptions": [
+        "AI training and inference demand continues to grow across hyperscalers and enterprise customers.",
+        "NVIDIA maintains performance and ecosystem advantages that support premium pricing.",
+        "Customers continue to view accelerated computing as a high-priority capital allocation area.",
+        "Supply availability improves enough to support shipment growth without a major deterioration in customer relationships.",
+        "Export restrictions and competitive responses slow some regions or products but do not fully offset broader demand growth."
+      ],
+      "upside_drivers": [
+        "Faster-than-expected inference demand broadens the customer base beyond a small set of hyperscalers.",
+        "New product ramps increase system-level revenue through combined GPU, networking, and software sales.",
+        "Enterprise adoption shortens the path from pilot workloads to production deployments.",
+        "Gross margin remains resilient despite mix shifts as software and platform attach rates increase."
+      ],
+      "downside_risks": [
+        "Hyperscaler capital spending becomes more cyclical or more concentrated in fewer customers.",
+        "Tighter export controls reduce addressable demand or create product segmentation challenges.",
+        "Competition from internal silicon or rival accelerators pressures pricing, share, or workload mix.",
+        "Supply chain or packaging constraints delay shipments and compress near-term revenue conversion.",
+        "Margin pressure emerges if product transitions or regional mix changes dilute the current economics."
+      ],
+      "macro_sensitivities": [
+        "Large customer capex appetite",
+        "Cost of capital and duration-sensitive equity valuation",
+        "Global growth and enterprise IT spending conditions",
+        "Industrial policy and trade restrictions",
+        "Semiconductor supply chain stability"
+      ],
+      "metrics_to_monitor": [
+        "Data center revenue growth",
+        "Hyperscaler and enterprise capex commentary",
+        "Gross margin trend",
+        "Customer concentration disclosures",
+        "Inventory and supply commitments",
+        "Export-control-related regional exposure",
+        "New product ramp timing",
+        "Networking and platform attach rates"
+      ]
+    },
+    "KO": {
+      "ticker": "KO",
+      "company_name": "The Coca-Cola Company",
+      "thesis_date": "2026-05-19",
+      "core_thesis": "Coca-Cola remains positioned as a defensive consumer staples business because its brand portfolio, global distribution system, and pricing power help support resilient cash generation across a wide range of macro environments.",
+      "key_assumptions": [
+        "Consumers continue to treat core beverage categories as repeat-purchase products even in slower growth environments.",
+        "Coca-Cola maintains brand strength and route-to-market advantages that support pricing actions without a severe erosion in demand.",
+        "The company continues to balance pricing, mix, and packaging decisions in a way that protects margins over time.",
+        "Global distribution and franchise execution remain strong enough to support broad market coverage across regions and channels.",
+        "FX volatility and input cost inflation create pressure at times but do not fully overwhelm the defensive quality of the business."
+      ],
+      "upside_drivers": [
+        "Pricing power remains durable while consumer demand stays stable across key markets.",
+        "Volume trends improve as execution, channel mix, or international recovery supports broader consumption.",
+        "Margin stability holds as management offsets input cost pressure through mix, pricing, and operating discipline.",
+        "The stock retains defensive appeal if investors rotate toward cash-generative and dividend-oriented businesses."
+      ],
+      "downside_risks": [
+        "Input cost inflation compresses margins if pricing actions lag cost pressure.",
+        "FX headwinds weigh on reported results or reduce the benefit of underlying operating performance.",
+        "Volume growth weakens if consumers trade down, reduce discretionary purchases, or face sustained macro pressure.",
+        "Execution or channel disruptions limit the benefit of the company's global distribution footprint.",
+        "Defensive quality becomes less valuable to investors if growth-sensitive assets re-rate more strongly."
+      ],
+      "macro_sensitivities": [
+        "Consumer spending resilience",
+        "Input cost inflation",
+        "Foreign exchange volatility",
+        "Global growth and emerging market demand conditions",
+        "Defensive equity factor leadership"
+      ],
+      "metrics_to_monitor": [
+        "Organic revenue growth",
+        "Pricing versus volume balance",
+        "Gross margin and operating margin stability",
+        "FX commentary",
+        "Input cost inflation trends",
+        "Cash generation and dividend support",
+        "Channel and geographic mix"
+      ]
+    }
+  },
+  "frontend_contract": {
+    "source_of_truth": "backend_generated_recommendation_packet",
+    "frontend_should_not_use_mock_data": true,
+    "static_packet_generated_at": "2026-05-20T05:40:21Z"
+  },
+  "model_predictions": {
+    "model_run_id": "model_20260520T054021Z",
+    "model_type": "transparent_fallback",
+    "target": "outperform benchmark over next 60 trading days",
+    "training_row_count": 762,
+    "predictions": {
+      "NVDA": {
+        "benchmark": "QQQ",
+        "outperform_probability": 0.524,
+        "model_confidence": 0.05,
+        "predicted_return_bucket": "neutral",
+        "top_features": [
+          "relative_return_vs_benchmark_60d",
+          "revenue_growth",
+          "gross_margin"
+        ],
+        "data_limitations": [
+          "official_model_kept_as_transparent_fallback",
+          "transparent_fallback_used_due_to_official_model_policy"
+        ]
+      },
+      "KO": {
+        "benchmark": "XLP",
+        "outperform_probability": 0.566,
+        "model_confidence": 0.1188,
+        "predicted_return_bucket": "slightly_positive",
+        "top_features": [
+          "relative_return_vs_benchmark_60d",
+          "inflation_keyword_count"
+        ],
+        "data_limitations": [
+          "missing_gross_margin",
+          "missing_revenue_growth",
+          "official_model_kept_as_transparent_fallback",
+          "transparent_fallback_used_due_to_official_model_policy"
+        ]
+      }
+    }
+  },
+  "model_comparison": {
+    "tool_name": "model_comparison",
+    "generated_at": "2026-05-20T05:40:21Z",
+    "target": "outperform benchmark over next 60 trading days",
+    "status": "success",
+    "official_model_type": "transparent_fallback",
+    "models": {
+      "logistic_regression": {
+        "status": "success",
+        "outperform_probability": null,
+        "model_confidence": null,
+        "training_row_count": 609,
+        "test_row_count": 153,
+        "features_used": [
+          "20d_return",
+          "60d_return",
+          "20d_volatility",
+          "60d_volatility",
+          "max_drawdown_60d",
+          "relative_return_vs_benchmark_60d"
+        ],
+        "validation_metrics": {
+          "accuracy": 0.444444,
+          "roc_auc": 0.472129,
+          "test_row_count": 153,
+          "class_balance": {
+            "positive_rate": 0.647059,
+            "negative_rate": 0.352941
+          }
+        },
+        "limitations": [
+          "historical_training_uses_market_derived_features_only"
+        ]
+      },
+      "random_forest": {
+        "status": "success",
+        "outperform_probability": null,
+        "model_confidence": null,
+        "training_row_count": 609,
+        "test_row_count": 153,
+        "features_used": [
+          "20d_return",
+          "60d_return",
+          "20d_volatility",
+          "60d_volatility",
+          "max_drawdown_60d",
+          "relative_return_vs_benchmark_60d"
+        ],
+        "validation_metrics": {
+          "accuracy": 0.424837,
+          "roc_auc": 0.57529,
+          "test_row_count": 153,
+          "class_balance": {
+            "positive_rate": 0.647059,
+            "negative_rate": 0.352941
+          }
+        },
+        "limitations": [
+          "historical_training_uses_market_derived_features_only"
+        ]
+      }
+    },
+    "target_price_models": {
+      "linear_regression": {
+        "status": "success",
+        "validation_status": "weak_validation",
+        "price_estimate_usable": false,
+        "predicted_60d_return": null,
+        "current_price": null,
+        "predicted_60d_price": null,
+        "model_confidence": 0.402134,
+        "training_row_count": 609,
+        "test_row_count": 153,
+        "features_used": [
+          "20d_return",
+          "60d_return",
+          "20d_volatility",
+          "60d_volatility",
+          "max_drawdown_60d",
+          "relative_return_vs_benchmark_60d"
+        ],
+        "validation_metrics": {
+          "mae": 0.073726,
+          "rmse": 0.086258,
+          "r2": -0.470494
+        },
+        "baseline_metrics": {
+          "baseline_type": "historical_mean_forward_return",
+          "mae": 0.058883,
+          "rmse": 0.071306
+        },
+        "beats_baseline": false,
+        "limitations": [
+          "does_not_beat_baseline",
+          "experimental_price_forecast_low_validation_quality",
+          "market_derived_features_only",
+          "not_used_for_official_recommendation",
+          "target_returns_winsorized_for_stability"
+        ],
+        "model_family": "ridge_regularized_linear_model"
+      },
+      "random_forest_regressor": {
+        "status": "success",
+        "validation_status": "weak_validation",
+        "price_estimate_usable": false,
+        "predicted_60d_return": null,
+        "current_price": null,
+        "predicted_60d_price": null,
+        "model_confidence": 0.384169,
+        "training_row_count": 609,
+        "test_row_count": 153,
+        "features_used": [
+          "20d_return",
+          "60d_return",
+          "20d_volatility",
+          "60d_volatility",
+          "max_drawdown_60d",
+          "relative_return_vs_benchmark_60d"
+        ],
+        "validation_metrics": {
+          "mae": 0.112724,
+          "rmse": 0.13646,
+          "r2": -2.680191
+        },
+        "baseline_metrics": {
+          "baseline_type": "historical_mean_forward_return",
+          "mae": 0.058883,
+          "rmse": 0.071306
+        },
+        "beats_baseline": false,
+        "limitations": [
+          "does_not_beat_baseline",
+          "experimental_price_forecast_low_validation_quality",
+          "market_derived_features_only",
+          "not_used_for_official_recommendation",
+          "target_returns_winsorized_for_stability"
+        ]
+      }
+    },
+    "ticker_results": {
+      "NVDA": {
+        "logistic_regression": {
+          "status": "success",
+          "outperform_probability": 0.516195,
+          "model_confidence": 0.420588,
+          "predicted_return_bucket": "neutral",
+          "training_row_count": 609,
+          "test_row_count": 153,
+          "features_used": [
+            "20d_return",
+            "60d_return",
+            "20d_volatility",
+            "60d_volatility",
+            "max_drawdown_60d",
+            "relative_return_vs_benchmark_60d"
+          ],
+          "validation_metrics": {
+            "accuracy": 0.444444,
+            "roc_auc": 0.472129,
+            "test_row_count": 153,
+            "class_balance": {
+              "positive_rate": 0.647059,
+              "negative_rate": 0.352941
+            }
+          },
+          "limitations": [
+            "historical_training_uses_market_derived_features_only"
+          ]
+        },
+        "random_forest": {
+          "status": "success",
+          "outperform_probability": 0.149756,
+          "model_confidence": 0.420652,
+          "predicted_return_bucket": "negative",
+          "training_row_count": 609,
+          "test_row_count": 153,
+          "features_used": [
+            "20d_return",
+            "60d_return",
+            "20d_volatility",
+            "60d_volatility",
+            "max_drawdown_60d",
+            "relative_return_vs_benchmark_60d"
+          ],
+          "validation_metrics": {
+            "accuracy": 0.424837,
+            "roc_auc": 0.57529,
+            "test_row_count": 153,
+            "class_balance": {
+              "positive_rate": 0.647059,
+              "negative_rate": 0.352941
+            }
+          },
+          "limitations": [
+            "historical_training_uses_market_derived_features_only"
+          ]
+        },
+        "target_price_models": {
+          "linear_regression": {
+            "status": "success",
+            "validation_status": "weak_validation",
+            "price_estimate_usable": false,
+            "predicted_60d_return": 0.029379,
+            "current_price": 220.610001,
+            "predicted_60d_price": 227.091233,
+            "model_confidence": 0.417519,
+            "training_row_count": 609,
+            "test_row_count": 153,
+            "features_used": [
+              "20d_return",
+              "60d_return",
+              "20d_volatility",
+              "60d_volatility",
+              "max_drawdown_60d",
+              "relative_return_vs_benchmark_60d"
+            ],
+            "validation_metrics": {
+              "mae": 0.073726,
+              "rmse": 0.086258,
+              "r2": -0.470494
+            },
+            "baseline_metrics": {
+              "baseline_type": "historical_mean_forward_return",
+              "mae": 0.058883,
+              "rmse": 0.071306
+            },
+            "beats_baseline": false,
+            "limitations": [
+              "does_not_beat_baseline",
+              "experimental_price_forecast_low_validation_quality",
+              "market_derived_features_only",
+              "not_used_for_official_recommendation",
+              "target_returns_winsorized_for_stability"
+            ],
+            "model_family": "ridge_regularized_linear_model"
+          },
+          "random_forest_regressor": {
+            "status": "success",
+            "validation_status": "weak_validation",
+            "price_estimate_usable": false,
+            "predicted_60d_return": -0.136383,
+            "current_price": 220.610001,
+            "predicted_60d_price": 190.522438,
+            "model_confidence": 0.399553,
+            "training_row_count": 609,
+            "test_row_count": 153,
+            "features_used": [
+              "20d_return",
+              "60d_return",
+              "20d_volatility",
+              "60d_volatility",
+              "max_drawdown_60d",
+              "relative_return_vs_benchmark_60d"
+            ],
+            "validation_metrics": {
+              "mae": 0.112724,
+              "rmse": 0.13646,
+              "r2": -2.680191
+            },
+            "baseline_metrics": {
+              "baseline_type": "historical_mean_forward_return",
+              "mae": 0.058883,
+              "rmse": 0.071306
+            },
+            "beats_baseline": false,
+            "limitations": [
+              "does_not_beat_baseline",
+              "experimental_price_forecast_low_validation_quality",
+              "market_derived_features_only",
+              "not_used_for_official_recommendation",
+              "target_returns_winsorized_for_stability"
+            ]
+          }
+        }
+      },
+      "KO": {
+        "logistic_regression": {
+          "status": "success",
+          "outperform_probability": 0.533962,
+          "model_confidence": 0.389819,
+          "predicted_return_bucket": "neutral",
+          "training_row_count": 609,
+          "test_row_count": 153,
+          "features_used": [
+            "20d_return",
+            "60d_return",
+            "20d_volatility",
+            "60d_volatility",
+            "max_drawdown_60d",
+            "relative_return_vs_benchmark_60d"
+          ],
+          "validation_metrics": {
+            "accuracy": 0.444444,
+            "roc_auc": 0.472129,
+            "test_row_count": 153,
+            "class_balance": {
+              "positive_rate": 0.647059,
+              "negative_rate": 0.352941
+            }
+          },
+          "limitations": [
+            "historical_training_uses_market_derived_features_only"
+          ]
+        },
+        "random_forest": {
+          "status": "success",
+          "outperform_probability": 0.36046,
+          "model_confidence": 0.389883,
+          "predicted_return_bucket": "negative",
+          "training_row_count": 609,
+          "test_row_count": 153,
+          "features_used": [
+            "20d_return",
+            "60d_return",
+            "20d_volatility",
+            "60d_volatility",
+            "max_drawdown_60d",
+            "relative_return_vs_benchmark_60d"
+          ],
+          "validation_metrics": {
+            "accuracy": 0.424837,
+            "roc_auc": 0.57529,
+            "test_row_count": 153,
+            "class_balance": {
+              "positive_rate": 0.647059,
+              "negative_rate": 0.352941
+            }
+          },
+          "limitations": [
+            "historical_training_uses_market_derived_features_only"
+          ]
+        },
+        "target_price_models": {
+          "linear_regression": {
+            "status": "success",
+            "validation_status": "weak_validation",
+            "price_estimate_usable": false,
+            "predicted_60d_return": 0.056963,
+            "current_price": 81.919998,
+            "predicted_60d_price": 86.586408,
+            "model_confidence": 0.386749,
+            "training_row_count": 609,
+            "test_row_count": 153,
+            "features_used": [
+              "20d_return",
+              "60d_return",
+              "20d_volatility",
+              "60d_volatility",
+              "max_drawdown_60d",
+              "relative_return_vs_benchmark_60d"
+            ],
+            "validation_metrics": {
+              "mae": 0.073726,
+              "rmse": 0.086258,
+              "r2": -0.470494
+            },
+            "baseline_metrics": {
+              "baseline_type": "historical_mean_forward_return",
+              "mae": 0.058883,
+              "rmse": 0.071306
+            },
+            "beats_baseline": false,
+            "limitations": [
+              "does_not_beat_baseline",
+              "experimental_price_forecast_low_validation_quality",
+              "market_derived_features_only",
+              "not_used_for_official_recommendation",
+              "target_returns_winsorized_for_stability"
+            ],
+            "model_family": "ridge_regularized_linear_model"
+          },
+          "random_forest_regressor": {
+            "status": "success",
+            "validation_status": "weak_validation",
+            "price_estimate_usable": false,
+            "predicted_60d_return": -0.006664,
+            "current_price": 81.919998,
+            "predicted_60d_price": 81.374124,
+            "model_confidence": 0.368784,
+            "training_row_count": 609,
+            "test_row_count": 153,
+            "features_used": [
+              "20d_return",
+              "60d_return",
+              "20d_volatility",
+              "60d_volatility",
+              "max_drawdown_60d",
+              "relative_return_vs_benchmark_60d"
+            ],
+            "validation_metrics": {
+              "mae": 0.112724,
+              "rmse": 0.13646,
+              "r2": -2.680191
+            },
+            "baseline_metrics": {
+              "baseline_type": "historical_mean_forward_return",
+              "mae": 0.058883,
+              "rmse": 0.071306
+            },
+            "beats_baseline": false,
+            "limitations": [
+              "does_not_beat_baseline",
+              "experimental_price_forecast_low_validation_quality",
+              "market_derived_features_only",
+              "not_used_for_official_recommendation",
+              "target_returns_winsorized_for_stability"
+            ]
+          }
+        }
+      }
+    },
+    "limitations": [
+      "experimental_models_do_not_override_official_recommendation_logic"
+    ]
+  },
+  "indicator_scorecards": {
+    "tool_name": "score_stock_indicators",
+    "generated_at": "2026-05-20T05:40:21Z",
+    "scorecards": [
+      {
+        "ticker": "NVDA",
+        "aggregate_indicator_score": -0.1,
+        "confidence_score": 0.5725,
+        "recommendation_band": "reduce",
+        "benchmark": "QQQ",
+        "portfolio_weight": 0.1,
+        "pm_approval_required": true,
+        "indicators": [
+          {
+            "name": "AI demand momentum",
+            "score": 1.0,
+            "weight": 0.17,
+            "confidence": 0.525,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:20d_return",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "data center growth",
+            "score": 1.0,
+            "weight": 0.14,
+            "confidence": 0.525,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:revenue_growth",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "gross margin quality",
+            "score": 1.0,
+            "weight": 0.14,
+            "confidence": 0.525,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:gross_margin",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "export control risk",
+            "score": -1.0,
+            "weight": 0.15,
+            "confidence": 0.525,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:export_control_keyword_count",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "supply chain risk",
+            "score": -1.0,
+            "weight": 0.12,
+            "confidence": 0.525,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:supply_chain_keyword_count",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "valuation sensitivity",
+            "score": -1.0,
+            "weight": 0.12,
+            "confidence": 0.525,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:60d_volatility",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "hyperscaler capex dependence",
+            "score": -1.0,
+            "weight": 0.16,
+            "confidence": 0.525,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:capex_keyword_count",
+              "model_prediction:QQQ",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          }
+        ],
+        "data_limitations": [
+          "official_model_kept_as_transparent_fallback",
+          "transparent_fallback_used_due_to_official_model_policy"
+        ]
+      },
+      {
+        "ticker": "KO",
+        "aggregate_indicator_score": 0.05,
+        "confidence_score": 0.464999,
+        "recommendation_band": "review",
+        "benchmark": "XLP",
+        "portfolio_weight": 0.2,
+        "pm_approval_required": true,
+        "indicators": [
+          {
+            "name": "pricing power",
+            "score": 0.0,
+            "weight": 0.18,
+            "confidence": 0.405554,
+            "direction": "mixed",
+            "evidence_refs": [
+              "stock_features:gross_margin",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": [
+              "missing_source_field:gross_margin"
+            ]
+          },
+          {
+            "name": "volume growth",
+            "score": 1.0,
+            "weight": 0.14,
+            "confidence": 0.405554,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:20d_return",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "margin stability",
+            "score": 0.0,
+            "weight": 0.17,
+            "confidence": 0.405554,
+            "direction": "mixed",
+            "evidence_refs": [
+              "stock_features:operating_margin",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": [
+              "missing_source_field:operating_margin"
+            ]
+          },
+          {
+            "name": "dividend stability",
+            "score": 0.0,
+            "weight": 0.12,
+            "confidence": 0.405554,
+            "direction": "mixed",
+            "evidence_refs": [
+              "stock_features:debt_to_assets",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": [
+              "missing_source_field:debt_to_assets"
+            ]
+          },
+          {
+            "name": "input cost inflation",
+            "score": -1.0,
+            "weight": 0.13,
+            "confidence": 0.405554,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:inflation_keyword_count",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "FX exposure",
+            "score": -1.0,
+            "weight": 0.11,
+            "confidence": 0.405554,
+            "direction": "negative",
+            "evidence_refs": [
+              "stock_features:macro_unrate_latest",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          },
+          {
+            "name": "defensive quality",
+            "score": 1.0,
+            "weight": 0.15,
+            "confidence": 0.405554,
+            "direction": "positive",
+            "evidence_refs": [
+              "stock_features:60d_volatility",
+              "model_prediction:XLP",
+              "news_evidence",
+              "filing_evidence"
+            ],
+            "data_limitations": []
+          }
+        ],
+        "data_limitations": [
+          "missing_gross_margin",
+          "missing_revenue_growth",
+          "missing_source_field:debt_to_assets",
+          "missing_source_field:gross_margin",
+          "missing_source_field:operating_margin",
+          "official_model_kept_as_transparent_fallback",
+          "transparent_fallback_used_due_to_official_model_policy"
+        ]
+      }
+    ]
+  },
+  "rag_evidence": {
+    "recommendation_rules": {
+      "query": "investment recommendation confidence weighting committee approval",
+      "top_k": 3,
+      "results": [
+        {
+          "document_path": "rag/knowledge_base/bridgewater_style_investment_process_principles.md",
+          "title": "Bridgewater-Style Investment Process Principles",
+          "score": 21,
+          "excerpt": "bridgewater style, investment process, raw data governance, recommendation workflow, mandate, evidence separation, confidence, review, hold_review, PM approval, auditable process"
+        },
+        {
+          "document_path": "rag/knowledge_base/trade_approval_policy.md",
+          "title": "Trade Approval Policy",
+          "score": 20,
+          "excerpt": "- PM approval is required for review-oriented cases - PM approval is required when confidence is low - PM approval is required when market data is missing - PM approval is required when recommendation logic relies on fallback scoring - PM approval is required when scenario stress indicates fragility"
+        },
+        {
+          "document_path": "rag/knowledge_base/recommendation_rating_policy.md",
+          "title": "Recommendation Rating Policy",
+          "score": 16,
+          "excerpt": "recommendation rating, accumulate, hold, reduce, avoid, review, hold_review, confidence threshold, missing data, PM review, directional action"
+        }
+      ]
+    },
+    "risk_rules": {
+      "query": "portfolio stress test escalation risk review approval",
+      "top_k": 3,
+      "results": [
+        {
+          "document_path": "rag/knowledge_base/risk_escalation_rules.md",
+          "title": "Risk Escalation Rules",
+          "score": 22,
+          "excerpt": "## Required Escalation Output When the model escalates, it should specify: - which assumption is at risk - what evidence triggered the escalation - whether the issue is timing, economics, access, or structure - what a human analyst should review next"
+        },
+        {
+          "document_path": "rag/knowledge_base/trade_approval_policy.md",
+          "title": "Trade Approval Policy",
+          "score": 19,
+          "excerpt": "- PM approval is required for review-oriented cases - PM approval is required when confidence is low - PM approval is required when market data is missing - PM approval is required when recommendation logic relies on fallback scoring - PM approval is required when scenario stress indicates fragility"
+        },
+        {
+          "document_path": "rag/knowledge_base/scenario_stress_testing_policy.md",
+          "title": "Scenario Stress Testing Policy",
+          "score": 16,
+          "excerpt": "## Escalation Guidance Escalate when: - a stress case shows failure of more than one core assumption - the scenario reveals hidden dependence on one customer, one geography, or one policy regime - scenario outcomes are highly sensitive to an input the team cannot currently observe well - the scenario would require a..."
+        }
+      ]
+    }
+  },
+  "ai_committee_views": [
+    {
+      "ticker": "NVDA",
+      "views": [
+        {
+          "role": "macro_analyst",
+          "status": "placeholder"
+        },
+        {
+          "role": "fundamentals_analyst",
+          "status": "placeholder"
+        },
+        {
+          "role": "risk_analyst",
+          "status": "placeholder"
+        }
+      ]
+    },
+    {
+      "ticker": "KO",
+      "views": [
+        {
+          "role": "macro_analyst",
+          "status": "placeholder"
+        },
+        {
+          "role": "fundamentals_analyst",
+          "status": "placeholder"
+        },
+        {
+          "role": "risk_analyst",
+          "status": "placeholder"
+        }
+      ]
+    }
+  ],
+  "portfolio_stress_test": {
+    "tool_name": "run_portfolio_stress_test",
+    "generated_at": "2026-05-20T05:40:21Z",
+    "scenarios": [
+      {
+        "scenario_id": "ai_capex_pullback",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.340058,
+              -0.226706
+            ],
+            "main_driver": "ai_capex_pullback"
+          },
+          "KO": {
+            "downside_range": [
+              -0.055358,
+              -0.036906
+            ],
+            "main_driver": "ai_capex_pullback"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.045078,
+          -0.030052
+        ]
+      },
+      {
+        "scenario_id": "export_control_tightening",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.309144,
+              -0.206096
+            ],
+            "main_driver": "export_control_tightening"
+          },
+          "KO": {
+            "downside_range": [
+              -0.027679,
+              -0.018453
+            ],
+            "main_driver": "export_control_tightening"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.03645,
+          -0.0243
+        ]
+      },
+      {
+        "scenario_id": "rates_higher_for_longer",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.247315,
+              -0.164877
+            ],
+            "main_driver": "rates_higher_for_longer"
+          },
+          "KO": {
+            "downside_range": [
+              -0.069198,
+              -0.046132
+            ],
+            "main_driver": "rates_higher_for_longer"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.038571,
+          -0.025714
+        ]
+      },
+      {
+        "scenario_id": "recession_consumer_slowdown",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.154572,
+              -0.103048
+            ],
+            "main_driver": "recession_consumer_slowdown"
+          },
+          "KO": {
+            "downside_range": [
+              -0.124556,
+              -0.083038
+            ],
+            "main_driver": "recession_consumer_slowdown"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.040368,
+          -0.026912
+        ]
+      },
+      {
+        "scenario_id": "valuation_multiple_compression",
+        "ticker_level_impacts": {
+          "NVDA": {
+            "downside_range": [
+              -0.27823,
+              -0.185486
+            ],
+            "main_driver": "valuation_multiple_compression"
+          },
+          "KO": {
+            "downside_range": [
+              -0.083038,
+              -0.055358
+            ],
+            "main_driver": "valuation_multiple_compression"
+          }
+        },
+        "portfolio_downside_range": [
+          -0.04443,
+          -0.02962
+        ]
+      }
+    ],
+    "ticker_level_impact_ranges": {
+      "NVDA": [
+        -0.340058,
+        -0.226706
+      ],
+      "KO": [
+        -0.055358,
+        -0.036906
+      ]
+    },
+    "portfolio_downside_range": [
+      -0.045078,
+      -0.030052
+    ],
+    "main_risk_drivers": [
+      "NVDA:ai_capex_pullback",
+      "NVDA:export_control_tightening",
+      "NVDA:rates_higher_for_longer",
+      "NVDA:recession_consumer_slowdown",
+      "NVDA:valuation_multiple_compression"
+    ],
+    "constraint_violations": [],
+    "risk_action": "review",
+    "pm_review_required": true
+  },
+  "recommendations": {
+    "NVDA": {
+      "action": "hold_review",
+      "confidence_score": 0.05,
+      "reason": "Base recommendation band was reduce with aggregate indicator score -0.1 and outperform probability 0.524.",
+      "blocked_strong_action_reason": "low_model_confidence:0.05; pm_review_required_by_stress_test",
+      "data_limitation_reason": "official_model_kept_as_transparent_fallback; transparent_fallback_used_due_to_official_model_policy",
+      "benchmark": "QQQ",
+      "outperform_probability": 0.524,
+      "aggregate_indicator_score": -0.1,
+      "requires_pm_review": true
+    },
+    "KO": {
+      "action": "review",
+      "confidence_score": 0.1188,
+      "reason": "Base recommendation band was review with aggregate indicator score 0.05 and outperform probability 0.566.",
+      "blocked_strong_action_reason": "low_model_confidence:0.12; pm_review_required_by_stress_test",
+      "data_limitation_reason": "missing_gross_margin; missing_revenue_growth; missing_source_field:debt_to_assets; missing_source_field:gross_margin; missing_source_field:operating_margin",
+      "benchmark": "XLP",
+      "outperform_probability": 0.566,
+      "aggregate_indicator_score": 0.05,
+      "requires_pm_review": true
+    }
+  },
+  "draft_trade_tickets": [
+    {
+      "ticker": "NVDA",
+      "status": "draft",
+      "action": "hold_review",
+      "target_weight_change": 0.0,
+      "pm_approval_required": true
+    },
+    {
+      "ticker": "KO",
+      "status": "draft",
+      "action": "review",
+      "target_weight_change": 0.0,
+      "pm_approval_required": true
+    }
+  ],
+  "human_review": {
+    "status": "pending_pm_review",
+    "pm_approval_required": true
+  },
+  "disclaimer": "Educational workflow artifact only. Not real investment advice."
+}
