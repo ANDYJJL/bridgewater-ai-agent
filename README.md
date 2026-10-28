@@ -1,4 +1,4 @@
-# Bridgewater AI Agent
+# Bridgewater-Style AI Agent
 
 > **Independent student course project** — UC San Diego Rady School of
 > Management, MGTA 495 (Generative AI for Business), Group 16. This project is

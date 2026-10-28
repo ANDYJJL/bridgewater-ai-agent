@@ -77,7 +77,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <BridgewaterLogo size="md" />
-            <p className="text-sm">© 2026 Bridgewater AI Agent · Educational demo workflow</p>
+            <p className="text-sm">© 2026 Bridgewater-Style AI Agent · Educational demo workflow</p>
           </div>
           <p className="text-xs text-gray-600 text-center md:text-right">
             For educational use only. Does not provide investment advice. No real trades are executed.

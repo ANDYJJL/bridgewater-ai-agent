@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Bridgewater AI Agent - AI-Powered Investment Research',
+  title: 'Bridgewater-Style AI Agent - AI-Powered Investment Research',
   description: 'Institutional-grade AI research workspace for modern investment professionals',
 };
 

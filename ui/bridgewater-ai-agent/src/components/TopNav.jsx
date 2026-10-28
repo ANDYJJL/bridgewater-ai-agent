@@ -46,7 +46,7 @@ export default function TopNav() {
 
         {/* Logo */}
         <Link href="/" className="flex flex-col cursor-pointer">
-          <h1 className="text-xl font-black text-gray-950 tracking-tight leading-none">BRIDGEWATER</h1>
+          <h1 className="text-xl font-black text-gray-950 tracking-tight leading-none">BRIDGEWATER-STYLE</h1>
           <p className="text-xs text-gray-500 font-semibold mt-0.5">AI Agent</p>
         </Link>
 
@@ -137,7 +137,6 @@ export default function TopNav() {
                 <div className="space-y-2">
                   {[
                     { initials: 'AL', name: 'Andy Liu',   role: 'Project Lead / Analyst',   bg: 'bg-slate-700' },
-                    { initials: 'WZ', name: 'Will Zheng', role: 'Project Team Member',       bg: 'bg-slate-500' },
                   ].map(m => (
                     <div key={m.name} className="flex items-center gap-2.5">
                       <div className={`w-6 h-6 rounded-full ${m.bg} text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0`}>

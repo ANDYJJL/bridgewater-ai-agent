@@ -1,4 +1,4 @@
-# Bridgewater AI Agent Frontend
+# Bridgewater-Style AI Agent Frontend
 
 This is the Next.js frontend for the MGTA 495R Milestone 04
 Bridgewater-style AI investment research workflow. It presents a role-based
